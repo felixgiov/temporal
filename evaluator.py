@@ -3,9 +3,15 @@ import json
 
 """
 Example Usage: 
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/others/bert.norm.output.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/others/roberta.output.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/roberta-base/pred_results_roberta-base.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/bert-base-cased/pred_results_bert-base-cased.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/bert-base-uncased/pred_results_bert-base-uncased.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/bert-base-uncased-mctaco/eval_outputs.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/sbert-bert-base-uncased/pred_results_sbert_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/sbert-roberta-base/pred_results_sbert_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/ppt_data.tsv --prediction_file models/others/ppt_data.txt
 """
 
 
@@ -65,8 +71,8 @@ class McTacoEvaluator:
         print("Correct: " + str(correct))
         print("F1: " + str(f1))
         print("Total: " + str(total))
-        print("Strict Acc.: " + str(correct / total))
-        print("Avg F1: " + str(f1 / total))
+        print("Strict Acc.: {:.3f}" .format(correct / total))
+        print("Avg F1: {:.3f}" .format(f1 / total))
 
         if self.output:
             print("Writing results to file: %s" % self.output)

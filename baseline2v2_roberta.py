@@ -13,6 +13,7 @@ import numpy as np
 
 from transformers import AutoConfig, AutoModelForSequenceClassification, AutoTokenizer, EvalPrediction, GlueDataset, DataProcessor, InputExample, InputFeatures
 from transformers import GlueDataTrainingArguments as DataTrainingArguments
+from transformers import RobertaTokenizer, RobertaConfig, RobertaForSequenceClassification, BertForSequenceClassification, BertTokenizer
 from transformers import (
     HfArgumentParser,
     Trainer,
@@ -188,7 +189,7 @@ def _truncate_seq_pair(tokens_a, tokens_b, max_length):
 def main():
     # Parameters
     model_args = ModelArguments(
-        model_name_or_path="bert-large-uncased",
+        model_name_or_path="roberta-base",
     )
     data_args = DataTrainingArguments(task_name="rte", data_dir="./datasets/MCTACO")
     training_args = TrainingArguments(
@@ -197,8 +198,8 @@ def main():
         do_train=True,
         do_eval=True,
         do_predict=True,
-        per_gpu_train_batch_size=16,
-        per_gpu_eval_batch_size=64,
+        per_gpu_train_batch_size=32,
+        per_gpu_eval_batch_size=128,
         num_train_epochs=3,
         learning_rate=2e-5,
         logging_steps=500,
@@ -211,15 +212,15 @@ def main():
     num_labels = 2
 
     # Config, Tokenizer, Model
-    config = AutoConfig.from_pretrained(
+    config = RobertaConfig.from_pretrained(
         model_args.model_name_or_path,
         num_labels=num_labels,
         # finetuning_task=data_args.task_name,
     )
-    tokenizer = AutoTokenizer.from_pretrained(
+    tokenizer = RobertaTokenizer.from_pretrained(
         model_args.model_name_or_path,
     )
-    model = AutoModelForSequenceClassification.from_pretrained(
+    model = RobertaForSequenceClassification.from_pretrained(
         model_args.model_name_or_path,
         from_tf=bool(".ckpt" in model_args.model_name_or_path),
         config=config,
