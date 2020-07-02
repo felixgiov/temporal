@@ -45,7 +45,7 @@ if __name__ == '__main__':
             if output != "":
                 output_dir_name = output
             else:
-                output_dir_name = os.path.dirname(dirpath) + "_joint/"
+                output_dir_name = os.path.dirname(dirpath) + "_joint/" # change dir name for each task
 
             if output_dir_name[-1] != "/": output_dir_name += "/"
             ensureDir(output_dir_name)
@@ -56,7 +56,7 @@ if __name__ == '__main__':
                     if filename.endswith(".tml"):
                         filepath = os.path.join(r, filename)
                         print("Converting " + filepath + "...")
-                        out_file = open(output_dir_name + os.path.basename(filepath).replace(".tml", ".col"), "w")
+                        out_file = open(output_dir_name + os.path.basename(filepath).replace(".tml", ".col"), "w") # tml to tml for COL ID
                         if parser_name != "":
                             timeml_cols = TimeMLToColumns.TimeMLToColumns(filepath, parser_name)
                         else:

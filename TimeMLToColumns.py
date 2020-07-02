@@ -423,28 +423,32 @@ class TimeMLToColumns:
         prev_event_id = None
         (tlink_str, slink_str, alink_str, clink_str) = ("O", "O", "O", "O")
 
+        # for joint
         dict = {
             "-1": "tmx0"
         }
         dict_arr = []
-        col_id_path = 'datasets/TBAQ-cleaned/TimeBank_COL_id/' + self.filename[31:]
+        col_id_path = 'datasets/TBAQ-cleaned/AQUAINT_COL_ID/' + self.filename[30:]  # change dir for each dataset and index (31 for timebank, 30 for aquaint)
         with open(col_id_path, "r") as reader:
             for line_id in reader:
                 index = line_id.split("\t")[0]
                 id = line_id.split("\t")[1].replace('\n', '')
                 dict[index] = id
                 dict_arr.append(id)
+        dict_arr.append("index")
 
         for eid in self.tlinks:
             self.num_tlink += len(self.tlinks[eid])
 
         # TEXT
         for sen in self.sentences:
-            line += "#doc_" + self.filename[31:] + "_sent_" + str(sent_id) + "\n"
+            line += "#doc_" + self.filename[30:] + "_sent_" + str(sent_id) + "\n" # comment this for COL ID, change index (timebank is 31, aquaint 30)
             if len(sen) > 0:
                 for (word, event_attr, timex_attr, signal_id, csignal_id) in sen:
-                    line += str(tok_id) + "\t" + word
+                    line += str(tok_id) + "\t" + word # for COL and joint
+                    # line += str(tok_id) # for COL ID
 
+                    #  Joint
                     (ner_label, class_label, rel_label, head_id) = ("O", "_", "['N']", "[" + str(tok_id) + "]")
 
                     # line += "\t" + ner_label
@@ -532,6 +536,7 @@ class TimeMLToColumns:
                         prev_event_id = None
                         line += "\t" + ner_label + "\t" + class_label + "\t" + rel_label + "\t" + head_id
 
+                    # # COL ID
                     # (tlink_str, slink_str, alink_str, clink_str) = ("O", "O", "O", "O")
                     #
                     # if event_attr is not None:
@@ -542,6 +547,7 @@ class TimeMLToColumns:
                     #     prev_timex_id = None
                     #     for i in range(1): line += "\tO"
 
+                    # #  COL
                     # (tlink_str, slink_str, alink_str, clink_str) = ("O", "O", "O", "O")
                     #
                     # # event attributes if any: (event_id, event_class, stem, tense, aspect, polarity, modality, pos)
@@ -620,6 +626,7 @@ class TimeMLToColumns:
                     # else:
                     #     line += "\tO"
 
+                    # don't uncomment below
                     line += "\n"
                     tok_id += 1
                 sent_id += 1

@@ -1,0 +1,14 @@
+{
+    "data_dir": "./datasets/TBAQ-cleaned/ner-from-tbaq/ner",
+    "labels": "./datasets/TBAQ-cleaned/tbaq_ner_labels.txt",
+    "model_name_or_path": "bert-base-uncased",
+    "output_dir": "./models/ner-from-tbaq-ner-bert-base-uncased",
+    "max_seq_length": 128,
+    "num_train_epochs": 3,
+    "per_device_train_batch_size": 32,
+    "save_steps": 1000,
+    "seed": 1,
+    "do_train": true,
+    "do_eval": true,
+    "do_predict": false
+}
