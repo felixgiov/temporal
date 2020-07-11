@@ -261,6 +261,21 @@ def read_examples_from_file(data_dir, mode: Union[Split, str]) -> List[InputExam
     return examples
 
 
+def segments_to_index_array(ner_segments_row):
+    per_sentence_segments_index = []
+    segments_sequence = []
+    for i, val in enumerate(ner_segments_row):
+        if val != 0:
+            if val == -99 or val == -98:
+                segments_sequence.append(i)
+        else:
+            if segments_sequence:
+                per_sentence_segments_index.append(segments_sequence)
+            segments_sequence = []
+
+    return per_sentence_segments_index
+
+
 def convert_examples_to_features(
     examples: List[InputExample],
     label_list: List[str],
@@ -306,7 +321,11 @@ def convert_examples_to_features(
             if len(word_tokens) > 0:
                 tokens.extend(word_tokens)
                 # Use the real label id for the first token of the word, and padding ids for the remaining tokens
-                label_ids.extend([label_map[label]] + [pad_token_label_id] * (len(word_tokens) - 1))
+                # if label in ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]:
+                if label in ["DATE", "TIME", "DURATION", "SET"]:
+                    label_ids.extend([label_map[label]] + [pad_token_label_id] * (len(word_tokens) - 1))
+                else:
+                    label_ids.extend([pad_token_label_id] * (len(word_tokens)))
 
                 if ner == "B-EVENT":
                     ner_segment_ids.extend([-99] + [-98] * (len(word_tokens) - 1))
@@ -420,7 +439,10 @@ def convert_examples_to_features(
         if "token_type_ids" not in tokenizer.model_input_names:
             segment_ids = None
 
-        ner_segment_arr.append(" ".join([str(x) for x in ner_segment_ids]))
+        # ner_segment_arr.append(" ".join([str(x) for x in ner_segment_ids]))
+
+        # ner_event_segment_index_array = segments_to_index_array(ner_segment_ids)
+        # ner_segment_arr.append(ner_event_segment_index_array)
 
         features.append(
             InputFeatures(
@@ -428,14 +450,18 @@ def convert_examples_to_features(
                 attention_mask=input_mask,
                 token_type_ids=segment_ids,
                 label_ids=label_ids,
-                # ner_token_ids=ner_segment_ids
+                ner_token_ids=ner_segment_ids
             )
         )
 
-        with open(f"{data_dir}/{example.guid[:3]}_ner_segments.txt", "w") as ner_writer:
-            ner_writer.write("\n".join([str(x) for x in ner_segment_arr]))
+        # with open(f"{data_dir}/{example.guid[:3]}_ner_segments.txt", "w") as ner_writer:
+        #     ner_writer.write("\n".join([str(x) for x in ner_segment_arr]))
+
+        # with open(f"{data_dir}/{example.guid[:3]}_ner_events_segments_to_index_array.txt", "w") as ner_writer:
+        #     ner_writer.write("\n".join([str(x) for x in ner_segment_arr]))
 
     return features
+
 
 def extract_ner_segments(
     examples: List[InputExample],
@@ -446,7 +472,7 @@ def extract_ner_segments(
     sep_token="[SEP]",
     sep_token_extra=False,
     pad_on_left=False,
-) -> List[str]:
+) -> List[List[List[int]]]:
 
     ner_segment_arr = []
     for (ex_index, example) in enumerate(examples):
@@ -506,7 +532,8 @@ def extract_ner_segments(
 
         assert len(ner_segment_ids) == max_seq_length
 
-        ner_segment_arr.append(" ".join([str(x) for x in ner_segment_ids]))
+        # ner_segment_arr.append(" ".join([str(x) for x in ner_segment_ids]))
+        ner_segment_arr.append(segments_to_index_array(ner_segment_ids))
 
         # with open(f"{example.guid[:3]}_ner_segments.txt", "w") as ner_writer:
         #     ner_writer.write("\n".join([str(x) for x in ner_segment_arr]))
@@ -514,16 +541,26 @@ def extract_ner_segments(
     return ner_segment_arr
 
 
+# def get_labels(path: str) -> List[str]:
+#     if path:
+#         with open(path, "r") as f:
+#             labels = f.read().splitlines()
+#         if "_" not in labels:
+#             labels = ["_"] + labels
+#         return labels
+#     else:
+#         # return ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]
+#         return ["ASPECTUAL", "DATE", "DURATION", "I_ACTION", "I_STATE", "OCCURRENCE", "PERCEPTION", "REPORTING", "SET", "STATE", "TIME", "_"]
+
+
 def get_labels(path: str) -> List[str]:
     if path:
         with open(path, "r") as f:
             labels = f.read().splitlines()
-        if "_" not in labels:
-            labels = ["_"] + labels
         return labels
     else:
+        return ["DATE", "TIME", "DURATION", "SET"]
         # return ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]
-        return ["ASPECTUAL", "DATE", "DURATION", "I_ACTION", "I_STATE", "OCCURRENCE", "PERCEPTION", "REPORTING", "SET", "STATE", "TIME", "_"]
 
 
 # def get_labels(path: str) -> List[str]:

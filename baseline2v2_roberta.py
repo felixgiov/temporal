@@ -13,7 +13,13 @@ import numpy as np
 
 from transformers import AutoConfig, AutoModelForSequenceClassification, AutoTokenizer, EvalPrediction, GlueDataset, DataProcessor, InputExample, InputFeatures
 from transformers import GlueDataTrainingArguments as DataTrainingArguments
-from transformers import RobertaTokenizer, RobertaConfig, RobertaForSequenceClassification, BertForSequenceClassification, BertTokenizer
+from transformers import (
+    RobertaTokenizer,
+    RobertaConfig,
+    # RobertaForSequenceClassification,
+    BertForSequenceClassification,
+    BertTokenizer
+)
 from transformers import (
     HfArgumentParser,
     Trainer,
@@ -23,6 +29,8 @@ from transformers import (
     glue_tasks_num_labels,
     set_seed,
 )
+
+from timebank_modelling_roberta import RobertaForSequenceClassification
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -314,14 +322,6 @@ def main():
                     pred_writer.write("yes\n")
                 else:
                     pred_writer.write("no\n")
-
-            # for i in range(len(preds_tensor)):
-            #     pred_writer.write(str(torch.argmax(preds_tensor))+"\n")
-
-                # if torch.argmax(val) == 0:
-                #     pred_writer.write("yes\n")
-                # else:
-                #     pred_writer.write("no\n")
 
 
 if __name__ == '__main__':

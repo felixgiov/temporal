@@ -18,7 +18,7 @@ from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data.sampler import RandomSampler, Sampler, SequentialSampler
 from tqdm.auto import tqdm, trange
 
-from transformers.data.data_collator import DataCollator, DefaultDataCollator
+# from transformers.data.data_collator import DataCollator, DefaultDataCollator
 from transformers.modeling_utils import PreTrainedModel
 from transformers.optimization import AdamW, get_linear_schedule_with_warmup
 from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR, EvalPrediction, PredictionOutput, TrainOutput
@@ -26,6 +26,7 @@ from transformers.training_args import TrainingArguments, is_tpu_available
 
 from timebank_modeling_bert import BertForTemporalMultitask
 from timebank_batch_sampler import BatchSchedulerSampler
+from timebank_data_collator import DataCollator, DefaultDataCollator
 
 try:
     from apex import amp
@@ -157,18 +158,13 @@ class Trainer:
     optimized for Transformers.
     """
 
-    multitask_model: PreTrainedModel
     model: PreTrainedModel
     args: TrainingArguments
-    mctaco_model: PreTrainedModel
-    mctaco_args: TrainingArguments
     data_collator: DataCollator
-    train_dataset: Optional[Dataset]
+    timebank_train_dataset: Optional[Dataset]
     eval_dataset: Optional[Dataset]
     mctaco_train_dataset: Optional[Dataset]
-    mctaco_eval_dataset: Optional[Dataset]
     compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None
-    mctaco_compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None
     prediction_loss_only: bool
     tb_writer: Optional["SummaryWriter"] = None
     optimizers: Tuple[torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR] = None
@@ -177,18 +173,13 @@ class Trainer:
 
     def __init__(
         self,
-        multitask_model: PreTrainedModel,
         model: PreTrainedModel,
         args: TrainingArguments,
-        mctaco_model: PreTrainedModel,
-        mctaco_args: TrainingArguments,
         data_collator: Optional[DataCollator] = None,
-        train_dataset: Optional[Dataset] = None,
+        timebank_train_dataset: Optional[Dataset] = None,
         eval_dataset: Optional[Dataset] = None,
         mctaco_train_dataset: Optional[Dataset] = None,
-        mctaco_eval_dataset: Optional[Dataset] = None,
         compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None,
-        mctaco_compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None,
         prediction_loss_only=False,
         tb_writer: Optional["SummaryWriter"] = None,
         optimizers: Tuple[torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR] = None,
@@ -201,22 +192,17 @@ class Trainer:
             prediction_loss_only:
                 (Optional) in evaluation and prediction, only return the loss
         """
-        self.multitask_model = multitask_model.to(args.device)
-        self.model = multitask_model.to(args.device)
+        self.model = model.to(args.device)
         # self.model = model.to(args.device)
         self.args = args
-        self.mctaco_model = mctaco_model.to(mctaco_args.device)
-        self.mctaco_args = mctaco_args
         if data_collator is not None:
             self.data_collator = data_collator
         else:
             self.data_collator = DefaultDataCollator()
-        self.train_dataset = train_dataset
+        self.timebank_train_dataset = timebank_train_dataset
         self.eval_dataset = eval_dataset
         self.mctaco_train_dataset = mctaco_train_dataset
-        self.mctaco_eval_dataset = mctaco_eval_dataset
         self.compute_metrics = compute_metrics
-        self.mctaco_compute_metrics = mctaco_compute_metrics
         self.prediction_loss_only = prediction_loss_only
         self.optimizers = optimizers
         if tb_writer is not None:
@@ -244,41 +230,20 @@ class Trainer:
             self.model.config.xla_device = True
 
     def get_train_dataloader(self) -> DataLoader:
-        if self.train_dataset is None:
+        if self.timebank_train_dataset is None:
             raise ValueError("Trainer: training requires a train_dataset.")
         if is_tpu_available():
-            train_sampler = get_tpu_sampler(self.train_dataset)
+            train_sampler = get_tpu_sampler(self.timebank_train_dataset)
         else:
             train_sampler = (
-                RandomSampler(self.train_dataset)
+                RandomSampler(self.timebank_train_dataset)
                 if self.args.local_rank == -1
-                else DistributedSampler(self.train_dataset)
+                else DistributedSampler(self.timebank_train_dataset)
             )
 
         data_loader = DataLoader(
-            self.train_dataset,
+            self.timebank_train_dataset,
             batch_size=self.args.train_batch_size,
-            sampler=train_sampler,
-            collate_fn=self.data_collator.collate_batch,
-        )
-
-        return data_loader
-
-    def get_mctaco_train_dataloader(self) -> DataLoader:
-        if self.mctaco_train_dataset is None:
-            raise ValueError("Trainer: training requires a train_dataset.")
-        if is_tpu_available():
-            train_sampler = get_tpu_sampler(self.mctaco_train_dataset)
-        else:
-            train_sampler = (
-                RandomSampler(self.mctaco_train_dataset)
-                if self.mctaco_args.local_rank == -1
-                else DistributedSampler(self.mctaco_train_dataset)
-            )
-
-        data_loader = DataLoader(
-            self.mctaco_train_dataset,
-            batch_size=self.mctaco_args.train_batch_size,
             sampler=train_sampler,
             collate_fn=self.data_collator.collate_batch,
         )
@@ -302,30 +267,6 @@ class Trainer:
 
         data_loader = DataLoader(
             eval_dataset,
-            sampler=sampler,
-            batch_size=self.args.eval_batch_size,
-            collate_fn=self.data_collator.collate_batch,
-        )
-
-        return data_loader
-
-    def get_mctaco_eval_dataloader(self, mctaco_eval_dataset: Optional[Dataset] = None) -> DataLoader:
-        if mctaco_eval_dataset is None and self.mctaco_eval_dataset is None:
-            raise ValueError("Trainer: evaluation requires an eval_dataset.")
-
-        mctaco_eval_dataset = mctaco_eval_dataset if mctaco_eval_dataset is not None else self.mctaco_eval_dataset
-
-        if is_tpu_available():
-            sampler = SequentialDistributedSampler(
-                mctaco_eval_dataset, num_replicas=xm.xrt_world_size(), rank=xm.get_ordinal()
-            )
-        elif self.mctaco_args.local_rank != -1:
-            sampler = SequentialDistributedSampler(mctaco_eval_dataset)
-        else:
-            sampler = SequentialSampler(mctaco_eval_dataset)
-
-        data_loader = DataLoader(
-            mctaco_eval_dataset,
             sampler=sampler,
             batch_size=self.args.eval_batch_size,
             collate_fn=self.data_collator.collate_batch,
@@ -415,10 +356,10 @@ class Trainer:
 
     def merge_datasets(self) -> DataLoader:
 
-        if self.train_dataset is None and self.mctaco_train_dataset is None:
+        if self.timebank_train_dataset is None and self.mctaco_train_dataset is None:
             raise ValueError("Trainer: training requires a train_dataset.")
 
-        concat_dataset = ConcatDataset([self.train_dataset, self.mctaco_train_dataset])
+        concat_dataset = ConcatDataset([self.timebank_train_dataset, self.mctaco_train_dataset])
 
         data_loader = DataLoader(
             concat_dataset,
@@ -439,7 +380,7 @@ class Trainer:
                 (Optional) Local path to model if model to train has been instantiated from a local path
                 If present, we will try reloading the optimizer/scheduler states from there.
         """
-        # train_dataloader = self.get_train_dataloader()
+
         train_dataloader = self.merge_datasets()
 
         if self.args.max_steps > 0:
@@ -466,9 +407,6 @@ class Trainer:
             scheduler.load_state_dict(torch.load(os.path.join(model_path, "scheduler.pt")))
 
         model = self.model
-        # mctaco_model = self.mctaco_model
-
-        # model = self.multitask_model
 
         if self.args.fp16:
             if not is_apex_available():
@@ -777,7 +715,6 @@ class Trainer:
                 - the potential metrics computed from the predictions
         """
         eval_dataloader = self.get_eval_dataloader(eval_dataset)
-        # eval_dataloader = self.get_eval_dataloader(mctaco_eval_dataset)
 
         output = self._prediction_loop(eval_dataloader, description="Evaluation")
 

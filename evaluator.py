@@ -8,7 +8,9 @@ python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/roberta-base/pred_results_roberta-base.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/bert-base-cased/pred_results_bert-base-cased.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/bert-base-uncased/pred_results_bert-base-uncased.txt
-python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/ner-from-tbaq-class-v2-bert-base-uncased/pred_results_bert-base-uncased.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/bert-large-uncased/pred_results_bert-large-uncased.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/ner-from-tbaq-class-event-bert-base-uncased/pred_results_bert-base-uncased.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/ner-from-tbaq-class-timex-bert-base-uncased/pred_results_bert-base-uncased.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/bert-base-uncased-mctaco/eval_outputs.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/sbert-bert-base-uncased/pred_results_sbert_results.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/sbert-roberta-base/pred_results_sbert_results.txt
