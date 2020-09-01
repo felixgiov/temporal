@@ -19,7 +19,7 @@
 16	subordinated	O	_	['N']	[16]
 17	debentures	O	_	['N']	[17]
 18	,	O	_	['N']	[18]
-19	due	B-EVENT	STATE	['ENDED_BY']	[20]
+19	due	B-EVENT	STATE	['ENDED_BY']	[23]
 20	March	B-TIMEX3	_	['N']	[20]
 21	15	I-TIMEX3	_	['N']	[21]
 22	,	I-TIMEX3	_	['N']	[22]

@@ -58,7 +58,7 @@
 55	is	O	_	['N']	[55]
 56	scheduled	B-EVENT	I_ACTION	['IS_INCLUDED', 'MODAL']	[-1, 58]
 57	to	O	_	['N']	[57]
-58	expire	B-EVENT	OCCURRENCE	['ENDED_BY']	[61]
+58	expire	B-EVENT	OCCURRENCE	['ENDED_BY']	[64]
 59	at	O	_	['N']	[59]
 60	the	O	_	['N']	[60]
 61	the	B-TIMEX3	_	['N']	[61]

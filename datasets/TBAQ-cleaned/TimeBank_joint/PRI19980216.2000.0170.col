@@ -46,7 +46,7 @@
 43	was	O	_	['N']	[43]
 44	behind	B-EVENT	STATE	['FACTIVE']	[46]
 45	two	O	_	['N']	[45]
-46	killings	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[49]
+46	killings	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[50]
 47	in	O	_	['N']	[47]
 48	Belfast	O	_	['N']	[48]
 49	last	B-TIMEX3	_	['N']	[49]

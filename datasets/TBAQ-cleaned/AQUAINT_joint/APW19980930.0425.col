@@ -99,7 +99,7 @@
 95	"	O	_	['N']	[95]
 #doc_APW19980930.0425.tml_sent_3
 96	The	O	_	['N']	[96]
-97	bombings	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[99]
+97	bombings	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[100]
 98	on	O	_	['N']	[98]
 99	Aug.	B-TIMEX3	_	['N']	[99]
 100	7	I-TIMEX3	DATE	['BEFORE']	[255]
@@ -148,7 +148,7 @@
 142	a	O	_	['N']	[142]
 143	bombing	B-EVENT	OCCURRENCE	['IS_INCLUDED', 'IBEFORE', 'BEFORE']	[145, 140, 131]
 144	in	O	_	['N']	[144]
-145	1995	B-TIMEX3	DATE	['BEFORE']	[99]
+145	1995	B-TIMEX3	DATE	['BEFORE']	[100]
 146	.	O	_	['N']	[146]
 #doc_APW19980930.0425.tml_sent_5
 147	The	O	_	['N']	[147]

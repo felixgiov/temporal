@@ -16,7 +16,7 @@ from transformers import GlueDataTrainingArguments as DataTrainingArguments
 from transformers import (
     RobertaTokenizer,
     RobertaConfig,
-    # RobertaForSequenceClassification,
+    RobertaForSequenceClassification,
     BertForSequenceClassification,
     BertTokenizer
 )
@@ -30,7 +30,7 @@ from transformers import (
     set_seed,
 )
 
-from timebank_modelling_roberta import RobertaForSequenceClassification
+# from timebank_modelling_roberta import RobertaForSequenceClassification
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -127,20 +127,21 @@ def convert_examples_to_features(examples, label_list, max_seq_length, tokenizer
         # the entire model is fine-tuned.
         tokens = []
         segment_ids = []
-        tokens.append("[CLS]")
+        tokens.append("<s>")
         segment_ids.append(0)
         for token in tokens_a:
             tokens.append(token)
             segment_ids.append(0)
-        tokens.append("[SEP]")
+        tokens.append("</s></s>")
         segment_ids.append(0)
-
+        # tokens.append("</s>")
+        # segment_ids.append(0)
         if tokens_b:
             for token in tokens_b:
                 tokens.append(token)
-                segment_ids.append(1)
-            tokens.append("[SEP]")
-            segment_ids.append(1)
+                segment_ids.append(0)
+            tokens.append("</s>")
+            segment_ids.append(0)
 
         input_ids = tokenizer.convert_tokens_to_ids(tokens)
 
@@ -197,7 +198,7 @@ def _truncate_seq_pair(tokens_a, tokens_b, max_length):
 def main():
     # Parameters
     model_args = ModelArguments(
-        model_name_or_path="roberta-base",
+        model_name_or_path="roberta-large",
     )
     data_args = DataTrainingArguments(task_name="rte", data_dir="./datasets/MCTACO")
     training_args = TrainingArguments(
@@ -206,13 +207,13 @@ def main():
         do_train=True,
         do_eval=True,
         do_predict=True,
-        per_gpu_train_batch_size=32,
+        per_gpu_train_batch_size=8,
         per_gpu_eval_batch_size=128,
         num_train_epochs=3,
         learning_rate=2e-5,
         logging_steps=500,
         logging_first_step=True,
-        save_steps=1000,
+        save_steps=10000,
         # evaluate_during_training=True,
     )
 

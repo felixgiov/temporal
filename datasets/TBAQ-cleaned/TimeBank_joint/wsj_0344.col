@@ -24,7 +24,7 @@
 21	reported	B-EVENT	REPORTING	['EVIDENTIAL']	[24]
 22	a	O	_	['N']	[22]
 23	net	O	_	['N']	[23]
-24	loss	B-EVENT	STATE	['DURING', 'ENDED_BY']	[37, 41]
+24	loss	B-EVENT	STATE	['DURING', 'ENDED_BY']	[39, 42]
 25	of	O	_	['N']	[25]
 26	$	O	_	['N']	[26]
 27	8.1	O	_	['N']	[27]

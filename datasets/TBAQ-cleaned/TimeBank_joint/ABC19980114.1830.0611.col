@@ -60,7 +60,7 @@
 55	in	O	_	['N']	[55]
 56	the	O	_	['N']	[56]
 57	last	O	_	['N']	[57]
-58	conversation	B-EVENT	OCCURRENCE	['BEGINS']	[92]
+58	conversation	B-EVENT	OCCURRENCE	['BEGINS']	[96]
 59	between	O	_	['N']	[59]
 60	controllers	O	_	['N']	[60]
 61	and	O	_	['N']	[61]
@@ -109,7 +109,7 @@
 102	a	O	_	['N']	[102]
 103	nearby	O	_	['N']	[103]
 104	flight	O	_	['N']	[104]
-105	calls	B-EVENT	REPORTING	['AFTER', 'ENDS', 'EVIDENTIAL']	[58, 92, 112]
+105	calls	B-EVENT	REPORTING	['AFTER', 'ENDS', 'EVIDENTIAL']	[58, 96, 112]
 106	in	O	_	['N']	[106]
 107	.	O	_	['N']	[107]
 #doc_ABC19980114.1830.0611.tml_sent_6

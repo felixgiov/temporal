@@ -47,7 +47,7 @@
 43	including	O	_	['N']	[43]
 44	100,000	O	_	['N']	[44]
 45	shares	O	_	['N']	[45]
-46	bought	B-EVENT	OCCURRENCE	['BEFORE', 'BEFORE', 'AFTER', 'BEFORE']	[37, -1, 48, 51]
+46	bought	B-EVENT	OCCURRENCE	['BEFORE', 'BEFORE', 'AFTER', 'BEFORE']	[37, -1, 49, 52]
 47	from	O	_	['N']	[47]
 48	Aug.	B-TIMEX3	_	['N']	[48]
 49	26	I-TIMEX3	DATE	['N']	[49]
@@ -169,7 +169,7 @@
 161	,	O	_	['N']	[161]
 162	stock	O	_	['N']	[162]
 163	purchase	O	_	['N']	[163]
-164	agreement	B-EVENT	I_ACTION	['SIMULTANEOUS']	[157]
+164	agreement	B-EVENT	I_ACTION	['SIMULTANEOUS']	[160]
 165	.	O	_	['N']	[165]
 #doc_wsj_0679.tml_sent_7
 166	That	O	_	['N']	[166]
@@ -191,7 +191,7 @@
 182	market	O	_	['N']	[182]
 183	within	O	_	['N']	[183]
 184	18	B-TIMEX3	_	['N']	[184]
-185	months	I-TIMEX3	DURATION	['DURING', 'AFTER']	[175, 157]
+185	months	I-TIMEX3	DURATION	['DURING', 'AFTER']	[175, 160]
 186	.	O	_	['N']	[186]
 #doc_wsj_0679.tml_sent_8
 187	In	O	_	['N']	[187]

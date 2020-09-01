@@ -141,7 +141,7 @@
 134	stock	O	_	['N']	[134]
 135	would	O	_	['N']	[135]
 136	be	O	_	['N']	[136]
-137	redeemed	B-EVENT	OCCURRENCE	['AFTER', 'SIMULTANEOUS']	[51, 139]
+137	redeemed	B-EVENT	OCCURRENCE	['AFTER', 'SIMULTANEOUS']	[51, 140]
 138	in	O	_	['N']	[138]
 139	five	B-TIMEX3	_	['N']	[139]
 140	years	I-TIMEX3	DATE	['N']	[140]

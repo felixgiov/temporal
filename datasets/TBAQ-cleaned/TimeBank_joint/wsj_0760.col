@@ -165,7 +165,7 @@
 156	's	O	_	['N']	[156]
 157	buy	B-EVENT	_	['N']	[157]
 158	-	I-EVENT	_	['N']	[158]
-159	out	I-EVENT	OCCURRENCE	['IS_INCLUDED', 'BEFORE']	[174, 147]
+159	out	I-EVENT	OCCURRENCE	['IS_INCLUDED', 'BEFORE']	[175, 147]
 160	of	O	_	['N']	[160]
 161	a	O	_	['N']	[161]
 162	50	O	_	['N']	[162]
@@ -205,7 +205,7 @@
 194	.	O	_	['N']	[194]
 #doc_wsj_0760.tml_sent_10
 195	Norton	O	_	['N']	[195]
-196	announced	B-EVENT	REPORTING	['BEFORE', 'IS_INCLUDED', 'EVIDENTIAL']	[-1, 197, 203]
+196	announced	B-EVENT	REPORTING	['BEFORE', 'IS_INCLUDED', 'EVIDENTIAL']	[-1, 199, 203]
 197	earlier	B-TIMEX3	_	['N']	[197]
 198	this	I-TIMEX3	_	['N']	[198]
 199	month	I-TIMEX3	DATE	['N']	[199]
@@ -317,7 +317,7 @@
 302	.	O	_	['N']	[302]
 #doc_wsj_0760.tml_sent_14
 303	Sales	O	_	['N']	[303]
-304	rose	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[244]
+304	rose	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[248]
 305	8	O	_	['N']	[305]
 306	%	O	_	['N']	[306]
 307	to	O	_	['N']	[307]

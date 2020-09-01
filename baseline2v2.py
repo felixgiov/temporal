@@ -188,7 +188,7 @@ def _truncate_seq_pair(tokens_a, tokens_b, max_length):
 def main():
     # Parameters
     model_args = ModelArguments(
-        model_name_or_path="bert-large-uncased",
+        model_name_or_path="roberta-large",
     )
     data_args = DataTrainingArguments(task_name="rte", data_dir="./datasets/MCTACO")
     training_args = TrainingArguments(
@@ -197,9 +197,10 @@ def main():
         do_train=True,
         do_eval=True,
         do_predict=True,
-        per_gpu_train_batch_size=16,
+        # per_device_train_batch_size=16,
+        per_gpu_train_batch_size=4,
         per_gpu_eval_batch_size=64,
-        num_train_epochs=3,
+        num_train_epochs=5,
         learning_rate=2e-5,
         logging_steps=500,
         logging_first_step=True,
@@ -325,4 +326,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

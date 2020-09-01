@@ -40,7 +40,7 @@
 36	regulatory	O	_	['N']	[36]
 37	approval	B-EVENT	OCCURRENCE	['N']	[37]
 38	and	O	_	['N']	[38]
-39	complete	B-EVENT	ASPECTUAL	['BEFORE', 'ENDS', 'CULMINATES']	[43, 41, 41]
+39	complete	B-EVENT	ASPECTUAL	['BEFORE', 'ENDS', 'CULMINATES']	[45, 41, 41]
 40	the	O	_	['N']	[40]
 41	transaction	B-EVENT	OCCURRENCE	['N']	[41]
 42	by	O	_	['N']	[42]

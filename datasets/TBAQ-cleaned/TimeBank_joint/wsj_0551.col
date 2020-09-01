@@ -60,7 +60,7 @@
 56	is	O	_	['N']	[56]
 57	expected	B-EVENT	I_STATE	['IS_INCLUDED', 'MODAL']	[-1, 59]
 58	to	O	_	['N']	[58]
-59	close	B-EVENT	ASPECTUAL	['IS_INCLUDED', 'CULMINATES']	[60, 55]
+59	close	B-EVENT	ASPECTUAL	['IS_INCLUDED', 'CULMINATES']	[62, 55]
 60	around	B-TIMEX3	_	['N']	[60]
 61	year	I-TIMEX3	_	['N']	[61]
 62	end	I-TIMEX3	DATE	['N']	[62]

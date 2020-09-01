@@ -116,7 +116,7 @@
 110	barrel	O	_	['N']	[110]
 111	level	O	_	['N']	[111]
 112	we	O	_	['N']	[112]
-113	saw	B-EVENT	PERCEPTION	['IS_INCLUDED']	[115]
+113	saw	B-EVENT	PERCEPTION	['IS_INCLUDED']	[121]
 114	in	O	_	['N']	[114]
 115	the	B-TIMEX3	_	['N']	[115]
 116	winter	I-TIMEX3	_	['N']	[116]
@@ -145,7 +145,7 @@
 #doc_CNN19980223.1130.0960.tml_sent_6
 138	Gas	O	_	['N']	[138]
 139	prices	O	_	['N']	[139]
-140	fell	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[147]
+140	fell	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[150]
 141	nearly	O	_	['N']	[141]
 142	two	O	_	['N']	[142]
 143	cents	O	_	['N']	[143]

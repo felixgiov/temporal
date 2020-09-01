@@ -13,7 +13,7 @@
 10	-	I-TIMEX3	_	['N']	[10]
 11	quarter	I-TIMEX3	DATE	['N']	[11]
 12	net	O	_	['N']	[12]
-13	loss	B-EVENT	OCCURRENCE	['SIMULTANEOUS']	[9]
+13	loss	B-EVENT	OCCURRENCE	['SIMULTANEOUS']	[11]
 14	of	O	_	['N']	[14]
 15	$	O	_	['N']	[15]
 16	17	O	_	['N']	[16]
@@ -133,7 +133,7 @@
 #doc_wsj_0161.tml_sent_5
 127	A	B-TIMEX3	_	['N']	[127]
 128	year	I-TIMEX3	_	['N']	[128]
-129	earlier	I-TIMEX3	DATE	['BEFORE', 'SIMULTANEOUS']	[9, 132]
+129	earlier	I-TIMEX3	DATE	['BEFORE', 'SIMULTANEOUS']	[11, 132]
 130	,	O	_	['N']	[130]
 131	net	O	_	['N']	[131]
 132	income	B-EVENT	STATE	['N']	[132]

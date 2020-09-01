@@ -108,7 +108,7 @@
 102	company	O	_	['N']	[102]
 103	has	O	_	['N']	[103]
 104	reported	B-EVENT	REPORTING	['BEFORE', 'EVIDENTIAL']	[34, 105]
-105	declines	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[110]
+105	declines	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[115]
 106	in	O	_	['N']	[106]
 107	operating	O	_	['N']	[107]
 108	profit	O	_	['N']	[108]

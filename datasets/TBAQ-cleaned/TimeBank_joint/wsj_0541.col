@@ -7,7 +7,7 @@
 #doc_wsj_0541.tml_sent_1
 5	plans	B-EVENT	I_STATE	['INCLUDES', 'SIMULTANEOUS', 'MODAL']	[-1, 21, 7]
 6	to	O	_	['N']	[6]
-7	redeem	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[9]
+7	redeem	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[10]
 8	on	O	_	['N']	[8]
 9	Nov.	B-TIMEX3	_	['N']	[9]
 10	16	I-TIMEX3	DATE	['N']	[10]
@@ -21,7 +21,7 @@
 18	convertible	O	_	['N']	[18]
 19	subordinated	O	_	['N']	[19]
 20	debentures	O	_	['N']	[20]
-21	due	B-EVENT	STATE	['ENDED_BY']	[22]
+21	due	B-EVENT	STATE	['ENDED_BY']	[25]
 22	March	B-TIMEX3	_	['N']	[22]
 23	1	I-TIMEX3	_	['N']	[23]
 24	,	I-TIMEX3	_	['N']	[24]

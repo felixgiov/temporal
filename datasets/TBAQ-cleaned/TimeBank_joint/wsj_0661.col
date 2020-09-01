@@ -27,7 +27,7 @@
 25	would	O	_	['N']	[25]
 26	seek	B-EVENT	I_ACTION	['MODAL']	[28]
 27	to	O	_	['N']	[27]
-28	liquidate	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[35]
+28	liquidate	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[38]
 29	the	O	_	['N']	[29]
 30	computer	O	_	['N']	[30]
 31	-	O	_	['N']	[31]

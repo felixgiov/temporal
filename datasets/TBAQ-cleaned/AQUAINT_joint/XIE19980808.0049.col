@@ -10,7 +10,7 @@
 8	President	O	_	['N']	[8]
 9	Bill	O	_	['N']	[9]
 10	Clinton	O	_	['N']	[10]
-11	Saturday	B-TIMEX3	DATE	['IDENTITY']	[2]
+11	Saturday	B-TIMEX3	DATE	['IDENTITY']	[3]
 12	vowed	B-EVENT	I_ACTION	['IS_INCLUDED']	[11]
 13	to	O	_	['N']	[13]
 14	hunt	B-EVENT	OCCURRENCE	['BEFORE', 'MODAL']	[17, 12]

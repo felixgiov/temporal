@@ -42,8 +42,8 @@ from transformers import (
     AutoModelForSequenceClassification,
     glue_compute_metrics,
     GlueDataTrainingArguments)
-from timebank_utils import NerDataset, Split, get_labels, extract_ner_segments, read_examples_from_file
-from timebank_modeling_bert import BertForTokenEventClassification, temporalmultitask, BertForTemporalMultitask
+from timebank_utils import NerDataset, Split, get_timex_labels, get_event_labels, read_examples_from_file
+from timebank_modeling_bert import BertForTokenEventClassification, BertForTemporalMultitask
 # from timebank_modelling_roberta import RobertaForTemporalMultitask
 from timebank_trainer import Trainer
 from mctaco_temporal_utils import TemporalProcessor, convert_mctaco_examples_to_features
@@ -148,9 +148,13 @@ def main():
     set_seed(training_args.seed)
 
     # Prepare TimeBank task
-    labels = get_labels(data_args.labels)
-    label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
-    num_labels = len(labels)
+    labels_timex = get_timex_labels()
+    label_map_timex: Dict[int, str] = {i: label for i, label in enumerate(labels_timex)}
+    num_labels_timex = len(labels_timex)
+
+    labels_event = get_event_labels()
+    label_map_event: Dict[int, str] = {i: label for i, label in enumerate(labels_event)}
+    num_labels_event = len(labels_event)
 
     # Prepare MCTACO task
     mctaco_num_labels = 2
@@ -161,24 +165,33 @@ def main():
     # The .from_pretrained methods guarantee that only one local process can concurrently
     # download model & vocab.
 
-    config = AutoConfig.from_pretrained(
+    timebank_config_timex = AutoConfig.from_pretrained(
         model_args.config_name if model_args.config_name else model_args.model_name_or_path,
-        num_labels=num_labels,
-        id2label=label_map,
-        label2id={label: i for i, label in enumerate(labels)},
+        num_labels=num_labels_timex,
+        id2label=label_map_timex,
+        label2id={label: i for i, label in enumerate(labels_timex)},
         cache_dir=model_args.cache_dir,
     )
+
+    timebank_config_event = AutoConfig.from_pretrained(
+        model_args.config_name if model_args.config_name else model_args.model_name_or_path,
+        num_labels=num_labels_event,
+        id2label=label_map_event,
+        label2id={label: i for i, label in enumerate(labels_event)},
+        cache_dir=model_args.cache_dir,
+    )
+
     tokenizer = AutoTokenizer.from_pretrained(
         model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path,
         cache_dir=model_args.cache_dir,
         use_fast=model_args.use_fast,
     )
 
-    # train_examples = read_examples_from_file(data_args.data_dir, Split.train)
-    # train_ner_segments = extract_ner_segments(train_examples, data_args.max_seq_length, tokenizer)
-
-    # dev_examples = read_examples_from_file(data_args.data_dir, Split.dev)
-    # dev_ner_segments = extract_ner_segments(dev_examples, data_args.max_seq_length, tokenizer)
+    tokenizer_event = AutoTokenizer.from_pretrained(
+        model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path,
+        cache_dir=model_args.cache_dir,
+        use_fast=model_args.use_fast,
+    )
 
     # MCTACO Config, Tokenizer, Model
     mctaco_config = AutoConfig.from_pretrained(
@@ -200,18 +213,33 @@ def main():
     )
 
     multitask_model.set_batch_size(training_args.per_gpu_train_batch_size)
-    # multitask_model.set_ner_segments(train_ner_segments)
 
     # Get TimeBank datasets
-    train_dataset = (
+    timebank_train_dataset_timex = (
         NerDataset(
             data_dir=data_args.data_dir,
             tokenizer=tokenizer,
-            labels=labels,
-            model_type=config.model_type,
+            labels=labels_timex,
+            model_type=timebank_config_timex.model_type,
+            task_name=2,
             max_seq_length=data_args.max_seq_length,
             overwrite_cache=data_args.overwrite_cache,
             mode=Split.train,
+        )
+        if training_args.do_train
+        else None
+    )
+
+    timebank_train_dataset_event = (
+        NerDataset(
+            data_dir=data_args.data_dir,
+            tokenizer=tokenizer_event,
+            labels=labels_event,
+            model_type=timebank_config_event.model_type,
+            task_name=3,
+            max_seq_length=data_args.max_seq_length,
+            overwrite_cache=data_args.overwrite_cache,
+            mode=Split.train_event,
         )
         if training_args.do_train
         else None
@@ -247,7 +275,8 @@ def main():
     trainer = Trainer(
         model=multitask_model,
         args=training_args,
-        timebank_train_dataset=train_dataset,
+        # timebank_train_dataset_timex=timebank_train_dataset_timex,
+        timebank_train_dataset_event=timebank_train_dataset_event,
         mctaco_train_dataset=mctaco_train_dataset,
         eval_dataset=mctaco_eval_dataset,
         compute_metrics=mctaco_compute_metrics

@@ -1,9 +1,22 @@
+import json
 import logging
+
+from dataclasses import dataclass
 import os
 
 from transformers import InputFeatures, DataProcessor, InputExample
+from typing import List, Optional, Union
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass(frozen=True)
+class InputFeatures:
+    input_ids: List[int]
+    attention_mask: Optional[List[int]] = None
+    token_type_ids: Optional[List[int]] = None
+    label: Optional[Union[int, float]] = None
+    task_name: Optional[int] = None
 
 
 class TemporalProcessor(DataProcessor):
@@ -127,7 +140,8 @@ def convert_mctaco_examples_to_features(examples, label_list, max_seq_length, to
                 InputFeatures(input_ids,
                               input_mask,
                               segment_ids,
-                              label_id))
+                              label_id,
+                              1))
     return features
 
 

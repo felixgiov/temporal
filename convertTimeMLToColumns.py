@@ -1,5 +1,7 @@
 """
 python convertTimeMLToColumns.py datasets/TBAQ-cleaned/TimeBank
+python convertTimeMLToColumns.py datasets/TBAQ-cleaned/AQUAINT
+python convertTimeMLToColumns.py datasets/te3/te3-platinum
 """
 
 import sys

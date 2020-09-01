@@ -230,7 +230,7 @@
 222	president	O	_	['N']	[222]
 223	's	O	_	['N']	[223]
 224	son	O	_	['N']	[224]
-225	met	B-EVENT	OCCURRENCE	['IS_INCLUDED', 'AFTER']	[228, 231]
+225	met	B-EVENT	OCCURRENCE	['IS_INCLUDED', 'AFTER']	[229, 231]
 226	with	O	_	['N']	[226]
 227	Sununu	O	_	['N']	[227]
 228	last	B-TIMEX3	_	['N']	[228]

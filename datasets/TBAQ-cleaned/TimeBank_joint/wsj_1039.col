@@ -14,7 +14,7 @@
 12	decline	B-EVENT	OCCURRENCE	['N']	[12]
 13	in	O	_	['N']	[13]
 14	net	O	_	['N']	[14]
-15	income	B-EVENT	OCCURRENCE	['ENDS']	[18]
+15	income	B-EVENT	OCCURRENCE	['ENDS']	[19]
 16	for	O	_	['N']	[16]
 17	its	O	_	['N']	[17]
 18	third	B-TIMEX3	_	['N']	[18]
@@ -36,7 +36,7 @@
 #doc_wsj_1039.tml_sent_1
 34	Net	O	_	['N']	[34]
 35	income	O	_	['N']	[35]
-36	fell	B-EVENT	OCCURRENCE	['DURING']	[62]
+36	fell	B-EVENT	OCCURRENCE	['DURING']	[66]
 37	37	O	_	['N']	[37]
 38	%	O	_	['N']	[38]
 39	to	O	_	['N']	[39]
@@ -70,7 +70,7 @@
 67	.	O	_	['N']	[67]
 #doc_wsj_1039.tml_sent_2
 68	Revenue	O	_	['N']	[68]
-69	rose	B-EVENT	OCCURRENCE	['DURING']	[62]
+69	rose	B-EVENT	OCCURRENCE	['DURING']	[66]
 70	15	O	_	['N']	[70]
 71	%	O	_	['N']	[71]
 72	to	O	_	['N']	[72]

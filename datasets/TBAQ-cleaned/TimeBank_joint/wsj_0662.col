@@ -135,7 +135,7 @@
 #doc_wsj_0662.tml_sent_7
 127	In	O	_	['N']	[127]
 128	the	B-TIMEX3	_	['N']	[128]
-129	quarter	I-TIMEX3	DATE	['ENDED_BY']	[131]
+129	quarter	I-TIMEX3	DATE	['ENDED_BY']	[132]
 130	ended	O	_	['N']	[130]
 131	July	B-TIMEX3	_	['N']	[131]
 132	31	I-TIMEX3	DATE	['N']	[132]

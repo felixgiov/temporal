@@ -428,7 +428,7 @@ class TimeMLToColumns:
             "-1": "tmx0"
         }
         dict_arr = []
-        col_id_path = 'datasets/TBAQ-cleaned/AQUAINT_COL_ID/' + self.filename[30:]  # change dir for each dataset and index (31 for timebank, 30 for aquaint)
+        col_id_path = 'datasets/TBAQ-cleaned/TimeBank_COL_ID/' + self.filename[31:]  # change dir for each dataset and index (31 for timebank, 30 for aquaint, 26 for te3-platinum)
         with open(col_id_path, "r") as reader:
             for line_id in reader:
                 index = line_id.split("\t")[0]
@@ -437,12 +437,19 @@ class TimeMLToColumns:
                 dict_arr.append(id)
         dict_arr.append("index")
 
+        # change keys with similar value in dict with "O"
+        for i, line_id in enumerate(dict_arr):
+            if line_id != "O" and i < len(dict_arr)-1:
+                if dict_arr[i + 1] == dict_arr[i]:
+                    dict[str(i)] = "O"
+                    #aaaa
+
         for eid in self.tlinks:
             self.num_tlink += len(self.tlinks[eid])
 
         # TEXT
         for sen in self.sentences:
-            line += "#doc_" + self.filename[30:] + "_sent_" + str(sent_id) + "\n" # comment this for COL ID, change index (timebank is 31, aquaint 30)
+            line += "#doc_" + self.filename[31:] + "_sent_" + str(sent_id) + "\n" # comment this for COL ID, change index (timebank is 31, aquaint 30, te3-platinum 26)
             if len(sen) > 0:
                 for (word, event_attr, timex_attr, signal_id, csignal_id) in sen:
                     line += str(tok_id) + "\t" + word # for COL and joint

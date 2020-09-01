@@ -161,7 +161,8 @@ class Trainer:
     model: PreTrainedModel
     args: TrainingArguments
     data_collator: DataCollator
-    timebank_train_dataset: Optional[Dataset]
+    timebank_train_dataset_timex: Optional[Dataset]
+    timebank_train_dataset_event: Optional[Dataset]
     eval_dataset: Optional[Dataset]
     mctaco_train_dataset: Optional[Dataset]
     compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None
@@ -176,7 +177,8 @@ class Trainer:
         model: PreTrainedModel,
         args: TrainingArguments,
         data_collator: Optional[DataCollator] = None,
-        timebank_train_dataset: Optional[Dataset] = None,
+        timebank_train_dataset_timex: Optional[Dataset] = None,
+        timebank_train_dataset_event: Optional[Dataset] = None,
         eval_dataset: Optional[Dataset] = None,
         mctaco_train_dataset: Optional[Dataset] = None,
         compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None,
@@ -199,7 +201,8 @@ class Trainer:
             self.data_collator = data_collator
         else:
             self.data_collator = DefaultDataCollator()
-        self.timebank_train_dataset = timebank_train_dataset
+        self.timebank_train_dataset_timex = timebank_train_dataset_timex
+        self.timebank_train_dataset_event= timebank_train_dataset_event
         self.eval_dataset = eval_dataset
         self.mctaco_train_dataset = mctaco_train_dataset
         self.compute_metrics = compute_metrics
@@ -230,19 +233,19 @@ class Trainer:
             self.model.config.xla_device = True
 
     def get_train_dataloader(self) -> DataLoader:
-        if self.timebank_train_dataset is None:
+        if self.timebank_train_dataset_timex is None:
             raise ValueError("Trainer: training requires a train_dataset.")
         if is_tpu_available():
-            train_sampler = get_tpu_sampler(self.timebank_train_dataset)
+            train_sampler = get_tpu_sampler(self.timebank_train_dataset_timex)
         else:
             train_sampler = (
-                RandomSampler(self.timebank_train_dataset)
+                RandomSampler(self.timebank_train_dataset_timex)
                 if self.args.local_rank == -1
-                else DistributedSampler(self.timebank_train_dataset)
+                else DistributedSampler(self.timebank_train_dataset_timex)
             )
 
         data_loader = DataLoader(
-            self.timebank_train_dataset,
+            self.timebank_train_dataset_timex,
             batch_size=self.args.train_batch_size,
             sampler=train_sampler,
             collate_fn=self.data_collator.collate_batch,
@@ -356,10 +359,13 @@ class Trainer:
 
     def merge_datasets(self) -> DataLoader:
 
-        if self.timebank_train_dataset is None and self.mctaco_train_dataset is None:
+        if self.timebank_train_dataset_timex is None and self.timebank_train_dataset_event is None and self.mctaco_train_dataset is None :
             raise ValueError("Trainer: training requires a train_dataset.")
 
-        concat_dataset = ConcatDataset([self.timebank_train_dataset, self.mctaco_train_dataset])
+        concat_dataset = ConcatDataset([
+            # self.timebank_train_dataset_timex,
+            self.timebank_train_dataset_event,
+            self.mctaco_train_dataset])
 
         data_loader = DataLoader(
             concat_dataset,

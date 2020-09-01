@@ -115,7 +115,7 @@
 #doc_wsj_1035.tml_sent_5
 109	Analysts	O	_	['N']	[109]
 110	had	O	_	['N']	[110]
-111	expected	B-EVENT	I_STATE	['BEFORE', 'MODAL']	[10, 114]
+111	expected	B-EVENT	I_STATE	['BEFORE', 'MODAL']	[12, 114]
 112	Consolidated	O	_	['N']	[112]
 113	to	O	_	['N']	[113]
 114	post	B-EVENT	OCCURRENCE	['N']	[114]

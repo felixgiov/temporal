@@ -43,7 +43,7 @@
 39	,	O	_	['N']	[39]
 40	will	O	_	['N']	[40]
 41	formally	O	_	['N']	[41]
-42	take	B-EVENT	I_ACTION	['SIMULTANEOUS']	[49]
+42	take	B-EVENT	I_ACTION	['SIMULTANEOUS']	[50]
 43	ownership	O	_	['N']	[43]
 44	of	O	_	['N']	[44]
 45	the	O	_	['N']	[45]

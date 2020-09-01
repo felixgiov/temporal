@@ -322,7 +322,7 @@
 308	or	I-TIMEX3	_	['N']	[308]
 309	two	I-TIMEX3	DATE	['N']	[309]
 310	,	O	_	['N']	[310]
-311	save	B-EVENT	OCCURRENCE	['INCLUDES']	[306]
+311	save	B-EVENT	OCCURRENCE	['INCLUDES']	[309]
 312	a	O	_	['N']	[312]
 313	few	O	_	['N']	[313]
 314	more	O	_	['N']	[314]
@@ -373,7 +373,7 @@
 358	liver	O	_	['N']	[358]
 359	transplant	O	_	['N']	[359]
 360	would	O	_	['N']	[360]
-361	accumulate	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[341]
+361	accumulate	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[342]
 362	.	O	_	['N']	[362]
 #doc_VOA19980331.1700.1533.tml_sent_14
 363	If	O	_	['N']	[363]

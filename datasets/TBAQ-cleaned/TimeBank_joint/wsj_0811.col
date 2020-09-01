@@ -33,7 +33,7 @@
 29	which	O	_	['N']	[29]
 30	will	O	_	['N']	[30]
 31	be	O	_	['N']	[31]
-32	due	B-EVENT	OCCURRENCE	['ENDS', 'IS_INCLUDED']	[24, 34]
+32	due	B-EVENT	OCCURRENCE	['ENDS', 'IS_INCLUDED']	[24, 37]
 33	on	O	_	['N']	[33]
 34	Nov.	B-TIMEX3	_	['N']	[34]
 35	1	I-TIMEX3	_	['N']	[35]

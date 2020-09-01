@@ -57,7 +57,7 @@
 52	110	O	_	['N']	[52]
 53	million	O	_	['N']	[53]
 54	in	O	_	['N']	[54]
-55	sales	B-EVENT	OCCURRENCE	['DURING']	[56]
+55	sales	B-EVENT	OCCURRENCE	['DURING']	[57]
 56	last	B-TIMEX3	_	['N']	[56]
 57	year	I-TIMEX3	DATE	['N']	[57]
 58	,	O	_	['N']	[58]

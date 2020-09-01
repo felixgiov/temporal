@@ -77,7 +77,7 @@
 71	will	O	_	['N']	[71]
 72	continue	B-EVENT	ASPECTUAL	['AFTER', 'CONTINUES']	[-1, 74]
 73	to	O	_	['N']	[73]
-74	operate	B-EVENT	OCCURRENCE	['ENDED_BY']	[80]
+74	operate	B-EVENT	OCCURRENCE	['ENDED_BY']	[81]
 75	under	O	_	['N']	[75]
 76	their	O	_	['N']	[76]
 77	current	O	_	['N']	[77]

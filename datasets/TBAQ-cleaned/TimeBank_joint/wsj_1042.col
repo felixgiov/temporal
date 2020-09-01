@@ -84,7 +84,7 @@
 77	warrants	O	_	['N']	[77]
 78	may	O	_	['N']	[78]
 79	be	O	_	['N']	[79]
-80	exercised	B-EVENT	OCCURRENCE	['BEFORE']	[82]
+80	exercised	B-EVENT	OCCURRENCE	['BEFORE']	[83]
 81	until	O	_	['N']	[81]
 82	90	B-TIMEX3	_	['N']	[82]
 83	days	I-TIMEX3	DURATION	['N']	[83]

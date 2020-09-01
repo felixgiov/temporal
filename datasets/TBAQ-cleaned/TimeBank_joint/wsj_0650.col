@@ -24,7 +24,7 @@
 22	convertible	O	_	['N']	[22]
 23	subordinated	O	_	['N']	[23]
 24	debentures	O	_	['N']	[24]
-25	due	B-EVENT	STATE	['ENDED_BY']	[26]
+25	due	B-EVENT	STATE	['ENDED_BY']	[29]
 26	Oct.	B-TIMEX3	_	['N']	[26]
 27	15	I-TIMEX3	_	['N']	[27]
 28	,	I-TIMEX3	_	['N']	[28]

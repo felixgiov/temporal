@@ -141,7 +141,7 @@
 135	is	O	_	['N']	[135]
 136	scheduled	B-EVENT	I_STATE	['MODAL']	[138]
 137	for	O	_	['N']	[137]
-138	completion	B-EVENT	OCCURRENCE	['ENDED_BY', 'TERMINATES']	[140, 120]
+138	completion	B-EVENT	OCCURRENCE	['ENDED_BY', 'TERMINATES']	[141, 120]
 139	by	O	_	['N']	[139]
 140	Dec.	B-TIMEX3	_	['N']	[140]
 141	10	I-TIMEX3	DATE	['N']	[141]

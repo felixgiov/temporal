@@ -1006,39 +1006,59 @@ class ModelArguments:
 #     )
 
 
-def temporalmultitask(model_args: ModelArguments, config: BertConfig, mctaco_model_args: ModelArguments, mctaco_config: BertConfig):
+# def temporalmultitask(model_args: ModelArguments, config: BertConfig, mctaco_model_args: ModelArguments, mctaco_config: BertConfig):
+#
+#     timebank_event_cls_model =  BertForTokenEventClassification.from_pretrained(
+#         model_args.model_name_or_path,
+#         from_tf=bool(".ckpt" in model_args.model_name_or_path),
+#         config=config,
+#         cache_dir=model_args.cache_dir,
+#     )
+#
+#     mctaco_model = BertForSequenceClassification.from_pretrained(
+#         mctaco_model_args.model_name_or_path,
+#         from_tf=bool(".ckpt" in mctaco_model_args.model_name_or_path),
+#         config=mctaco_config,
+#         cache_dir=mctaco_model_args.cache_dir,
+#     )
+#
+#     return timebank_event_cls_model, mctaco_model
 
-    timebank_event_cls_model =  BertForTokenEventClassification.from_pretrained(
-        model_args.model_name_or_path,
-        from_tf=bool(".ckpt" in model_args.model_name_or_path),
-        config=config,
-        cache_dir=model_args.cache_dir,
-    )
 
-    mctaco_model = BertForSequenceClassification.from_pretrained(
-        mctaco_model_args.model_name_or_path,
-        from_tf=bool(".ckpt" in mctaco_model_args.model_name_or_path),
-        config=mctaco_config,
-        cache_dir=mctaco_model_args.cache_dir,
-    )
-
-    return timebank_event_cls_model, mctaco_model
-
-
-def segments_to_index_array(ner_segments):
+def segments_to_index_array_timex(ner_segments):
     per_batch_segments_index = []
     for row in ner_segments:
         per_sentence_segments_index = []
         segments_sequence = []
         for i, val in enumerate(row):
-            # if val == -99 and (row[i - 1] == -99 or row[i - 1] == -98 or row[i - 1] == -97 or row[i - 1] == -96):
             if val == -95 and (row[i - 1] == -95 or row[i - 1] == -94 or row[i - 1] == -93 or row[i - 1] == -92):
                 if segments_sequence:
                     per_sentence_segments_index.append(segments_sequence)
                 segments_sequence = []
                 segments_sequence.append(i)
-            # elif val == -99 or val == -98 or val == -97 or val == -96:
             elif val == -95 or val == -94 or val == -93 or val == -92:
+                    segments_sequence.append(i)
+            else:
+                if segments_sequence:
+                    per_sentence_segments_index.append(segments_sequence)
+                segments_sequence = []
+        per_batch_segments_index.append(per_sentence_segments_index)
+
+    return per_batch_segments_index
+
+
+def segments_to_index_array_event(ner_segments):
+    per_batch_segments_index = []
+    for row in ner_segments:
+        per_sentence_segments_index = []
+        segments_sequence = []
+        for i, val in enumerate(row):
+            if val == -99 and (row[i - 1] == -99 or row[i - 1] == -98 or row[i - 1] == -97 or row[i - 1] == -96):
+                if segments_sequence:
+                    per_sentence_segments_index.append(segments_sequence)
+                segments_sequence = []
+                segments_sequence.append(i)
+            elif val == -99 or val == -98 or val == -97 or val == -96:
                     segments_sequence.append(i)
             else:
                 if segments_sequence:
@@ -1058,12 +1078,9 @@ def segments_to_index_array(ner_segments):
 class BertForTemporalMultitask(BertPreTrainedModel):
 
     torch.set_printoptions(edgeitems=64)
-    ner_segments = []
     batch_size = 16
-    tb_cls_num_labels = 4
-
-    def set_ner_segments(self, ner_segments):
-        self.ner_segments = ner_segments
+    tb_timex_cls_num_labels = 4
+    tb_event_cls_num_labels = 7
 
     def set_batch_size(self, batch_size):
         self.batch_size = batch_size
@@ -1075,7 +1092,8 @@ class BertForTemporalMultitask(BertPreTrainedModel):
         self.bert = BertModel(config)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
         self.classifier = nn.Linear(config.hidden_size, config.num_labels)
-        self.timebank_event_classifier = nn.Linear(config.hidden_size, self.tb_cls_num_labels)
+        self.timebank_timex_classifier = nn.Linear(config.hidden_size, self.tb_timex_cls_num_labels)
+        self.timebank_event_classifier = nn.Linear(config.hidden_size, self.tb_event_cls_num_labels)
 
         self.init_weights()
 
@@ -1090,6 +1108,7 @@ class BertForTemporalMultitask(BertPreTrainedModel):
         inputs_embeds=None,
         labels=None,
         ner_token_ids=None,
+        task_name=None
     ):
 
         outputs = self.bert(
@@ -1101,12 +1120,10 @@ class BertForTemporalMultitask(BertPreTrainedModel):
             inputs_embeds=inputs_embeds,
         )
 
-        # if task_name == [21]:
-        # print(len(list(labels.shape))) // problem in eval since len list is 2
-        # print(labels.shape)
-        # print(labels)
-        # print(input_ids)
-        if len(list(labels.shape)) == 1:
+        # if len(list(labels.shape)) == 1:
+        # print("===== TASK NAME =====")
+        # print(task_name)
+        if task_name[0] == 1:
             # print("MCTACO")
             pooled_output = outputs[1]
             pooled_output = self.dropout(pooled_output)
@@ -1124,20 +1141,17 @@ class BertForTemporalMultitask(BertPreTrainedModel):
                     loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
                 outputs = (loss,) + outputs
 
-        else:
-            # print("TIMEBANK")
-            # print(ner_token_ids)
-            segments = segments_to_index_array(ner_token_ids)
+        elif task_name[0] == 2:
+            # print("TIMEBANK Time Expression Cls")
+            segments = segments_to_index_array_timex(ner_token_ids)
             sequence_output = outputs[0]
             sequence_output = self.dropout(sequence_output)
 
-            # segments_index = self.ner_segments[index]
             pooled_seq_output_array = torch.zeros(1, 768)
             pooled_seq_output_array = pooled_seq_output_array.to(device='cuda')
             pooled_seq_output = torch.zeros(1, 768)
             pooled_seq_output = pooled_seq_output.to(device='cuda')
 
-            # print(segments)
             for row_id in range(self.batch_size):
                 if segments[row_id]:
                     for seg in segments[row_id]:
@@ -1147,34 +1161,61 @@ class BertForTemporalMultitask(BertPreTrainedModel):
                             pooled_seq_output += sequence_output[row_id][idx]
                         pooled_seq_output = pooled_seq_output / len(seg)
                         pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
-                        # pooled_seq_output_array.append(pooled_seq_output)
 
             pooled_seq_output_array = pooled_seq_output_array[1:].unsqueeze(dim=0)
-            logits = self.timebank_event_classifier(pooled_seq_output_array)
+            logits = self.timebank_timex_classifier(pooled_seq_output_array)
             outputs = (logits,) + outputs[2:]  # add hidden states and attention if they are here
-            # print(labels.shape)
-            # print(labels)
+
             if labels is not None:
                 loss_fct = CrossEntropyLoss()
                 # Only keep active parts of the loss
-                # active_loss = attention_mask.view(-1) == 1
-                # print(len(active_loss))
-                # print(active_loss)
-                active_logits = logits.view(-1, self.tb_cls_num_labels)
-                # print(active_logits.shape)
-                # print(active_logits)
-                # active_labels = torch.where(
-                #     active_loss, labels.view(-1), torch.tensor(loss_fct.ignore_index).type_as(labels)
-                # )
+                active_logits = logits.view(-1, self.tb_timex_cls_num_labels)
                 active_labels = []
                 for lab in labels.view(-1):
                     if lab != -100:
                         active_labels.append(lab.item())
                 active_labels = torch.tensor(active_labels).type_as(labels)
                 active_labels = active_labels.to(device='cuda')
-                # print(active_labels.shape)
-                # print(active_labels)
                 loss = loss_fct(active_logits, active_labels)
                 outputs = (loss,) + outputs
+
+        elif task_name[0] == 3:
+            # print("TIMEBANK Event Cls")
+            segments = segments_to_index_array_event(ner_token_ids)
+            sequence_output = outputs[0]
+            sequence_output = self.dropout(sequence_output)
+
+            pooled_seq_output_array = torch.zeros(1, 768)
+            pooled_seq_output_array = pooled_seq_output_array.to(device='cuda')
+            pooled_seq_output = torch.zeros(1, 768)
+            pooled_seq_output = pooled_seq_output.to(device='cuda')
+
+            for row_id in range(self.batch_size):
+                if segments[row_id]:
+                    for seg in segments[row_id]:
+                        pooled_seq_output = torch.zeros(1, 768)
+                        pooled_seq_output = pooled_seq_output.to(device='cuda')
+                        for idx in seg:
+                            pooled_seq_output += sequence_output[row_id][idx]
+                        pooled_seq_output = pooled_seq_output / len(seg)
+                        pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
+
+            pooled_seq_output_array = pooled_seq_output_array[1:].unsqueeze(dim=0)
+            logits = self.timebank_event_classifier(pooled_seq_output_array)
+            outputs = (logits,) + outputs[2:]  # add hidden states and attention if they are here
+
+            if labels is not None:
+                loss_fct = CrossEntropyLoss()
+                # Only keep active parts of the loss
+                active_logits = logits.view(-1, self.tb_event_cls_num_labels)
+                active_labels = []
+                for lab in labels.view(-1):
+                    if lab != -100:
+                        active_labels.append(lab.item())
+                active_labels = torch.tensor(active_labels).type_as(labels)
+                active_labels = active_labels.to(device='cuda')
+                loss = loss_fct(active_logits, active_labels)
+                outputs = (loss,) + outputs
+
 
         return outputs  # (loss), scores, (hidden_states), (attentions)

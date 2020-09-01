@@ -54,9 +54,9 @@
 50	been	O	_	['N']	[50]
 51	set	B-EVENT	I_ACTION	['BEFORE', 'MODAL']	[7, 53]
 52	to	O	_	['N']	[52]
-53	expire	B-EVENT	OCCURRENCE	['SIMULTANEOUS']	[54]
+53	expire	B-EVENT	OCCURRENCE	['SIMULTANEOUS']	[55]
 54	Nov.	B-TIMEX3	_	['N']	[54]
-55	6	I-TIMEX3	DATE	['BEFORE']	[20]
+55	6	I-TIMEX3	DATE	['BEFORE']	[24]
 56	.	O	_	['N']	[56]
 #doc_wsj_0152.tml_sent_3
 57	Dow	O	_	['N']	[57]

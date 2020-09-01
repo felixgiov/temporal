@@ -59,10 +59,12 @@ class InputFeatures:
     token_type_ids: Optional[List[int]] = None
     label_ids: Optional[List[int]] = None
     ner_token_ids: Optional[List[int]] = None
+    task_name : Optional[int] = None
 
 
 class Split(Enum):
     train = "train"
+    train_event = "train_event"
     dev = "dev"
     test = "test"
 
@@ -89,6 +91,7 @@ if is_torch_available():
             tokenizer: PreTrainedTokenizer,
             labels: List[str],
             model_type: str,
+            task_name: int,
             max_seq_length: Optional[int] = None,
             overwrite_cache=False,
             mode: Split = Split.train,
@@ -116,6 +119,7 @@ if is_torch_available():
                         max_seq_length,
                         tokenizer,
                         data_dir,
+                        task_name,
                         cls_token_at_end=bool(model_type in ["xlnet"]),
                         # xlnet has a cls token at the end
                         cls_token=tokenizer.cls_token,
@@ -261,19 +265,19 @@ def read_examples_from_file(data_dir, mode: Union[Split, str]) -> List[InputExam
     return examples
 
 
-def segments_to_index_array(ner_segments_row):
-    per_sentence_segments_index = []
-    segments_sequence = []
-    for i, val in enumerate(ner_segments_row):
-        if val != 0:
-            if val == -99 or val == -98:
-                segments_sequence.append(i)
-        else:
-            if segments_sequence:
-                per_sentence_segments_index.append(segments_sequence)
-            segments_sequence = []
-
-    return per_sentence_segments_index
+# def segments_to_index_array(ner_segments_row):
+#     per_sentence_segments_index = []
+#     segments_sequence = []
+#     for i, val in enumerate(ner_segments_row):
+#         if val != 0:
+#             if val == -99 or val == -98:
+#                 segments_sequence.append(i)
+#         else:
+#             if segments_sequence:
+#                 per_sentence_segments_index.append(segments_sequence)
+#             segments_sequence = []
+#
+#     return per_sentence_segments_index
 
 
 def convert_examples_to_features(
@@ -282,6 +286,7 @@ def convert_examples_to_features(
     max_seq_length: int,
     tokenizer: PreTrainedTokenizer,
     data_dir: str,
+    task_name: int,
     cls_token_at_end=False,
     cls_token="[CLS]",
     cls_token_segment_id=1,
@@ -313,6 +318,12 @@ def convert_examples_to_features(
         tokens = []
         label_ids = []
         ner_segment_ids = []
+        labels = []
+
+        if task_name == 2:
+            labels = ["DATE", "TIME", "DURATION", "SET"]
+        elif task_name == 3:
+            labels = ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]
 
         for word, label, ner in zip(example.words, example.labels, example.ner):
             word_tokens = tokenizer.tokenize(word)
@@ -322,7 +333,7 @@ def convert_examples_to_features(
                 tokens.extend(word_tokens)
                 # Use the real label id for the first token of the word, and padding ids for the remaining tokens
                 # if label in ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]:
-                if label in ["DATE", "TIME", "DURATION", "SET"]:
+                if label in labels:
                     label_ids.extend([label_map[label]] + [pad_token_label_id] * (len(word_tokens) - 1))
                 else:
                     label_ids.extend([pad_token_label_id] * (len(word_tokens)))
@@ -407,19 +418,6 @@ def convert_examples_to_features(
             segment_ids += [pad_token_segment_id] * padding_length
             label_ids += [pad_token_label_id] * padding_length
 
-        # print(len(tokens))
-        # print(tokens)
-        # print(len(input_ids))
-        # print(input_ids)
-        # print(len(input_mask))
-        # print(input_mask)
-        # print(len(ner_segment_ids))
-        # print(ner_segment_ids)
-        # print(len(segment_ids))
-        # print(segment_ids)
-        # print(len(label_ids))
-        # print(label_ids)
-
         assert len(input_ids) == max_seq_length
         assert len(input_mask) == max_seq_length
         assert len(ner_segment_ids) == max_seq_length
@@ -439,106 +437,92 @@ def convert_examples_to_features(
         if "token_type_ids" not in tokenizer.model_input_names:
             segment_ids = None
 
-        # ner_segment_arr.append(" ".join([str(x) for x in ner_segment_ids]))
-
-        # ner_event_segment_index_array = segments_to_index_array(ner_segment_ids)
-        # ner_segment_arr.append(ner_event_segment_index_array)
-
         features.append(
             InputFeatures(
                 input_ids=input_ids,
                 attention_mask=input_mask,
                 token_type_ids=segment_ids,
                 label_ids=label_ids,
-                ner_token_ids=ner_segment_ids
+                ner_token_ids=ner_segment_ids,
+                task_name=task_name,
             )
         )
-
-        # with open(f"{data_dir}/{example.guid[:3]}_ner_segments.txt", "w") as ner_writer:
-        #     ner_writer.write("\n".join([str(x) for x in ner_segment_arr]))
-
-        # with open(f"{data_dir}/{example.guid[:3]}_ner_events_segments_to_index_array.txt", "w") as ner_writer:
-        #     ner_writer.write("\n".join([str(x) for x in ner_segment_arr]))
 
     return features
 
 
-def extract_ner_segments(
-    examples: List[InputExample],
-    max_seq_length: int,
-    tokenizer: PreTrainedTokenizer,
-    cls_token_at_end=False,
-    cls_token="[CLS]",
-    sep_token="[SEP]",
-    sep_token_extra=False,
-    pad_on_left=False,
-) -> List[List[List[int]]]:
-
-    ner_segment_arr = []
-    for (ex_index, example) in enumerate(examples):
-
-        tokens = []
-        ner_segment_ids = []
-
-        for word, label, ner in zip(example.words, example.labels, example.ner):
-            word_tokens = tokenizer.tokenize(word)
-
-            # bert-base-multilingual-cased sometimes output "nothing ([]) when calling tokenize with just a space.
-            if len(word_tokens) > 0:
-                tokens.extend(word_tokens)
-
-                if ner == "B-EVENT":
-                    ner_segment_ids.extend([-99] + [-98] * (len(word_tokens) - 1))
-                elif ner == "I-EVENT":
-                    ner_segment_ids.extend([-97] + [-96] * (len(word_tokens) - 1))
-                elif ner == "B-TIMEX3":
-                    ner_segment_ids.extend([-95] + [-94] * (len(word_tokens) - 1))
-                elif ner == "I-TIMEX3":
-                    ner_segment_ids.extend([-93] + [-92] * (len(word_tokens) - 1))
-                else:
-                    ner_segment_ids.extend([0] + [0] * (len(word_tokens) - 1))
-
-        # Account for [CLS] and [SEP] with "- 2" and with "- 3" for RoBERTa.
-        special_tokens_count = tokenizer.num_special_tokens_to_add()
-        if len(tokens) > max_seq_length - special_tokens_count:
-            tokens = tokens[: (max_seq_length - special_tokens_count)]
-            ner_segment_ids = ner_segment_ids[: (max_seq_length - special_tokens_count)]
-
-
-        tokens += [sep_token]
-        ner_segment_ids += [0]
-
-        if sep_token_extra:
-            # roberta uses an extra separator b/w pairs of sentences
-            tokens += [sep_token]
-            ner_segment_ids += [0]
-
-        if cls_token_at_end:
-            tokens += [cls_token]
-            ner_segment_ids += [0]
-        else:
-            tokens = [cls_token] + tokens
-            ner_segment_ids = [0] + ner_segment_ids
-
-        input_ids = tokenizer.convert_tokens_to_ids(tokens)
-
-        # Zero-pad up to the sequence length.
-        padding_length = max_seq_length - len(input_ids)
-
-        if pad_on_left:
-            ner_segment_ids = ([0] * padding_length) + ner_segment_ids
-        else:
-            ner_segment_ids += [0] * padding_length
-
-        assert len(ner_segment_ids) == max_seq_length
-
-        # ner_segment_arr.append(" ".join([str(x) for x in ner_segment_ids]))
-        ner_segment_arr.append(segments_to_index_array(ner_segment_ids))
-
-        # with open(f"{example.guid[:3]}_ner_segments.txt", "w") as ner_writer:
-        #     ner_writer.write("\n".join([str(x) for x in ner_segment_arr]))
-
-    return ner_segment_arr
+# def extract_ner_segments(
+#     examples: List[InputExample],
+#     max_seq_length: int,
+#     tokenizer: PreTrainedTokenizer,
+#     cls_token_at_end=False,
+#     cls_token="[CLS]",
+#     sep_token="[SEP]",
+#     sep_token_extra=False,
+#     pad_on_left=False,
+# ) -> List[List[List[int]]]:
+#
+#     ner_segment_arr = []
+#     for (ex_index, example) in enumerate(examples):
+#
+#         tokens = []
+#         ner_segment_ids = []
+#
+#         for word, label, ner in zip(example.words, example.labels, example.ner):
+#             word_tokens = tokenizer.tokenize(word)
+#
+#             # bert-base-multilingual-cased sometimes output "nothing ([]) when calling tokenize with just a space.
+#             if len(word_tokens) > 0:
+#                 tokens.extend(word_tokens)
+#
+#                 if ner == "B-EVENT":
+#                     ner_segment_ids.extend([-99] + [-98] * (len(word_tokens) - 1))
+#                 elif ner == "I-EVENT":
+#                     ner_segment_ids.extend([-97] + [-96] * (len(word_tokens) - 1))
+#                 elif ner == "B-TIMEX3":
+#                     ner_segment_ids.extend([-95] + [-94] * (len(word_tokens) - 1))
+#                 elif ner == "I-TIMEX3":
+#                     ner_segment_ids.extend([-93] + [-92] * (len(word_tokens) - 1))
+#                 else:
+#                     ner_segment_ids.extend([0] + [0] * (len(word_tokens) - 1))
+#
+#         # Account for [CLS] and [SEP] with "- 2" and with "- 3" for RoBERTa.
+#         special_tokens_count = tokenizer.num_special_tokens_to_add()
+#         if len(tokens) > max_seq_length - special_tokens_count:
+#             tokens = tokens[: (max_seq_length - special_tokens_count)]
+#             ner_segment_ids = ner_segment_ids[: (max_seq_length - special_tokens_count)]
+#
+#
+#         tokens += [sep_token]
+#         ner_segment_ids += [0]
+#
+#         if sep_token_extra:
+#             # roberta uses an extra separator b/w pairs of sentences
+#             tokens += [sep_token]
+#             ner_segment_ids += [0]
+#
+#         if cls_token_at_end:
+#             tokens += [cls_token]
+#             ner_segment_ids += [0]
+#         else:
+#             tokens = [cls_token] + tokens
+#             ner_segment_ids = [0] + ner_segment_ids
+#
+#         input_ids = tokenizer.convert_tokens_to_ids(tokens)
+#
+#         # Zero-pad up to the sequence length.
+#         padding_length = max_seq_length - len(input_ids)
+#
+#         if pad_on_left:
+#             ner_segment_ids = ([0] * padding_length) + ner_segment_ids
+#         else:
+#             ner_segment_ids += [0] * padding_length
+#
+#         assert len(ner_segment_ids) == max_seq_length
+#
+#         ner_segment_arr.append(segments_to_index_array(ner_segment_ids))
+#
+#     return ner_segment_arr
 
 
 # def get_labels(path: str) -> List[str]:
@@ -549,18 +533,16 @@ def extract_ner_segments(
 #             labels = ["_"] + labels
 #         return labels
 #     else:
-#         # return ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]
 #         return ["ASPECTUAL", "DATE", "DURATION", "I_ACTION", "I_STATE", "OCCURRENCE", "PERCEPTION", "REPORTING", "SET", "STATE", "TIME", "_"]
 
-
-def get_labels(path: str) -> List[str]:
-    if path:
-        with open(path, "r") as f:
-            labels = f.read().splitlines()
-        return labels
-    else:
-        return ["DATE", "TIME", "DURATION", "SET"]
-        # return ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]
+# def get_labels(path: str) -> List[str]:
+#     if path:
+#         with open(path, "r") as f:
+#             labels = f.read().splitlines()
+#         return labels
+#     else:
+#         return ["DATE", "TIME", "DURATION", "SET"]
+#         # return ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]
 
 
 # def get_labels(path: str) -> List[str]:
@@ -572,3 +554,10 @@ def get_labels(path: str) -> List[str]:
 #         return labels
 #     else:
 #         return ["B-EVENT", "B-TIMEX3", "I-EVENT", "I-TIMEX3", "O"]
+
+def get_timex_labels() -> List[str]:
+        return ["DATE", "TIME", "DURATION", "SET"]
+
+def get_event_labels() -> List[str]:
+        return ["OCCURRENCE", "PERCEPTION", "REPORTING", "ASPECTUAL", "STATE", "I_STATE", "I_ACTION"]
+

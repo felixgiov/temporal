@@ -17,7 +17,7 @@
 15	next	B-TIMEX3	_	['N']	[15]
 16	week	I-TIMEX3	DATE	['N']	[16]
 17	's	O	_	['N']	[17]
-18	talks	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[15]
+18	talks	B-EVENT	OCCURRENCE	['IS_INCLUDED']	[16]
 19	in	O	_	['N']	[19]
 20	London	O	_	['N']	[20]
 21	.	O	_	['N']	[21]

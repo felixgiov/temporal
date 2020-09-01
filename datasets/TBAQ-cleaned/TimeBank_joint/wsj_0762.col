@@ -83,7 +83,7 @@
 78	earnings	O	_	['N']	[78]
 79	and	O	_	['N']	[79]
 80	cash	O	_	['N']	[80]
-81	flow	B-EVENT	OCCURRENCE	['SIMULTANEOUS']	[83]
+81	flow	B-EVENT	OCCURRENCE	['SIMULTANEOUS']	[85]
 82	for	O	_	['N']	[82]
 83	1990	B-TIMEX3	_	['N']	[83]
 84	and	I-TIMEX3	_	['N']	[84]

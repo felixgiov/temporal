@@ -64,7 +64,7 @@
 61	.	O	_	['N']	[61]
 #doc_APW19980227.0487.tml_sent_2
 62	She	O	_	['N']	[62]
-63	took	B-EVENT	OCCURRENCE	['IDENTITY', 'DURING', 'IS_INCLUDED']	[5, 67, 71]
+63	took	B-EVENT	OCCURRENCE	['IDENTITY', 'DURING', 'IS_INCLUDED']	[5, 70, 71]
 64	the	O	_	['N']	[64]
 65	stand	O	_	['N']	[65]
 66	for	O	_	['N']	[66]
@@ -95,7 +95,7 @@
 90	the	O	_	['N']	[90]
 91	November	B-TIMEX3	_	['N']	[91]
 92	1995	I-TIMEX3	DATE	['N']	[92]
-93	assassination	B-EVENT	OCCURRENCE	['IS_INCLUDED', 'BEFORE']	[91, 85]
+93	assassination	B-EVENT	OCCURRENCE	['IS_INCLUDED', 'BEFORE']	[92, 85]
 94	of	O	_	['N']	[94]
 95	Rabin	O	_	['N']	[95]
 96	at	O	_	['N']	[96]
