@@ -702,134 +702,190 @@ class RobertaForQuestionAnswering(BertPreTrainedModel):
 torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
 
-class VerbNet(nn.Module):
-    def __init__(self, vocab_size, hidden_ratio=0.5, emb_size=200, num_layers=1):
-        super(VerbNet, self).__init__()
-        self.emb_size = emb_size
-        self.emb_layer = nn.Embedding(vocab_size, self.emb_size)
-        self.fc1 = nn.Linear(self.emb_size*2, int(self.emb_size*2*hidden_ratio))
-        self.num_layers = num_layers
-        if num_layers == 1:
-            self.fc2 = nn.Linear(int(self.emb_size*2*hidden_ratio), 1)
-        else:
-            self.fc2 = nn.Linear(int(self.emb_size*2*hidden_ratio), int(self.emb_size*hidden_ratio))
-            self.fc3 = nn.Linear(int(self.emb_size*hidden_ratio), 1)
-        self.is_training = True
-    def forward(self, x):
-        x_emb = self.emb_layer(x)
-        fullX = torch.cat((x_emb[:,0,:], x_emb[:,1,:]), dim=1)
-        layer1 = F.relu(self.fc1(F.dropout(fullX, p=0.3, training=self.is_training)))
-        if self.num_layers == 1:
-            return torch.sigmoid(self.fc2(layer1))
-        layer2 = F.relu(self.fc2(F.dropout(layer1, p=0.3, training=self.is_training)))
-        layer3 = torch.sigmoid(self.fc3(layer2))
-        return layer3
-    def retrieveEmbeddings(self,x):
-        x_emb = self.emb_layer(x)
-        fullX = torch.cat((x_emb[:, 0, :], x_emb[:, 1, :]), dim=1)
-        layer1 = F.relu(self.fc1(fullX))
-        if self.num_layers == 1:
-            return layer1
-        layer2 = F.relu(self.fc2(layer1))
-        return torch.cat((layer1,layer2),1)
+# class VerbNet(nn.Module):
+#     def __init__(self, vocab_size, hidden_ratio=0.5, emb_size=200, num_layers=1):
+#         super(VerbNet, self).__init__()
+#         self.emb_size = emb_size
+#         self.emb_layer = nn.Embedding(vocab_size, self.emb_size)
+#         self.fc1 = nn.Linear(self.emb_size*2, int(self.emb_size*2*hidden_ratio))
+#         self.num_layers = num_layers
+#         if num_layers == 1:
+#             self.fc2 = nn.Linear(int(self.emb_size*2*hidden_ratio), 1)
+#         else:
+#             self.fc2 = nn.Linear(int(self.emb_size*2*hidden_ratio), int(self.emb_size*hidden_ratio))
+#             self.fc3 = nn.Linear(int(self.emb_size*hidden_ratio), 1)
+#         self.is_training = True
+#     def forward(self, x):
+#         x_emb = self.emb_layer(x)
+#         fullX = torch.cat((x_emb[:,0,:], x_emb[:,1,:]), dim=1)
+#         layer1 = F.relu(self.fc1(F.dropout(fullX, p=0.3, training=self.is_training)))
+#         if self.num_layers == 1:
+#             return torch.sigmoid(self.fc2(layer1))
+#         layer2 = F.relu(self.fc2(F.dropout(layer1, p=0.3, training=self.is_training)))
+#         layer3 = torch.sigmoid(self.fc3(layer2))
+#         return layer3
+#     def retrieveEmbeddings(self,x):
+#         x_emb = self.emb_layer(x)
+#         fullX = torch.cat((x_emb[:, 0, :], x_emb[:, 1, :]), dim=1)
+#         layer1 = F.relu(self.fc1(fullX))
+#         if self.num_layers == 1:
+#             return layer1
+#         layer2 = F.relu(self.fc2(layer1))
+#         return torch.cat((layer1,layer2),1)
+#
+#
+# class lstm_siam(nn.Module):  # add categorical emb to two places instead of one
+#     def __init__(self, params,emb_cache,bigramGetter,granularity=0.05, common_sense_emb_dim=64,bidirectional=False,lowerCase=False):
+#         super(lstm_siam, self).__init__()
+#         self.params = params
+#         self.embedding_dim = params.get('embedding_dim')
+#         self.lstm_hidden_dim = params.get('lstm_hidden_dim',64)
+#         self.nn_hidden_dim = params.get('nn_hidden_dim',32)
+#         self.bigramStats_dim = params.get('bigramStats_dim')
+#         self.emb_cache = emb_cache
+#         self.bigramGetter = bigramGetter
+#         self.output_dim = params.get('output_dim',4)
+#         self.batch_size = params.get('batch_size',1)
+#         self.granularity = granularity
+#         self.common_sense_emb_dim = common_sense_emb_dim
+#         self.common_sense_emb = nn.Embedding(int(1.0/self.granularity)*self.bigramStats_dim,self.common_sense_emb_dim)
+#         self.bidirectional = bidirectional
+#         self.lowerCase = lowerCase
+#         if self.bidirectional:
+#             self.lstm = nn.LSTM(self.embedding_dim, self.lstm_hidden_dim // 2,\
+#                                 num_layers=1, bidirectional=True)
+#         else:
+#             self.lstm = nn.LSTM(self.embedding_dim, self.lstm_hidden_dim,\
+#                                 num_layers=1, bidirectional=False)
+#         self.h_lstm2h_nn = nn.Linear(2*self.lstm_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.nn_hidden_dim)
+#         self.h_nn2o = nn.Linear(self.nn_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.output_dim)
+#         self.init_hidden()
+#     def reset_parameters(self):
+#         self.lstm.reset_parameters()
+#         self.h_lstm2h_nn.reset_parameters()
+#         self.h_nn2o.reset_parameters()
+#     def init_hidden(self):
+#         if self.bidirectional:
+#             self.hidden = (torch.randn(2 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim // 2),\
+#                            torch.randn(2 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim // 2))
+#         else:
+#             self.hidden = (torch.randn(1 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim),\
+#                            torch.randn(1 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim))
+#
+#     def forward(self, temprel):
+#         self.init_hidden()
+#
+#         # common sense embeddings
+#         bigramstats = self.bigramGetter.getBigramStatsFromTemprel(temprel)
+#         common_sense_emb = self.common_sense_emb(torch.cuda.LongTensor(
+#             [min(int(1.0 / self.granularity) - 1, int(bigramstats[0][0] / self.granularity))])).view(1, -1)
+#         for i in range(1, self.bigramStats_dim):
+#             tmp = self.common_sense_emb(torch.cuda.LongTensor([(i - 1) * int(1.0 / self.granularity) + min(
+#                 int(1.0 / self.granularity) - 1, int(bigramstats[0][i] / self.granularity))])).view(1, -1)
+#             common_sense_emb = torch.cat((common_sense_emb, tmp), 1)
+#
+#         if not self.lowerCase:
+#             embeds = self.emb_cache.retrieveEmbeddings(tokList=temprel.token).cuda()
+#         else:
+#             embeds = self.emb_cache.retrieveEmbeddings(tokList=[x.lower() for x in temprel.token]).cuda()
+#         embeds = embeds.view(temprel.length,self.batch_size,-1)
+#         lstm_out, self.hidden = self.lstm(embeds, self.hidden)
+#         lstm_out = lstm_out.view(embeds.size()[0], self.batch_size, self.lstm_hidden_dim)
+#         lstm_out = lstm_out[temprel.event_ix][:][:]
+#         h_nn = F.relu(self.h_lstm2h_nn(torch.cat((lstm_out.view(1,-1),common_sense_emb),1)))
+#         output = self.h_nn2o(torch.cat((h_nn,common_sense_emb),1))
+#         return output
+
+def segments_to_index_array_timex(ner_segments):
+    per_batch_segments_index = []
+    for row in ner_segments:
+        per_sentence_segments_index = []
+        segments_sequence = []
+        for i, val in enumerate(row):
+            if val == -95 and (row[i - 1] == -95 or row[i - 1] == -94 or row[i - 1] == -93 or row[i - 1] == -92):
+                if segments_sequence:
+                    per_sentence_segments_index.append(segments_sequence)
+                segments_sequence = []
+                segments_sequence.append(i)
+            elif val == -95 or val == -94 or val == -93 or val == -92:
+                    segments_sequence.append(i)
+            else:
+                if segments_sequence:
+                    per_sentence_segments_index.append(segments_sequence)
+                segments_sequence = []
+        per_batch_segments_index.append(per_sentence_segments_index)
+
+    return per_batch_segments_index
 
 
-class lstm_siam(nn.Module):  # add categorical emb to two places instead of one
-    def __init__(self, params,emb_cache,bigramGetter,granularity=0.05, common_sense_emb_dim=64,bidirectional=False,lowerCase=False):
-        super(lstm_siam, self).__init__()
-        self.params = params
-        self.embedding_dim = params.get('embedding_dim')
-        self.lstm_hidden_dim = params.get('lstm_hidden_dim',64)
-        self.nn_hidden_dim = params.get('nn_hidden_dim',32)
-        self.bigramStats_dim = params.get('bigramStats_dim')
-        self.emb_cache = emb_cache
-        self.bigramGetter = bigramGetter
-        self.output_dim = params.get('output_dim',4)
-        self.batch_size = params.get('batch_size',1)
-        self.granularity = granularity
-        self.common_sense_emb_dim = common_sense_emb_dim
-        self.common_sense_emb = nn.Embedding(int(1.0/self.granularity)*self.bigramStats_dim,self.common_sense_emb_dim)
-        self.bidirectional = bidirectional
-        self.lowerCase = lowerCase
-        if self.bidirectional:
-            self.lstm = nn.LSTM(self.embedding_dim, self.lstm_hidden_dim // 2,\
-                                num_layers=1, bidirectional=True)
-        else:
-            self.lstm = nn.LSTM(self.embedding_dim, self.lstm_hidden_dim,\
-                                num_layers=1, bidirectional=False)
-        self.h_lstm2h_nn = nn.Linear(2*self.lstm_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.nn_hidden_dim)
-        self.h_nn2o = nn.Linear(self.nn_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.output_dim)
-        self.init_hidden()
-    def reset_parameters(self):
-        self.lstm.reset_parameters()
-        self.h_lstm2h_nn.reset_parameters()
-        self.h_nn2o.reset_parameters()
-    def init_hidden(self):
-        if self.bidirectional:
-            self.hidden = (torch.randn(2 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim // 2),\
-                           torch.randn(2 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim // 2))
-        else:
-            self.hidden = (torch.randn(1 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim),\
-                           torch.randn(1 * self.lstm.num_layers, self.batch_size, self.lstm_hidden_dim))
+def segments_to_index_array_event(ner_segments):
+    per_batch_segments_index = []
+    for row in ner_segments:
+        per_sentence_segments_index = []
+        segments_sequence = []
+        for i, val in enumerate(row):
+            if val == -99 and (row[i - 1] == -99 or row[i - 1] == -98 or row[i - 1] == -97 or row[i - 1] == -96):
+                if segments_sequence:
+                    per_sentence_segments_index.append(segments_sequence)
+                segments_sequence = []
+                segments_sequence.append(i)
+            elif val == -99 or val == -98 or val == -97 or val == -96:
+                    segments_sequence.append(i)
+            else:
+                if segments_sequence:
+                    per_sentence_segments_index.append(segments_sequence)
+                segments_sequence = []
+        per_batch_segments_index.append(per_sentence_segments_index)
 
-    def forward(self, temprel):
-        self.init_hidden()
-
-        # common sense embeddings
-        bigramstats = self.bigramGetter.getBigramStatsFromTemprel(temprel)
-        common_sense_emb = self.common_sense_emb(torch.cuda.LongTensor(
-            [min(int(1.0 / self.granularity) - 1, int(bigramstats[0][0] / self.granularity))])).view(1, -1)
-        for i in range(1, self.bigramStats_dim):
-            tmp = self.common_sense_emb(torch.cuda.LongTensor([(i - 1) * int(1.0 / self.granularity) + min(
-                int(1.0 / self.granularity) - 1, int(bigramstats[0][i] / self.granularity))])).view(1, -1)
-            common_sense_emb = torch.cat((common_sense_emb, tmp), 1)
-
-        if not self.lowerCase:
-            embeds = self.emb_cache.retrieveEmbeddings(tokList=temprel.token).cuda()
-        else:
-            embeds = self.emb_cache.retrieveEmbeddings(tokList=[x.lower() for x in temprel.token]).cuda()
-        embeds = embeds.view(temprel.length,self.batch_size,-1)
-        lstm_out, self.hidden = self.lstm(embeds, self.hidden)
-        lstm_out = lstm_out.view(embeds.size()[0], self.batch_size, self.lstm_hidden_dim)
-        lstm_out = lstm_out[temprel.event_ix][:][:]
-        h_nn = F.relu(self.h_lstm2h_nn(torch.cat((lstm_out.view(1,-1),common_sense_emb),1)))
-        output = self.h_nn2o(torch.cat((h_nn,common_sense_emb),1))
-        return output
-
+    return per_batch_segments_index
 
 class RobertaForTemporalMulti(BertPreTrainedModel):
     config_class = RobertaConfig
     pretrained_model_archive_map = ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP
     base_model_prefix = "roberta"
 
-    def __init__(self, config, params, bigramGetter):
+    def set_batch_size(self, batch_size):
+        self.batch_size = batch_size
+
+    def __init__(self, config):
         super().__init__(config)
+        self.batch_size = 8
         self.num_labels = config.num_labels
         self.num_labels_matres = 4
+        self.tb_timex_cls_num_labels = 4
+        self.tb_event_cls_num_labels = 7
+        self.tb_duration_cls_num_labels = 2
 
         self.roberta = RobertaModel(config)
         self.classifier = RobertaClassificationHead(config)
 
-        self.params = params
-        self.embedding_dim = params.get('embedding_dim', 1024)
-        self.lstm_hidden_dim = params.get('lstm_hidden_dim', 64)
-        self.nn_hidden_dim = params.get('nn_hidden_dim', 64)
-        self.bigramStats_dim = params.get('bigramStats_dim', 2)
-        self.bigramGetter = bigramGetter
-        self.output_dim = params.get('output_dim', 4)
-        self.batch_size = params.get('batch_size', 1)
-        self.granularity = params.get('granularity', 0.2)
-        self.common_sense_emb_dim = params.get('common_sense_emb_dim', 32)
-        self.common_sense_emb = nn.Embedding(int(1.0 / self.granularity) * self.bigramStats_dim, self.common_sense_emb_dim)
-
-        self.h_lstm2h_nn = nn.Linear(2*self.lstm_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.nn_hidden_dim)
-        self.h_nn2o = nn.Linear(self.nn_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.output_dim)
+        # self.params = params
+        # self.embedding_dim = params.get('embedding_dim', 1024)
+        # self.lstm_hidden_dim = params.get('lstm_hidden_dim', 64)
+        # self.nn_hidden_dim = params.get('nn_hidden_dim', 64)
+        # self.bigramStats_dim = params.get('bigramStats_dim', 2)
+        # self.bigramGetter = bigramGetter
+        # self.output_dim = params.get('output_dim', 4)
+        # self.batch_size = params.get('batch_size', 1)
+        # self.granularity = params.get('granularity', 0.2)
+        # self.common_sense_emb_dim = params.get('common_sense_emb_dim', 32)
+        # self.common_sense_emb = nn.Embedding(int(1.0 / self.granularity) * self.bigramStats_dim, self.common_sense_emb_dim)
+        #
+        # self.h_lstm2h_nn = nn.Linear(2*self.lstm_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.nn_hidden_dim)
+        # self.h_nn2o = nn.Linear(self.nn_hidden_dim+self.bigramStats_dim*self.common_sense_emb_dim, self.output_dim)
+        #
+        # self.h_lstm2h_nn_2_cse = nn.Linear(2*1024+self.bigramStats_dim*self.common_sense_emb_dim, 512)
+        # self.h_nn2o_2_cse = nn.Linear(512+self.bigramStats_dim*self.common_sense_emb_dim, self.output_dim)
 
         self.h_lstm2h_nn_2 = nn.Linear(2*1024, 512)
-        self.h_nn2o_2 = nn.Linear(512, self.output_dim)
+        self.h_nn2o_2 = nn.Linear(512, self.num_labels_matres)
 
-        self.h_lstm2h_nn_2_cse = nn.Linear(2*1024+self.bigramStats_dim*self.common_sense_emb_dim, 512)
-        self.h_nn2o_2_cse = nn.Linear(512+self.bigramStats_dim*self.common_sense_emb_dim, self.output_dim)
+        self.dropout = nn.Dropout(config.hidden_dropout_prob)
+        self.timebank_timex_classifier = nn.Linear(config.hidden_size, self.tb_timex_cls_num_labels)
+        self.timebank_event_classifier = nn.Linear(config.hidden_size, self.tb_event_cls_num_labels)
+
+        self.timebank_duration_classifier = nn.Linear(config.hidden_size, self.tb_duration_cls_num_labels)
+        self.init_weights()
 
     def reset_parameters(self):
         self.h_lstm2h_nn.reset_parameters()
@@ -840,10 +896,17 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
         E2 = []
         for i, id in enumerate(event_ids):
             if id == -99:
-                E1.append(id)
+                E1.append(i)
             elif id == -98:
-                E2.append(id)
+                E2.append(i)
         return E1, E2
+
+    def getDurationEventId(self, token_index):
+        event = []
+        for i, id in enumerate(token_index):
+            if id == 1:
+                event.append(i)
+        return event
 
     @add_start_docstrings_to_callable(ROBERTA_INPUTS_DOCSTRING)
     def forward(
@@ -855,9 +918,12 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
         event_ids=None,
         # cse_lemma=None,
         # cse_position=None,
+        ner_token_ids=None,
+        token_index=None,
         head_mask=None,
         inputs_embeds=None,
         labels=None,
+        label_ids=None,
         task_name=None,
     ):
 
@@ -873,6 +939,7 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
         # print(event_ids)
         # print(task_name)
         if task_name[0] == 1:
+            # print("MCTACO")
             sequence_output = outputs[0]
             logits = self.classifier(sequence_output)
 
@@ -886,7 +953,94 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
                     loss_fct = CrossEntropyLoss()
                     loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
                 outputs = (loss,) + outputs
-        else:
+        elif task_name[0] == 2:
+            # print("TIMEBANK Time Expression Cls")
+            # print(ner_token_ids)
+            # print(label_ids)
+            segments = segments_to_index_array_timex(ner_token_ids)
+            # print(segments)
+            sequence_output = outputs[0]
+            # print(sequence_output.shape)
+            sequence_output = self.dropout(sequence_output)
+            # print(sequence_output.shape)
+
+            pooled_seq_output_array = torch.zeros(1, 1024)  # originally (1, 768)
+            # pooled_seq_output_array = pooled_seq_output_array.to(device='cuda')
+            pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
+            # pooled_seq_output = pooled_seq_output.to(device='cuda')
+
+            for row_id in range(self.batch_size):
+                if segments[row_id]:
+                    for seg in segments[row_id]:
+                        pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
+                        # pooled_seq_output = pooled_seq_output.to(device='cuda')
+                        for idx in seg:
+                            pooled_seq_output += sequence_output[row_id][idx]
+                        pooled_seq_output = pooled_seq_output / len(seg)
+                        pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
+            # print(pooled_seq_output_array.shape)
+            pooled_seq_output_array = pooled_seq_output_array[1:].unsqueeze(dim=0)
+            # print(pooled_seq_output_array.shape)
+            logits = self.timebank_timex_classifier(pooled_seq_output_array)
+            # print(logits)
+            outputs = (logits,) + outputs[2:]  # add hidden states and attention if they are here\
+            # print(label_ids)
+            # print(labels)
+            # print(len(label_ids))
+            # print(len(labels))
+            if labels is not None:
+                loss_fct = CrossEntropyLoss()
+                # Only keep active parts of the loss
+                active_logits = logits.view(-1, self.tb_timex_cls_num_labels)
+                # print(active_logits)
+                active_labels = []
+                for lab in labels.view(-1):
+                    if lab != -100:
+                        active_labels.append(lab.item())
+                # print(active_labels)
+                active_labels = torch.tensor(active_labels).type_as(labels)
+                # print(active_labels)
+                # active_labels = active_labels.to(device='cuda')
+                loss = loss_fct(active_logits, active_labels)
+                outputs = (loss,) + outputs
+        elif task_name[0] == 3:
+            # print("TIMEBANK Event Cls")
+            segments = segments_to_index_array_event(ner_token_ids)
+            sequence_output = outputs[0]
+            sequence_output = self.dropout(sequence_output)
+
+            pooled_seq_output_array = torch.zeros(1, 1024)  # originally (1, 768)
+            # pooled_seq_output_array = pooled_seq_output_array.to(device='cuda')
+            pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
+            # pooled_seq_output = pooled_seq_output.to(device='cuda')
+
+            for row_id in range(self.batch_size):
+                if segments[row_id]:
+                    for seg in segments[row_id]:
+                        pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
+                        # pooled_seq_output = pooled_seq_output.to(device='cuda')
+                        for idx in seg:
+                            pooled_seq_output += sequence_output[row_id][idx]
+                        pooled_seq_output = pooled_seq_output / len(seg)
+                        pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
+
+            pooled_seq_output_array = pooled_seq_output_array[1:].unsqueeze(dim=0)
+            logits = self.timebank_event_classifier(pooled_seq_output_array)
+            outputs = (logits,) + outputs[2:]  # add hidden states and attention if they are here
+
+            if labels is not None:
+                loss_fct = CrossEntropyLoss()
+                # Only keep active parts of the loss
+                active_logits = logits.view(-1, self.tb_event_cls_num_labels)
+                active_labels = []
+                for lab in labels.view(-1):
+                    if lab != -100:
+                        active_labels.append(lab.item())
+                active_labels = torch.tensor(active_labels).type_as(labels)
+                # active_labels = active_labels.to(device='cuda')
+                loss = loss_fct(active_logits, active_labels)
+                outputs = (loss,) + outputs
+        elif task_name[0] == 4:
             # print("MATRES")
             sequence_output = outputs[0]
             # print(len(sequence_output))
@@ -941,6 +1095,36 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
                 else:
                     loss_fct = CrossEntropyLoss()
                     loss = loss_fct(output_logits.view(-1, self.num_labels_matres), labels.view(-1))
+                outputs = (loss,) + outputs
+        else:
+            # print("TB Duration")
+            sequence_output = outputs[0]
+
+            event_hidden_mean_batch = []
+            for i in range(len(sequence_output)):
+                event = self.getDurationEventId(token_index[i])
+                list_event = []
+                for j in event:
+                    list_event.append(sequence_output[i][j])
+
+                event_hidden_mean = torch.mean(torch.stack(list_event), 0)
+
+                event_hidden_mean_batch.append(event_hidden_mean)
+
+            event_hidden_mean_batch_stk = torch.stack(event_hidden_mean_batch)
+
+            pooled_output = self.dropout(event_hidden_mean_batch_stk)
+            logits = self.timebank_duration_classifier(pooled_output)
+
+            outputs = (logits,) + outputs[2:]
+            if labels is not None:
+                if self.tb_duration_cls_num_labels == 1:
+                    #  We are doing regression
+                    loss_fct = MSELoss()
+                    loss = loss_fct(logits.view(-1), labels.view(-1))
+                else:
+                    loss_fct = CrossEntropyLoss()
+                    loss = loss_fct(logits.view(-1, self.tb_duration_cls_num_labels), labels.view(-1))
                 outputs = (loss,) + outputs
 
         return outputs  # (loss), logits, (hidden_states), (attentions)

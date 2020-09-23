@@ -136,7 +136,7 @@ class SequentialDistributedSampler(Sampler):
         assert len(indices) == self.total_size
 
         # subsample
-        indices = indices[self.rank * self.num_samples : (self.rank + 1) * self.num_samples]
+        indices = indices[self.rank * self.num_samples: (self.rank + 1) * self.num_samples]
         assert len(indices) == self.num_samples
 
         return iter(indices)
@@ -160,8 +160,12 @@ class Trainer:
     model: PreTrainedModel
     args: TrainingArguments
     data_collator: DataCollator
-    timebank_train_dataset: Optional[Dataset]
+    timebank_train_timex_dataset: Optional[Dataset]
+    timebank_train_event_dataset: Optional[Dataset]
+    timebank_train_duration_dataset: Optional[Dataset]
+    matres_train_dataset: Optional[Dataset]
     eval_dataset: Optional[Dataset]
+    test_dataset: Optional[Dataset]
     mctaco_train_dataset: Optional[Dataset]
     compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None
     prediction_loss_only: bool
@@ -171,17 +175,21 @@ class Trainer:
     epoch: Optional[float] = None
 
     def __init__(
-        self,
-        model: PreTrainedModel,
-        args: TrainingArguments,
-        data_collator: Optional[DataCollator] = None,
-        timebank_train_dataset: Optional[Dataset] = None,
-        eval_dataset: Optional[Dataset] = None,
-        mctaco_train_dataset: Optional[Dataset] = None,
-        compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None,
-        prediction_loss_only=False,
-        tb_writer: Optional["SummaryWriter"] = None,
-        optimizers: Tuple[torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR] = None,
+            self,
+            model: PreTrainedModel,
+            args: TrainingArguments,
+            data_collator: Optional[DataCollator] = None,
+            timebank_train_timex_dataset: Optional[Dataset] = None,
+            timebank_train_event_dataset: Optional[Dataset] = None,
+            timebank_train_duration_dataset: Optional[Dataset] = None,
+            matres_train_dataset: Optional[Dataset] = None,
+            eval_dataset: Optional[Dataset] = None,
+            test_dataset: Optional[Dataset] = None,
+            mctaco_train_dataset: Optional[Dataset] = None,
+            compute_metrics: Optional[Callable[[EvalPrediction], Dict]] = None,
+            prediction_loss_only=False,
+            tb_writer: Optional["SummaryWriter"] = None,
+            optimizers: Tuple[torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR] = None,
     ):
         """
         Trainer is a simple but feature-complete training and eval loop for PyTorch,
@@ -197,8 +205,12 @@ class Trainer:
             self.data_collator = data_collator
         else:
             self.data_collator = DefaultDataCollator()
-        self.timebank_train_dataset = timebank_train_dataset
+        self.timebank_train_timex_dataset = timebank_train_timex_dataset
+        self.timebank_train_event_dataset = timebank_train_event_dataset
+        self.timebank_train_duration_dataset = timebank_train_duration_dataset
+        self.matres_train_dataset = matres_train_dataset
         self.eval_dataset = eval_dataset
+        self.test_dataset = test_dataset
         self.mctaco_train_dataset = mctaco_train_dataset
         self.compute_metrics = compute_metrics
         self.prediction_loss_only = prediction_loss_only
@@ -293,7 +305,7 @@ class Trainer:
         return data_loader
 
     def get_optimizers(
-        self, num_training_steps: int
+            self, num_training_steps: int
     ) -> Tuple[torch.optim.Optimizer, torch.optim.lr_scheduler.LambdaLR]:
         """
         Setup the optimizer and the learning rate scheduler.
@@ -351,11 +363,25 @@ class Trainer:
 
     def merge_datasets(self) -> DataLoader:
 
-        if self.timebank_train_dataset is None and self.mctaco_train_dataset is None:
+        if self.timebank_train_timex_dataset is None and self.timebank_train_event_dataset is None \
+                and self.mctaco_train_dataset is None and self.matres_train_dataset is None \
+                and self.timebank_train_duration_dataset is None:
             raise ValueError("Trainer: training requires a train_dataset.")
 
-        # concat_dataset = ConcatDataset([self.timebank_train_dataset, self.mctaco_train_dataset])
-        concat_dataset = ConcatDataset([self.timebank_train_dataset])
+        all_task = [self.mctaco_train_dataset,
+                    self.timebank_train_timex_dataset,
+                    self.timebank_train_event_dataset,
+                    self.matres_train_dataset,
+                    self.timebank_train_duration_dataset]
+
+        active_task = []
+
+        for task in all_task:
+            if task is not None:
+                active_task.append(task)
+
+        concat_dataset = ConcatDataset(active_task)
+        # concat_dataset = ConcatDataset([self.timebank_train_dataset])
         # concat_dataset = ConcatDataset([self.mctaco_train_dataset])
 
         data_loader = DataLoader(
@@ -366,7 +392,6 @@ class Trainer:
         )
 
         return data_loader
-
 
     def train(self, model_path: Optional[str] = None):
         """
@@ -382,7 +407,7 @@ class Trainer:
         if self.args.max_steps > 0:
             t_total = self.args.max_steps
             num_train_epochs = (
-                self.args.max_steps // (len(train_dataloader) // self.args.gradient_accumulation_steps) + 1
+                    self.args.max_steps // (len(train_dataloader) // self.args.gradient_accumulation_steps) + 1
             )
         else:
             t_total = int(len(train_dataloader) // self.args.gradient_accumulation_steps * self.args.num_train_epochs)
@@ -392,9 +417,9 @@ class Trainer:
 
         # Check if saved optimizer or scheduler states exist
         if (
-            model_path is not None
-            and os.path.isfile(os.path.join(model_path, "optimizer.pt"))
-            and os.path.isfile(os.path.join(model_path, "scheduler.pt"))
+                model_path is not None
+                and os.path.isfile(os.path.join(model_path, "optimizer.pt"))
+                and os.path.isfile(os.path.join(model_path, "scheduler.pt"))
         ):
             # Load in optimizer and scheduler states
             optimizer.load_state_dict(
@@ -431,9 +456,9 @@ class Trainer:
             total_train_batch_size = self.args.train_batch_size * xm.xrt_world_size()
         else:
             total_train_batch_size = (
-                self.args.train_batch_size
-                * self.args.gradient_accumulation_steps
-                * (torch.distributed.get_world_size() if self.args.local_rank != -1 else 1)
+                    self.args.train_batch_size
+                    * self.args.gradient_accumulation_steps
+                    * (torch.distributed.get_world_size() if self.args.local_rank != -1 else 1)
             )
         logger.info("***** Running training *****")
         logger.info("  Num examples = %d", self.num_examples(train_dataloader))
@@ -454,7 +479,7 @@ class Trainer:
                 self.global_step = int(model_path.split("-")[-1].split("/")[0])
                 epochs_trained = self.global_step // (len(train_dataloader) // self.args.gradient_accumulation_steps)
                 steps_trained_in_current_epoch = self.global_step % (
-                    len(train_dataloader) // self.args.gradient_accumulation_steps
+                        len(train_dataloader) // self.args.gradient_accumulation_steps
                 )
 
                 logger.info("  Continuing training from checkpoint, will skip to saved global_step")
@@ -493,9 +518,9 @@ class Trainer:
                 tr_loss += self._training_step(model, inputs, optimizer)
 
                 if (step + 1) % self.args.gradient_accumulation_steps == 0 or (
-                    # last step in epoch but step is always smaller than gradient_accumulation_steps
-                    len(epoch_iterator) <= self.args.gradient_accumulation_steps
-                    and (step + 1) == len(epoch_iterator)
+                        # last step in epoch but step is always smaller than gradient_accumulation_steps
+                        len(epoch_iterator) <= self.args.gradient_accumulation_steps
+                        and (step + 1) == len(epoch_iterator)
                 ):
                     if self.args.fp16:
                         torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), self.args.max_grad_norm)
@@ -513,7 +538,7 @@ class Trainer:
                     self.epoch = epoch + (step + 1) / len(epoch_iterator)
 
                     if (self.args.logging_steps > 0 and self.global_step % self.args.logging_steps == 0) or (
-                        self.global_step == 1 and self.args.logging_first_step
+                            self.global_step == 1 and self.args.logging_first_step
                     ):
                         logs: Dict[str, float] = {}
                         logs["loss"] = (tr_loss - logging_loss) / self.args.logging_steps
@@ -537,7 +562,8 @@ class Trainer:
                         # Save model checkpoint
                         output_dir = os.path.join(self.args.output_dir, f"{PREFIX_CHECKPOINT_DIR}-{self.global_step}")
 
-                        self.save_model(output_dir)
+                        # Don't save model
+                        # self.save_model(output_dir)
 
                         if self.is_world_master():
                             self._rotate_checkpoints()
@@ -560,6 +586,9 @@ class Trainer:
                 # tpu-comment: Logging debug metrics for PyTorch/XLA (compile, execute times, ops, etc.)
                 xm.master_print(met.metrics_report())
 
+            # Evaluate at the end of epoch
+            self.evaluate_multi()
+
         if self.tb_writer:
             self.tb_writer.close()
 
@@ -581,7 +610,7 @@ class Trainer:
             print(output)
 
     def _training_step(
-        self, model: nn.Module, inputs: Dict[str, torch.Tensor], optimizer: torch.optim.Optimizer
+            self, model: nn.Module, inputs: Dict[str, torch.Tensor], optimizer: torch.optim.Optimizer
     ) -> float:
         model.train()
         for k, v in inputs.items():
@@ -693,7 +722,7 @@ class Trainer:
             shutil.rmtree(checkpoint)
 
     def evaluate(
-        self, eval_dataset: Optional[Dataset] = None, prediction_loss_only: Optional[bool] = None,
+            self, eval_dataset: Optional[Dataset] = None, prediction_loss_only: Optional[bool] = None,
     ) -> Dict[str, float]:
         """
         Run evaluation and return metrics.
@@ -719,6 +748,30 @@ class Trainer:
 
         return output.metrics
 
+    def evaluate_multi(
+            self, eval_dataset: Optional[Dataset] = None, prediction_loss_only: Optional[bool] = None,
+    ) -> Dict[str, float]:
+
+        eval_dataloader = self.get_eval_dataloader(eval_dataset)
+        test_dataloader = self.get_eval_dataloader(self.test_dataset)
+
+        output_eval = self._prediction_loop(eval_dataloader, description="Evaluation")
+        output_test = self._prediction_loop(test_dataloader, description="Test")
+
+        self._log(output_test.metrics)
+        self._log(output_eval.metrics)
+
+        if self.args.tpu_metrics_debug:
+            # tpu-comment: Logging debug metrics for PyTorch/XLA (compile, execute times, ops, etc.)
+            xm.master_print(met.metrics_report())
+
+        path = os.path.join(self.args.output_dir, "results.txt")
+
+        with open(path, "a") as pred_writer:
+            pred_writer.write(json.dumps(output_eval.metrics)+"\n"+json.dumps(output_test.metrics)+"\n\n")
+
+        return output_eval.metrics
+
     def predict(self, test_dataset: Dataset) -> PredictionOutput:
         """
         Run prediction and return predictions and potential metrics.
@@ -729,18 +782,18 @@ class Trainer:
 
         return self._prediction_loop(test_dataloader, description="Prediction")
 
-    def predict_timebank(self, test_dataset: Dataset) -> PredictionOutput:
-        """
-        Run prediction and return predictions and potential metrics.
-        Depending on the dataset and your use case, your test dataset may contain labels.
-        In that case, this method will also return metrics, like in evaluate().
-        """
-        test_dataloader = self.get_test_dataloader(test_dataset)
-
-        return self._prediction_loop_timebank(test_dataloader, description="Prediction")
+    # def predict_timebank(self, test_dataset: Dataset) -> PredictionOutput:
+    #     """
+    #     Run prediction and return predictions and potential metrics.
+    #     Depending on the dataset and your use case, your test dataset may contain labels.
+    #     In that case, this method will also return metrics, like in evaluate().
+    #     """
+    #     test_dataloader = self.get_test_dataloader(test_dataset)
+    #
+    #     return self._prediction_loop_timebank(test_dataloader, description="Prediction")
 
     def _prediction_loop(
-        self, dataloader: DataLoader, description: str, prediction_loss_only: Optional[bool] = None
+            self, dataloader: DataLoader, description: str, prediction_loss_only: Optional[bool] = None
     ) -> PredictionOutput:
         """
         Prediction/evaluation loop, shared by `evaluate()` and `predict()`.
@@ -828,94 +881,94 @@ class Trainer:
 
         return PredictionOutput(predictions=preds, label_ids=label_ids, metrics=metrics)
 
-    def _prediction_loop_timebank(
-        self, dataloader: DataLoader, description: str, prediction_loss_only: Optional[bool] = None
-    ) -> PredictionOutput:
-        """
-        Prediction/evaluation loop, shared by `evaluate()` and `predict()`.
-        Works both with or without labels.
-        """
-
-        prediction_loss_only = prediction_loss_only if prediction_loss_only is not None else self.prediction_loss_only
-
-        model = self.model
-        # multi-gpu eval
-        if self.args.n_gpu > 1:
-            model = torch.nn.DataParallel(model)
-        else:
-            model = self.model
-        # Note: in torch.distributed mode, there's no point in wrapping the model
-        # inside a DistributedDataParallel as we'll be under `no_grad` anyways.
-
-        batch_size = dataloader.batch_size
-        logger.info("***** Running %s *****", description)
-        logger.info("  Num examples = %d", self.num_examples(dataloader))
-        logger.info("  Batch size = %d", batch_size)
-        eval_losses: List[float] = []
-        preds: torch.Tensor = None
-        label_ids: torch.Tensor = None
-        model.eval()
-
-        if is_tpu_available():
-            dataloader = pl.ParallelLoader(dataloader, [self.args.device]).per_device_loader(self.args.device)
-
-        for inputs in tqdm(dataloader, desc=description):
-            has_labels = any(inputs.get(k) is not None for k in ["labels", "lm_labels", "masked_lm_labels"])
-
-            for k, v in inputs.items():
-                inputs[k] = v.to(self.args.device)
-
-            with torch.no_grad():
-                outputs = model(**inputs)
-                if has_labels:
-                    step_eval_loss, logits = outputs[:2]
-                    eval_losses += [step_eval_loss.mean().item()]
-                else:
-                    logits = outputs[0]
-
-            if not prediction_loss_only:
-                logits2 = logits.detach()
-                for idx in range(logits2.size(1)):
-                    each_logits_row = logits2[torch.arange(logits2.size(0)), idx]
-                    if preds is None:
-                        preds = each_logits_row
-                    else:
-                        preds = torch.cat((preds, each_logits_row), dim=0)
-                if inputs.get("labels") is not None:
-                    if label_ids is None:
-                        label_ids = inputs["labels"].detach()
-                    else:
-                        label_ids = torch.cat((label_ids, inputs["labels"].detach()), dim=0)
-
-        if self.args.local_rank != -1:
-            # In distributed mode, concatenate all results from all nodes:
-            if preds is not None:
-                preds = self.distributed_concat(preds, num_total_examples=self.num_examples(dataloader))
-            if label_ids is not None:
-                label_ids = self.distributed_concat(label_ids, num_total_examples=self.num_examples(dataloader))
-        elif is_tpu_available():
-            # tpu-comment: Get all predictions and labels from all worker shards of eval dataset
-            if preds is not None:
-                preds = xm.mesh_reduce("eval_preds", preds, torch.cat)
-            if label_ids is not None:
-                label_ids = xm.mesh_reduce("eval_label_ids", label_ids, torch.cat)
-
-        # Finally, turn the aggregated tensors into numpy arrays.
-        if preds is not None:
-            preds = preds.cpu().numpy()
-        if label_ids is not None:
-            label_ids = label_ids.cpu().numpy()
-
-        metrics = {}
-        if len(eval_losses) > 0:
-            metrics["eval_loss"] = np.mean(eval_losses)
-
-        # Prefix all keys with eval_
-        for key in list(metrics.keys()):
-            if not key.startswith("eval_"):
-                metrics[f"eval_{key}"] = metrics.pop(key)
-
-        return PredictionOutput(predictions=preds, label_ids=label_ids, metrics=metrics)
+    # def _prediction_loop_timebank(
+    #     self, dataloader: DataLoader, description: str, prediction_loss_only: Optional[bool] = None
+    # ) -> PredictionOutput:
+    #     """
+    #     Prediction/evaluation loop, shared by `evaluate()` and `predict()`.
+    #     Works both with or without labels.
+    #     """
+    #
+    #     prediction_loss_only = prediction_loss_only if prediction_loss_only is not None else self.prediction_loss_only
+    #
+    #     model = self.model
+    #     # multi-gpu eval
+    #     if self.args.n_gpu > 1:
+    #         model = torch.nn.DataParallel(model)
+    #     else:
+    #         model = self.model
+    #     # Note: in torch.distributed mode, there's no point in wrapping the model
+    #     # inside a DistributedDataParallel as we'll be under `no_grad` anyways.
+    #
+    #     batch_size = dataloader.batch_size
+    #     logger.info("***** Running %s *****", description)
+    #     logger.info("  Num examples = %d", self.num_examples(dataloader))
+    #     logger.info("  Batch size = %d", batch_size)
+    #     eval_losses: List[float] = []
+    #     preds: torch.Tensor = None
+    #     label_ids: torch.Tensor = None
+    #     model.eval()
+    #
+    #     if is_tpu_available():
+    #         dataloader = pl.ParallelLoader(dataloader, [self.args.device]).per_device_loader(self.args.device)
+    #
+    #     for inputs in tqdm(dataloader, desc=description):
+    #         has_labels = any(inputs.get(k) is not None for k in ["labels", "lm_labels", "masked_lm_labels"])
+    #
+    #         for k, v in inputs.items():
+    #             inputs[k] = v.to(self.args.device)
+    #
+    #         with torch.no_grad():
+    #             outputs = model(**inputs)
+    #             if has_labels:
+    #                 step_eval_loss, logits = outputs[:2]
+    #                 eval_losses += [step_eval_loss.mean().item()]
+    #             else:
+    #                 logits = outputs[0]
+    #
+    #         if not prediction_loss_only:
+    #             logits2 = logits.detach()
+    #             for idx in range(logits2.size(1)):
+    #                 each_logits_row = logits2[torch.arange(logits2.size(0)), idx]
+    #                 if preds is None:
+    #                     preds = each_logits_row
+    #                 else:
+    #                     preds = torch.cat((preds, each_logits_row), dim=0)
+    #             if inputs.get("labels") is not None:
+    #                 if label_ids is None:
+    #                     label_ids = inputs["labels"].detach()
+    #                 else:
+    #                     label_ids = torch.cat((label_ids, inputs["labels"].detach()), dim=0)
+    #
+    #     if self.args.local_rank != -1:
+    #         # In distributed mode, concatenate all results from all nodes:
+    #         if preds is not None:
+    #             preds = self.distributed_concat(preds, num_total_examples=self.num_examples(dataloader))
+    #         if label_ids is not None:
+    #             label_ids = self.distributed_concat(label_ids, num_total_examples=self.num_examples(dataloader))
+    #     elif is_tpu_available():
+    #         # tpu-comment: Get all predictions and labels from all worker shards of eval dataset
+    #         if preds is not None:
+    #             preds = xm.mesh_reduce("eval_preds", preds, torch.cat)
+    #         if label_ids is not None:
+    #             label_ids = xm.mesh_reduce("eval_label_ids", label_ids, torch.cat)
+    #
+    #     # Finally, turn the aggregated tensors into numpy arrays.
+    #     if preds is not None:
+    #         preds = preds.cpu().numpy()
+    #     if label_ids is not None:
+    #         label_ids = label_ids.cpu().numpy()
+    #
+    #     metrics = {}
+    #     if len(eval_losses) > 0:
+    #         metrics["eval_loss"] = np.mean(eval_losses)
+    #
+    #     # Prefix all keys with eval_
+    #     for key in list(metrics.keys()):
+    #         if not key.startswith("eval_"):
+    #             metrics[f"eval_{key}"] = metrics.pop(key)
+    #
+    #     return PredictionOutput(predictions=preds, label_ids=label_ids, metrics=metrics)
 
     def distributed_concat(self, tensor: torch.Tensor, num_total_examples: int) -> torch.Tensor:
         assert self.args.local_rank != -1

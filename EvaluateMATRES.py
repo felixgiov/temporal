@@ -10,8 +10,8 @@ with open('models/multi-mctaco-ner-roberta-large/pred_results_matres_test.txt', 
         y_pred.append(line.strip('\n'))
 
 y_true = []
-# with open('models/multi-mctaco-ner-roberta-large-2/eval_labels.txt', 'r') as reader:
-with open('models/multi-mctaco-ner-roberta-large-2/test_labels.txt', 'r') as reader:
+# with open('datasets/MATRES/eval_labels.txt', 'r') as reader:
+with open('datasets/MATRES/test_labels.txt', 'r') as reader:
     for line in reader:
         y_true.append(line.strip("\n"))
 

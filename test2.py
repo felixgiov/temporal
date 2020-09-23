@@ -152,6 +152,7 @@
 # print(inputs2)
 
 from sklearn.model_selection import train_test_split
+
 # from multi_utils import temprel_set
 #
 # temprel_trainset = temprel_set("datasets/MATRES/testset-temprel.xml")
@@ -202,9 +203,9 @@ from sklearn.model_selection import train_test_split
 #                                                           tokenizer)
 
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from multi_run import bigramGetter_fromNN
+# import torch.nn as nn
+# import torch.nn.functional as F
+# from multi_run import bigramGetter_fromNN
 
 # embedding_dim = 1024
 # lstm_hidden_dim = 64
@@ -220,7 +221,7 @@ from multi_run import bigramGetter_fromNN
 # h_lstm2h_nn = nn.Linear(2 * lstm_hidden_dim + bigramStats_dim * common_sense_emb_dim,
 #                              nn_hidden_dim)
 # h_nn2o = nn.Linear(nn_hidden_dim + bigramStats_dim * common_sense_emb_dim, output_dim)
-
+#
 e1_hidden_mean_batch = []
 e2_hidden_mean_batch = []
 
@@ -228,10 +229,10 @@ output = torch.randn(2,16,128,1024)
 sequence_output = output[0]
 print(output.shape)
 print(sequence_output.shape)
-
+print(sequence_output[0][-99])
 for i in range(len(sequence_output)):
-    e1 = [4,5]
-    e2 = [10]
+    e1 = [-99,-99]
+    e2 = [-98]
 
     list_e1 = []
     list_e2 = []
@@ -259,23 +260,59 @@ print(e2_hidden_mean_batch_stk.shape)
 y = torch.cat((e1_hidden_mean_batch_stk, e2_hidden_mean_batch_stk), 1)
 print(y.shape)
 
-    # # common sense embeddings
-    # bigramstats = bigramGetter.getBigramStatsFromTemprel(temprel)
-    # common_sense_emb = common_sense_emb(torch.cuda.LongTensor(
-    #     [min(int(1.0 / granularity) - 1, int(bigramstats[0][0] / granularity))])).view(1, -1)
-    # for i in range(1, bigramStats_dim):
-    #     tmp = common_sense_emb(torch.cuda.LongTensor([(i - 1) * int(1.0 / granularity) + min(
-    #         int(1.0 / granularity) - 1, int(bigramstats[0][i] / granularity))])).view(1, -1)
-    #     common_sense_emb = torch.cat((common_sense_emb, tmp), 1)
-    #
-    # if not lowerCase:
-    #     embeds = emb_cache.retrieveEmbeddings(tokList=temprel.token).cuda()
-    # else:
-    #     embeds = emb_cache.retrieveEmbeddings(tokList=[x.lower() for x in temprel.token]).cuda()
-    # embeds = embeds.view(temprel.length, batch_size, -1)
-    # lstm_out, hidden = lstm(embeds, hidden)
-    # lstm_out = lstm_out.view(embeds.size()[0], batch_size, lstm_hidden_dim)
-    # lstm_out = lstm_out[temprel.event_ix][:][:]
-    #
-    # h_nn = F.relu(h_lstm2h_nn(torch.cat((lstm_out.view(1, -1), common_sense_emb), 1)))
-    # output = h_nn2o(torch.cat((h_nn, common_sense_emb), 1))
+# # common sense embeddings
+# bigramstats = bigramGetter.getBigramStatsFromTemprel(temprel)
+# common_sense_emb = common_sense_emb(torch.cuda.LongTensor(
+#     [min(int(1.0 / granularity) - 1, int(bigramstats[0][0] / granularity))])).view(1, -1)
+# for i in range(1, bigramStats_dim):
+#     tmp = common_sense_emb(torch.cuda.LongTensor([(i - 1) * int(1.0 / granularity) + min(
+#         int(1.0 / granularity) - 1, int(bigramstats[0][i] / granularity))])).view(1, -1)
+#     common_sense_emb = torch.cat((common_sense_emb, tmp), 1)
+#
+# if not lowerCase:
+#     embeds = emb_cache.retrieveEmbeddings(tokList=temprel.token).cuda()
+# else:
+#     embeds = emb_cache.retrieveEmbeddings(tokList=[x.lower() for x in temprel.token]).cuda()
+# embeds = embeds.view(temprel.length, batch_size, -1)
+# lstm_out, hidden = lstm(embeds, hidden)
+# lstm_out = lstm_out.view(embeds.size()[0], batch_size, lstm_hidden_dim)
+# lstm_out = lstm_out[temprel.event_ix][:][:]
+#
+# h_nn = F.relu(h_lstm2h_nn(torch.cat((lstm_out.view(1, -1), common_sense_emb), 1)))
+# output = h_nn2o(torch.cat((h_nn, common_sense_emb), 1))
+
+# f = open("/home/felix/projects/research/datasets/MCTACO/dev_3783.tsv", "r")
+# lines = [x.strip() for x in f.readlines()]
+# mctaco_train, mctaco_dev = train_test_split(lines, test_size=0.1, random_state=2093)
+#
+# with open("/home/felix/projects/research/datasets/MCTACO/train_splitted.tsv", "w") as pred_writer:
+#     for line in mctaco_train:
+#         pred_writer.write(line+"\n")
+#
+# with open("/home/felix/projects/research/datasets/MCTACO/dev_splitted.tsv", "w") as pred_writer:
+#     for line in mctaco_dev:
+#         pred_writer.write(line+"\n")
+
+# from transformers import RobertaTokenizer
+#
+# from multi_utils import TimeBankDurationProcessor, convert_tb_duration_examples_to_features
+#
+# tokenizer = RobertaTokenizer.from_pretrained("roberta-large")
+#
+# tb_duration_processor = TimeBankDurationProcessor()
+# tb_duration_label_list = tb_duration_processor.get_labels()
+#
+# tb_duration_train_examples = tb_duration_processor.get_train_examples('')
+# tb_duration_train_dataset = convert_tb_duration_examples_to_features(tb_duration_train_examples,
+#                                                                      tb_duration_label_list,
+#                                                                      128,
+#                                                                      tokenizer)
+#
+# tb_duration_all_examples = tb_duration_processor.get_all_examples('')
+# tb_duration_all_dataset = convert_tb_duration_examples_to_features(tb_duration_all_examples,
+#                                                                    tb_duration_label_list,
+#                                                                    128,
+#                                                                    tokenizer)
+#
+# print(len(tb_duration_train_dataset))
+# print(len(tb_duration_all_dataset))

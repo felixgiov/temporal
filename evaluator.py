@@ -18,7 +18,10 @@ python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/sbert-roberta-base/pred_results_sbert_results.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file models/fairseq-roberta-large/preds.txt
 python evaluator.py eval --test_file datasets/MCTACO/ppt_data.tsv --prediction_file models/others/ppt_data.txt
-
+python evaluator.py eval --test_file datasets/MCTACO/dev_splitted.tsv --prediction_file models/multi-mctaco-ner-roberta-large/pred_results_roberta-large.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file multi_results/1/pred_results_roberta-large.txt
+python evaluator.py eval --test_file datasets/MCTACO/dev_splitted_sent.tsv --prediction_file multi_results_2e-5/13_dev/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file multi_results/test/pred_results.txt
 """
 
 
