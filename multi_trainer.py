@@ -164,6 +164,7 @@ class Trainer:
     timebank_train_event_dataset: Optional[Dataset]
     timebank_train_duration_dataset: Optional[Dataset]
     matres_train_dataset: Optional[Dataset]
+    matres_v2_train_dataset: Optional[Dataset]
     eval_dataset: Optional[Dataset]
     test_dataset: Optional[Dataset]
     mctaco_train_dataset: Optional[Dataset]
@@ -183,6 +184,7 @@ class Trainer:
             timebank_train_event_dataset: Optional[Dataset] = None,
             timebank_train_duration_dataset: Optional[Dataset] = None,
             matres_train_dataset: Optional[Dataset] = None,
+            matres_v2_train_dataset: Optional[Dataset] = None,
             eval_dataset: Optional[Dataset] = None,
             test_dataset: Optional[Dataset] = None,
             mctaco_train_dataset: Optional[Dataset] = None,
@@ -209,6 +211,7 @@ class Trainer:
         self.timebank_train_event_dataset = timebank_train_event_dataset
         self.timebank_train_duration_dataset = timebank_train_duration_dataset
         self.matres_train_dataset = matres_train_dataset
+        self.matres_v2_train_dataset = matres_v2_train_dataset
         self.eval_dataset = eval_dataset
         self.test_dataset = test_dataset
         self.mctaco_train_dataset = mctaco_train_dataset
@@ -329,7 +332,7 @@ class Trainer:
         ]
         optimizer = AdamW(optimizer_grouped_parameters, lr=self.args.learning_rate, eps=self.args.adam_epsilon)
         scheduler = get_linear_schedule_with_warmup(
-            optimizer, num_warmup_steps=self.args.warmup_steps, num_training_steps=num_training_steps
+            optimizer, num_warmup_steps=0.1 * num_training_steps, num_training_steps=num_training_steps
         )
         return optimizer, scheduler
 
@@ -365,14 +368,15 @@ class Trainer:
 
         if self.timebank_train_timex_dataset is None and self.timebank_train_event_dataset is None \
                 and self.mctaco_train_dataset is None and self.matres_train_dataset is None \
-                and self.timebank_train_duration_dataset is None:
+                and self.timebank_train_duration_dataset is None and self.matres_v2_train_dataset is None:
             raise ValueError("Trainer: training requires a train_dataset.")
 
         all_task = [self.mctaco_train_dataset,
                     self.timebank_train_timex_dataset,
                     self.timebank_train_event_dataset,
                     self.matres_train_dataset,
-                    self.timebank_train_duration_dataset]
+                    self.timebank_train_duration_dataset,
+                    self.matres_v2_train_dataset]
 
         active_task = []
 
@@ -496,6 +500,8 @@ class Trainer:
         train_iterator = trange(
             epochs_trained, int(num_train_epochs), desc="Epoch", disable=not self.is_local_master()
         )
+        best_score = -1
+        epoch_num = 1
         for epoch in train_iterator:
             if isinstance(train_dataloader, DataLoader) and isinstance(train_dataloader.sampler, DistributedSampler):
                 train_dataloader.sampler.set_epoch(epoch)
@@ -550,7 +556,7 @@ class Trainer:
                         self._log(logs)
 
                         if self.args.evaluate_during_training:
-                            self.evaluate()
+                            self.evaluate()  # should be evaluate_multi
 
                     if self.args.save_steps > 0 and self.global_step % self.args.save_steps == 0:
                         # In all cases (even distributed/parallel), self.model is always a reference
@@ -562,7 +568,7 @@ class Trainer:
                         # Save model checkpoint
                         output_dir = os.path.join(self.args.output_dir, f"{PREFIX_CHECKPOINT_DIR}-{self.global_step}")
 
-                        # Don't save model
+                        # Save model
                         # self.save_model(output_dir)
 
                         if self.is_world_master():
@@ -587,7 +593,19 @@ class Trainer:
                 xm.master_print(met.metrics_report())
 
             # Evaluate at the end of epoch
-            self.evaluate_multi()
+            self.evaluate_multi(epoch_num)
+            # self.save_model(self.args.output_dir + '/' + str(epoch_num))
+            if epoch_num == 10:
+                self.save_model(self.args.output_dir + '/' + str(epoch_num))
+            epoch_num += 1
+
+            # Save model with best em dev
+            # output_eval = self.evaluate_multi()
+            # if output_eval['eval_EM'] > best_score:
+            #     best_score = output_eval['eval_EM']
+            #     self.save_model(self.args.output_dir+'/best')
+
+        # self.save_model(self.args.output_dir)
 
         if self.tb_writer:
             self.tb_writer.close()
@@ -749,7 +767,7 @@ class Trainer:
         return output.metrics
 
     def evaluate_multi(
-            self, eval_dataset: Optional[Dataset] = None, prediction_loss_only: Optional[bool] = None,
+            self, epoch_num: int, eval_dataset: Optional[Dataset] = None, prediction_loss_only: Optional[bool] = None,
     ) -> Dict[str, float]:
 
         eval_dataloader = self.get_eval_dataloader(eval_dataset)
@@ -758,8 +776,41 @@ class Trainer:
         output_eval = self._prediction_loop(eval_dataloader, description="Evaluation")
         output_test = self._prediction_loop(test_dataloader, description="Test")
 
-        self._log(output_test.metrics)
-        self._log(output_eval.metrics)
+        # Save prediction
+        preds_tensor = torch.from_numpy(output_eval.predictions)
+        preds_argmax = torch.argmax(preds_tensor, dim=1)
+
+        if not os.path.exists(self.args.output_dir+'/'+str(epoch_num)):
+            os.makedirs(self.args.output_dir+'/'+str(epoch_num))
+
+        output_tensor_file = self.args.output_dir+'/'+str(epoch_num)+'/'+'pred_tensors.txt'
+
+        with open(output_tensor_file, "w") as tensor_writer:
+            for val in output_eval.predictions:
+                tensor_writer.write(str(val) + "\n")
+
+        output_pred_file = self.args.output_dir+'/'+str(epoch_num)+'/'+'pred_results.txt'
+
+        # with open(output_pred_file, "w") as pred_writer:
+        #     for val in preds_argmax:
+        #         if val == 0:
+        #             pred_writer.write("BEFORE\n")
+        #         elif val == 1:
+        #             pred_writer.write("AFTER\n")
+        #         elif val == 2:
+        #             pred_writer.write("EQUAL\n")
+        #         else:
+        #             pred_writer.write("VAGUE\n")
+
+        with open(output_pred_file, "w") as pred_writer:
+            for val in preds_argmax:
+                if val == 0:
+                    pred_writer.write("yes\n")
+                else:
+                    pred_writer.write("no\n")
+
+        # self._log(output_test.metrics)
+        # self._log(output_eval.metrics)
 
         if self.args.tpu_metrics_debug:
             # tpu-comment: Logging debug metrics for PyTorch/XLA (compile, execute times, ops, etc.)
@@ -768,7 +819,10 @@ class Trainer:
         path = os.path.join(self.args.output_dir, "results.txt")
 
         with open(path, "a") as pred_writer:
-            pred_writer.write(json.dumps(output_eval.metrics)+"\n"+json.dumps(output_test.metrics)+"\n\n")
+            pred_writer.write(json.dumps(output_eval.metrics) + "\n" + json.dumps(output_test.metrics) + "\n\n")
+
+        # with open(path, "a") as pred_writer:
+        #     pred_writer.write(json.dumps(output_eval.metrics) + "\n")
 
         return output_eval.metrics
 

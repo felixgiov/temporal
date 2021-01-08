@@ -11,8 +11,8 @@ stl_diff_to_mctaco = []
 same_to_mctaco = []
 diff_to_mctaco = []
 
-single_task_mctaco_dir = "/home/felix/projects/research/models/bert-base-uncased-og-383/pred_results_bert-base-uncased.txt"
-multi_task_mctaco_dir = "/home/felix/projects/research/models/ner-from-tbaq-class-event-bert-base-uncased/pred_results_bert-base-uncased.txt"
+single_task_mctaco_dir = "/orange/felix/multi_results/mctaco_matres_roberta_large_baseline/multi_results_seed76567_1e-5_8x4/1/10/pred_results.txt"
+multi_task_mctaco_dir = "/orange/felix/multi_results/multi_full_hyperparams/multi_results_seed76567_1e-5_8x4/16_alt/10/pred_results.txt"
 mctaco_gold_dir = "/home/felix/projects/research/datasets/MCTACO/test_9442.tsv"
 
 with open(single_task_mctaco_dir, "r") as reader:
@@ -68,11 +68,11 @@ print(len(diff2))
 # print(diff_mctaco_gold)
 # print(len(diff_mctaco_gold))
 
-with open("became_correct_event.txt", "w") as writer:
+with open("became_correct_ensemble.txt", "w") as writer:
     for row in diff:
         writer.write(str(row)+"\n")
 
-with open("became_incorrect_event.txt", "w") as writer:
+with open("became_incorrect_ensemble.txt", "w") as writer:
     for row in diff2:
         writer.write(str(row)+"\n")
 

@@ -14,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """PyTorch RoBERTa model. """
-
-
+import json
 import logging
+import os
 
 import torch
 import torch.nn as nn
@@ -28,6 +28,7 @@ from transformers.file_utils import add_start_docstrings, add_start_docstrings_t
 from transformers.modeling_bert import BertEmbeddings, BertLayerNorm, BertModel, BertPreTrainedModel, gelu
 from transformers.modeling_utils import create_position_ids_from_input_ids
 
+import sympy as sym
 import multi_utils_v2
 
 logger = logging.getLogger(__name__)
@@ -580,6 +581,24 @@ class RobertaClassificationHead(nn.Module):
         x = self.out_proj(x)
         return x
 
+class RobertaClassificationHeadForMATRESv2(nn.Module):
+    """Head for sentence-level classification tasks."""
+
+    def __init__(self, config, num_labels):
+        super().__init__()
+        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
+        self.dropout = nn.Dropout(config.hidden_dropout_prob)
+        self.out_proj = nn.Linear(config.hidden_size, num_labels)
+
+    def forward(self, features, **kwargs):
+        x = features[:, 0, :]  # take <s> token (equiv. to [CLS])
+        x = self.dropout(x)
+        x = self.dense(x)
+        x = torch.tanh(x)
+        x = self.dropout(x)
+        x = self.out_proj(x)
+        return x
+
 
 @add_start_docstrings(
     """Roberta Model with a span classification head on top for extractive question-answering tasks like SQuAD (a linear layers on top of
@@ -844,9 +863,6 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
     pretrained_model_archive_map = ROBERTA_PRETRAINED_MODEL_ARCHIVE_MAP
     base_model_prefix = "roberta"
 
-    def set_batch_size(self, batch_size):
-        self.batch_size = batch_size
-
     def __init__(self, config):
         super().__init__(config)
         self.batch_size = 8
@@ -855,6 +871,7 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
         self.tb_timex_cls_num_labels = 4
         self.tb_event_cls_num_labels = 7
         self.tb_duration_cls_num_labels = 2
+        # self.loss_weight_ratio = {}
 
         self.roberta = RobertaModel(config)
         self.classifier = RobertaClassificationHead(config)
@@ -880,16 +897,20 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
         self.h_lstm2h_nn_2 = nn.Linear(2*1024, 512)
         self.h_nn2o_2 = nn.Linear(512, self.num_labels_matres)
 
-        self.dropout = nn.Dropout(config.hidden_dropout_prob)
+        self.dropout = nn.Dropout(config.hidden_dropout_prob)  # 0.3 / config.hidden_dropout_prob
         self.timebank_timex_classifier = nn.Linear(config.hidden_size, self.tb_timex_cls_num_labels)
         self.timebank_event_classifier = nn.Linear(config.hidden_size, self.tb_event_cls_num_labels)
-
         self.timebank_duration_classifier = nn.Linear(config.hidden_size, self.tb_duration_cls_num_labels)
+        self.matres_v2_classifier = RobertaClassificationHeadForMATRESv2(config, self.num_labels_matres)
+
         self.init_weights()
 
-    def reset_parameters(self):
-        self.h_lstm2h_nn.reset_parameters()
-        self.h_nn2o.reset_parameters()
+    # def reset_parameters(self):
+    #     self.h_lstm2h_nn.reset_parameters()
+    #     self.h_nn2o.reset_parameters()
+
+    def set_batch_size(self, batch_size):
+        self.batch_size = batch_size
 
     def getEventsIdx(self, event_ids):
         E1 = []
@@ -907,6 +928,77 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
             if id == 1:
                 event.append(i)
         return event
+
+    # def calculateWeightedLossRatio(self, len_1, len_2, len_3, len_4, len_5):
+    #     # task_0_ratio = 0
+    #     # task_1_ratio = 0
+    #     # task_2_ratio = 0
+    #     # task_3_ratio = 0
+    #     # task_4_ratio = 0
+    #     lengths = [len_1, len_2, len_3, len_4, len_5]
+    #     active_lengths = {}
+    #     act_lengths = []
+    #     for i, length in enumerate(lengths):
+    #         if length != 0:
+    #             active_lengths[i] = length  # id start at 1
+    #             act_lengths.append(length)
+    #
+    #     n = len(active_lengths)
+    #
+    #     # fix this to be more efficient
+    #     if n == 1:
+    #         active_lengths[0] = 1
+    #     elif n == 2:
+    #         a, b = sym.symbols('a,b')
+    #         eq1 = sym.Eq(a + b, 1)
+    #         eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+    #         result = sym.solve([eq1, eq2], (a, b))
+    #         result_list = list(result.values())
+    #         for i, key in enumerate(active_lengths):
+    #             active_lengths[key] = result_list[i]
+    #     elif n == 3:
+    #         a, b, c = sym.symbols('a,b,c')
+    #         eq1 = sym.Eq(a + b + c, 1)
+    #         eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+    #         eq3 = sym.Eq(act_lengths[1] * b, act_lengths[2] * c)
+    #         result = sym.solve([eq1, eq2, eq3], (a, b, c))
+    #         result_list = list(result.values())
+    #         for i, key in enumerate(active_lengths):
+    #             active_lengths[key] = result_list[i]
+    #     elif n == 4:
+    #         a, b, c, d = sym.symbols('a,b,c,d')
+    #         eq1 = sym.Eq(a + b + c + d, 1)
+    #         eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+    #         eq3 = sym.Eq(act_lengths[1] * b, act_lengths[2] * c)
+    #         eq4 = sym.Eq(act_lengths[2] * c, act_lengths[3] * d)
+    #         result = sym.solve([eq1, eq2, eq3, eq4], (a, b, c, d))
+    #         result_list = list(result.values())
+    #         for i, key in enumerate(active_lengths):
+    #             active_lengths[key] = result_list[i]
+    #     elif n == 5:
+    #         a, b, c, d, e = sym.symbols('a,b,c,d,e')
+    #         eq1 = sym.Eq(a + b + c + d + e, 1)
+    #         eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+    #         eq3 = sym.Eq(act_lengths[1] * b, act_lengths[2] * c)
+    #         eq4 = sym.Eq(act_lengths[2] * c, act_lengths[3] * d)
+    #         eq5 = sym.Eq(act_lengths[3] * d, act_lengths[4] * e)
+    #         result = sym.solve([eq1, eq2, eq3, eq4, eq5], (a, b, c, d, e))
+    #         result_list = list(result.values())
+    #         for i, key in enumerate(active_lengths):
+    #             active_lengths[key] = result_list[i]
+    #     else:
+    #         active_lengths[0] = 0
+    #
+    #     # dict = {}
+    #     # for i in range(5):
+    #     #     for key in active_lengths:
+    #     #         if key == i:
+    #     #             dict[i] = active_lengths[key]
+    #     #         else:
+    #     #             dict[i] = 0
+    #     # print(dict)
+    #
+    #     self.loss_weight_ratio = active_lengths
 
     @add_start_docstrings_to_callable(ROBERTA_INPUTS_DOCSTRING)
     def forward(
@@ -952,7 +1044,7 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
                 else:
                     loss_fct = CrossEntropyLoss()
                     loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
-                outputs = (loss,) + outputs
+                outputs = (loss,) + outputs  # + (self.loss_weight_ratio[0],)
         elif task_name[0] == 2:
             # print("TIMEBANK Time Expression Cls")
             # print(ner_token_ids)
@@ -970,14 +1062,17 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
             # pooled_seq_output = pooled_seq_output.to(device='cuda')
 
             for row_id in range(self.batch_size):
-                if segments[row_id]:
-                    for seg in segments[row_id]:
-                        pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
-                        # pooled_seq_output = pooled_seq_output.to(device='cuda')
-                        for idx in seg:
-                            pooled_seq_output += sequence_output[row_id][idx]
-                        pooled_seq_output = pooled_seq_output / len(seg)
-                        pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
+                try:
+                    if segments[row_id]:
+                        for seg in segments[row_id]:
+                            pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
+                            # pooled_seq_output = pooled_seq_output.to(device='cuda')
+                            for idx in seg:
+                                pooled_seq_output += sequence_output[row_id][idx]
+                            pooled_seq_output = pooled_seq_output / len(seg)
+                            pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
+                except:
+                    print("Some exception")
             # print(pooled_seq_output_array.shape)
             pooled_seq_output_array = pooled_seq_output_array[1:].unsqueeze(dim=0)
             # print(pooled_seq_output_array.shape)
@@ -1002,7 +1097,7 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
                 # print(active_labels)
                 # active_labels = active_labels.to(device='cuda')
                 loss = loss_fct(active_logits, active_labels)
-                outputs = (loss,) + outputs
+                outputs = (loss,) + outputs  # + (self.loss_weight_ratio[1],)
         elif task_name[0] == 3:
             # print("TIMEBANK Event Cls")
             segments = segments_to_index_array_event(ner_token_ids)
@@ -1015,14 +1110,17 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
             # pooled_seq_output = pooled_seq_output.to(device='cuda')
 
             for row_id in range(self.batch_size):
-                if segments[row_id]:
-                    for seg in segments[row_id]:
-                        pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
-                        # pooled_seq_output = pooled_seq_output.to(device='cuda')
-                        for idx in seg:
-                            pooled_seq_output += sequence_output[row_id][idx]
-                        pooled_seq_output = pooled_seq_output / len(seg)
-                        pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
+                try:
+                    if segments[row_id]:
+                        for seg in segments[row_id]:
+                            pooled_seq_output = torch.zeros(1, 1024)  # originally (1, 768)
+                            # pooled_seq_output = pooled_seq_output.to(device='cuda')
+                            for idx in seg:
+                                pooled_seq_output += sequence_output[row_id][idx]
+                            pooled_seq_output = pooled_seq_output / len(seg)
+                            pooled_seq_output_array = torch.cat([pooled_seq_output_array, pooled_seq_output], dim=0)
+                except:
+                    print("Some exception")
 
             pooled_seq_output_array = pooled_seq_output_array[1:].unsqueeze(dim=0)
             logits = self.timebank_event_classifier(pooled_seq_output_array)
@@ -1039,7 +1137,7 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
                 active_labels = torch.tensor(active_labels).type_as(labels)
                 # active_labels = active_labels.to(device='cuda')
                 loss = loss_fct(active_logits, active_labels)
-                outputs = (loss,) + outputs
+                outputs = (loss,) + outputs  # + (self.loss_weight_ratio[2],)
         elif task_name[0] == 4:
             # print("MATRES")
             sequence_output = outputs[0]
@@ -1095,8 +1193,8 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
                 else:
                     loss_fct = CrossEntropyLoss()
                     loss = loss_fct(output_logits.view(-1, self.num_labels_matres), labels.view(-1))
-                outputs = (loss,) + outputs
-        else:
+                outputs = (loss,) + outputs  # + (self.loss_weight_ratio[3],)
+        elif task_name[0] == 5:
             # print("TB Duration")
             sequence_output = outputs[0]
 
@@ -1125,6 +1223,21 @@ class RobertaForTemporalMulti(BertPreTrainedModel):
                 else:
                     loss_fct = CrossEntropyLoss()
                     loss = loss_fct(logits.view(-1, self.tb_duration_cls_num_labels), labels.view(-1))
+                outputs = (loss,) + outputs  # + (self.loss_weight_ratio[4],)
+
+        else:
+            sequence_output = outputs[0]
+            logits = self.matres_v2_classifier(sequence_output)
+
+            outputs = (logits,) + outputs[2:]
+            if labels is not None:
+                if self.num_labels_matres == 1:
+                    #  We are doing regression
+                    loss_fct = MSELoss()
+                    loss = loss_fct(logits.view(-1), labels.view(-1))
+                else:
+                    loss_fct = CrossEntropyLoss()
+                    loss = loss_fct(logits.view(-1, self.num_labels_matres), labels.view(-1))
                 outputs = (loss,) + outputs
 
         return outputs  # (loss), logits, (hidden_states), (attentions)

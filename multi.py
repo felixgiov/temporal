@@ -219,3 +219,118 @@ MULTI 4
 # CUDA_VISIBLE_DEVICES=5 python multi_run.py multi_results_1/multi_config_135.json      #
 # CUDA_VISIBLE_DEVICES=6 python multi_run.py multi_results_2/multi_config_135.json      #
 # CUDA_VISIBLE_DEVICES=7 python multi_run.py multi_results_3/multi_config_135.json      #
+
+# 12345, 1245, 1345, 1234, 145, 134, 124, 14, 1235, 135, 125, 123, 15, 13, 12, 1
+
+# 109
+# ./multi_run.sh 1 14 0
+# ./multi_run.sh 2 14 1
+# ./multi_run.sh 3 14 2
+# ./multi_run.sh 4 14 5
+# ./multi_run.sh 5 14 6
+# ./multi_run.sh 1 12 7
+
+# 107
+# ./multi_run.sh 2 12 0
+# ./multi_run.sh 3 12 1
+# ./multi_run.sh 4 12 2
+# ./multi_run.sh 5 12 3
+# ./multi_run.sh 1 15 4
+# ./multi_run.sh 2 15 5
+# ./multi_run.sh 3 15 6
+# ./multi_run.sh 4 15 7
+
+# 108
+# ./multi_run.sh 5 15 0
+# ./multi_run.sh 1 13 1
+# ./multi_run.sh 2 13 2
+# ./multi_run.sh 3 13 3
+
+# 106
+# ./multi_run.sh 4 13 0
+# ./multi_run.sh 5 13 1
+
+# 104
+# ./multi_run.sh 1 1 0
+# ./multi_run.sh 2 1 1
+# ./multi_run.sh 3 1 2
+# ./multi_run.sh 4 1 3
+# ./multi_run.sh 5 1 4
+
+# 12345, 1245, 1345, 1234, 145, 134, 124, 1235, 135, 125, 123
+
+# 107
+# ./multi_run.sh 1 145 0
+# ./multi_run.sh 2 145 1
+# ./multi_run.sh 3 145 2
+# ./multi_run.sh 4 145 3
+# ./multi_run.sh 5 145 4
+# ./multi_run.sh 1 134 5
+# ./multi_run.sh 2 134 6
+# ./multi_run.sh 3 134 7
+
+# 108
+# ./multi_run.sh 4 134 0
+# ./multi_run.sh 5 134 1
+# ./multi_run.sh 1 124 2
+# ./multi_run.sh 2 124 3
+
+# 106
+# ./multi_run.sh 3 124 0
+# ./multi_run.sh 4 124 1
+# ./multi_run.sh 5 124 2
+
+# 103
+# ./multi_run.sh 1 1235 0
+# ./multi_run.sh 2 1235 1
+# ./multi_run.sh 3 1235 2
+# ./multi_run.sh 4 1235 3
+# ./multi_run.sh 5 1235 4
+# ./multi_run.sh 1 135 5
+# ./multi_run.sh 2 135 6
+
+# 101
+# ./multi_run.sh 3 135 2
+# ./multi_run.sh 4 135 3
+# ./multi_run.sh 5 135 4
+# ./multi_run.sh 1 125 5
+# ./multi_run.sh 2 125 6
+
+# 102
+# ./multi_run.sh 3 125 5
+# ./multi_run.sh 4 125 6
+# ./multi_run.sh 5 125 7
+# ./multi_run.sh 1 123 0
+# ./multi_run.sh 2 123 1
+# ./multi_run.sh 3 123 2
+# ./multi_run.sh 4 123 3
+# ./multi_run.sh 5 123 4
+
+# 109
+# ./multi_run.sh 1 12345 0
+# ./multi_run.sh 2 12345 1
+# ./multi_run.sh 3 12345 2
+# ./multi_run.sh 4 12345 5
+# ./multi_run.sh 5 12345 6
+# ./multi_run.sh 1 1245 7
+
+# 108
+# ./multi_run.sh 2 1245 4
+# ./multi_run.sh 3 1245 5
+# ./multi_run.sh 4 1245 6
+# ./multi_run.sh 5 1245 7
+
+# 107
+# ./multi_run.sh 1 1345 0
+# ./multi_run.sh 2 1345 1
+# ./multi_run.sh 3 1345 2
+# ./multi_run.sh 4 1345 3
+# ./multi_run.sh 5 1345 4
+
+# 109
+# ./multi_run.sh 1 1234 0
+# ./multi_run.sh 2 1234 1
+# ./multi_run.sh 3 1234 2
+# ./multi_run.sh 4 1234 5
+# mos
+

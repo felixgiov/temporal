@@ -151,7 +151,7 @@
 # inputs2 = roberta_tokenizer.tokenize("<s> Who was Jim Henson ? </s> Jim Henson was a puppeteer </s>")
 # print(inputs2)
 
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 
 # from multi_utils import temprel_set
 #
@@ -202,7 +202,7 @@ from sklearn.model_selection import train_test_split
 #                                                           128,
 #                                                           tokenizer)
 
-import torch
+# import torch
 # import torch.nn as nn
 # import torch.nn.functional as F
 # from multi_run import bigramGetter_fromNN
@@ -222,43 +222,43 @@ import torch
 #                              nn_hidden_dim)
 # h_nn2o = nn.Linear(nn_hidden_dim + bigramStats_dim * common_sense_emb_dim, output_dim)
 #
-e1_hidden_mean_batch = []
-e2_hidden_mean_batch = []
-
-output = torch.randn(2,16,128,1024)
-sequence_output = output[0]
-print(output.shape)
-print(sequence_output.shape)
-print(sequence_output[0][-99])
-for i in range(len(sequence_output)):
-    e1 = [-99,-99]
-    e2 = [-98]
-
-    list_e1 = []
-    list_e2 = []
-    for j in e1:
-        list_e1.append(sequence_output[i][j])
-    for k in e2:
-        list_e2.append(sequence_output[i][k])
-
-    e1_hidden_mean = torch.mean(torch.stack(list_e1), 0)
-    e2_hidden_mean = torch.mean(torch.stack(list_e2), 0)
-
-    e1_hidden_mean_batch.append(e1_hidden_mean)
-    e2_hidden_mean_batch.append(e2_hidden_mean)
-
-
-print(len(e1_hidden_mean_batch))
-print(len(e2_hidden_mean_batch))
-
-e1_hidden_mean_batch_stk = torch.stack(e1_hidden_mean_batch)
-e2_hidden_mean_batch_stk = torch.stack(e2_hidden_mean_batch)
-
-print(e1_hidden_mean_batch_stk.shape)
-print(e2_hidden_mean_batch_stk.shape)
-
-y = torch.cat((e1_hidden_mean_batch_stk, e2_hidden_mean_batch_stk), 1)
-print(y.shape)
+# e1_hidden_mean_batch = []
+# e2_hidden_mean_batch = []
+#
+# output = torch.randn(2,16,128,1024)
+# sequence_output = output[0]
+# print(output.shape)
+# print(sequence_output.shape)
+# print(sequence_output[0][-99])
+# for i in range(len(sequence_output)):
+#     e1 = [-99,-99]
+#     e2 = [-98]
+#
+#     list_e1 = []
+#     list_e2 = []
+#     for j in e1:
+#         list_e1.append(sequence_output[i][j])
+#     for k in e2:
+#         list_e2.append(sequence_output[i][k])
+#
+#     e1_hidden_mean = torch.mean(torch.stack(list_e1), 0)
+#     e2_hidden_mean = torch.mean(torch.stack(list_e2), 0)
+#
+#     e1_hidden_mean_batch.append(e1_hidden_mean)
+#     e2_hidden_mean_batch.append(e2_hidden_mean)
+#
+#
+# print(len(e1_hidden_mean_batch))
+# print(len(e2_hidden_mean_batch))
+#
+# e1_hidden_mean_batch_stk = torch.stack(e1_hidden_mean_batch)
+# e2_hidden_mean_batch_stk = torch.stack(e2_hidden_mean_batch)
+#
+# print(e1_hidden_mean_batch_stk.shape)
+# print(e2_hidden_mean_batch_stk.shape)
+#
+# y = torch.cat((e1_hidden_mean_batch_stk, e2_hidden_mean_batch_stk), 1)
+# print(y.shape)
 
 # # common sense embeddings
 # bigramstats = bigramGetter.getBigramStatsFromTemprel(temprel)
@@ -316,3 +316,149 @@ print(y.shape)
 #
 # print(len(tb_duration_train_dataset))
 # print(len(tb_duration_all_dataset))
+
+import sympy as sym
+
+def calculateWeightedLossRatio(len_1, len_2, len_3, len_4, len_5):
+    task_0_ratio = 0
+    task_1_ratio = 0
+    task_2_ratio = 0
+    task_3_ratio = 0
+    task_4_ratio = 0
+    lengths = [len_1, len_2, len_3, len_4, len_5]
+    active_lengths = {}
+    act_lengths = []
+    for i, length in enumerate(lengths):
+        if length != 0:
+            active_lengths[i] = length  # id start at 1
+            act_lengths.append(length)
+
+    n = len(active_lengths)
+
+    # fix this to be more efficient
+    if n==1:
+        active_lengths[0] = 1
+    elif n==2:
+        a, b = sym.symbols('a,b')
+        eq1 = sym.Eq(a + b, 1)
+        eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+        result = sym.solve([eq1, eq2], (a, b))
+        result_list = list(result.values())
+        for i, key in enumerate(active_lengths):
+            active_lengths[key] = result_list[i]
+    elif n==3:
+        a, b, c = sym.symbols('a,b,c')
+        eq1 = sym.Eq(a + b + c, 1)
+        eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+        eq3 = sym.Eq(act_lengths[1] * b, act_lengths[2] * c)
+        result = sym.solve([eq1, eq2, eq3], (a, b, c))
+        result_list = list(result.values())
+        for i, key in enumerate(active_lengths):
+            active_lengths[key] = result_list[i]
+    elif n==4:
+        a, b, c, d = sym.symbols('a,b,c,d')
+        eq1 = sym.Eq(a + b + c + d, 1)
+        eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+        eq3 = sym.Eq(act_lengths[1] * b, act_lengths[2] * c)
+        eq4 = sym.Eq(act_lengths[2] * c, act_lengths[3] * d)
+        result = sym.solve([eq1, eq2, eq3, eq4], (a, b, c, d))
+        result_list = list(result.values())
+        for i, key in enumerate(active_lengths):
+            active_lengths[key] = result_list[i]
+    elif n==5:
+        a, b, c, d, e = sym.symbols('a,b,c,d,e')
+        eq1 = sym.Eq(a + b + c + d + e, 1)
+        eq2 = sym.Eq(act_lengths[0] * a, act_lengths[1] * b)
+        eq3 = sym.Eq(act_lengths[1] * b, act_lengths[2] * c)
+        eq4 = sym.Eq(act_lengths[2] * c, act_lengths[3] * d)
+        eq5 = sym.Eq(act_lengths[3] * d, act_lengths[4] * e)
+        result = sym.solve([eq1, eq2, eq3, eq4, eq5], (a, b, c, d, e))
+        result_list = list(result.values())
+        for i, key in enumerate(active_lengths):
+            active_lengths[key] = result_list[i]
+    else:
+        active_lengths[0] = 0
+
+    # dict = {}
+    # for i in range(5):
+    #     for key in active_lengths:
+    #         if key == i:
+    #             dict[i] = active_lengths[key]
+    #         else:
+    #             dict[i] = 0
+    # print(dict)
+    return active_lengths
+
+
+calculateWeightedLossRatio(1000, 0, 0, 0, 0)
+calculateWeightedLossRatio(1000, 0, 2000, 0, 0)
+calculateWeightedLossRatio(1000, 0, 2000, 0, 3000)
+calculateWeightedLossRatio(1000, 2000, 3000, 2500, 0)
+calculateWeightedLossRatio(1000, 2000, 3000, 2500, 1000)
+calculateWeightedLossRatio(0, 0, 0, 0, 0)
+
+
+def construct_features_v2(dict_example_value):
+    features_list = []
+    context_dict = {}
+    context = ""
+
+    for item in dict_example_value:
+        context_dict[item[1]+"_"+item[2]] = get_context(item[3])
+
+    context = get_merged_context(context_dict)
+
+    for i, item in enumerate(dict_example_value):
+
+        features_positive_and_negative_example = []
+
+        # context = get_context(item[3])
+        event1_sentence = extract_event_sentence_spacy(item[3], item[4][0])
+        event2_sentence = extract_event_sentence_spacy(item[3], item[4][1])
+
+        question_after = 'What happened after ' + event1_sentence + '?'
+        question_before = 'What happened before ' + event1_sentence + '?'
+
+        if item[4] == "BEFORE":
+            features_positive_and_negative_example.append(context + '\t' + question_after + '\t' + event2_sentence + '\tyes\tEvent Ordering')
+            features_positive_and_negative_example.append(context + '\t' + question_before + '\t' + event2_sentence + '\tno\tEvent Ordering')
+        elif item[4] == "AFTER":
+            features_positive_and_negative_example.append(context + '\t' + question_before + '\t' + event2_sentence + '\tyes\tEvent Ordering')
+            features_positive_and_negative_example.append(context + '\t' + question_after + '\t' + event2_sentence + '\tno\tEvent Ordering')
+        else:
+            features_positive_and_negative_example.append(context + '\t' + question_before + '\t' + event2_sentence + '\tno\tEvent Ordering')
+            features_positive_and_negative_example.append(context + '\t' + question_after + '\t' + event2_sentence + '\tno\tEvent Ordering')
+
+        features_list.append(features_positive_and_negative_example)
+
+    return features_list
+
+def get_merged_context(context_dict):
+    context_sentence = ''
+    context_list = []
+    sorted_dict = sorted(context_dict.items())
+
+    for item in sorted_dict:
+        splitted_context = item[1].split(" .")
+        for split_item in splitted_context:
+            if split_item not in context_list:
+                context_list.append(split_item)
+
+    for context in context_list:
+        context_sentence = context_sentence + context.strip() + ". "
+
+    context_sentence.strip()
+
+    return context_sentence
+
+for key in dict_train_example:
+    all_features.extend(construct_features_v2(dict_train_example[key]))
+
+# df = pd.DataFrame(all_features).drop_duplicates()
+# df.to_csv(path_or_buf='/home/felix/projects/research/datasets/MATRES-MCTACO/train12k_v2.tsv', index=False, header=False, quoting=csv.QUOTE_NONE, escapechar="")
+
+all_features = list(dict.fromkeys(all_features))
+
+with open('/home/felix/projects/research/datasets/MATRES-MCTACO/train12k_v2.tsv', "w") as writer:
+    for feature in all_features:
+        writer.write(feature+'\n')

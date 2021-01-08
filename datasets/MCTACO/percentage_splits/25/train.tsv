@@ -1,0 +1,963 @@
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	What happened after Mr. Barco accepted the military aid?	the aid was denied	no	Event Ordering
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	What happened after Mr. Barco accepted the military aid?	he received the aid	yes	Event Ordering
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	What happened after Mr. Barco accepted the military aid?	things started to progress	yes	Event Ordering
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	several centuries	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	a minute	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	0.33 second	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	1 second	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	1 week	yes	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	a few seconds	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	a day	yes	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	several months	yes	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	3 second	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	several minutes	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	an second	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	1 year	yes	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	9 second	no	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How long did it take for Mr Barco to accept military aid?	a few weeks	yes	Event Duration
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	it has three u.s. branches	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he has accepted it for several seconds	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he never had aid	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	the u.s. has one great advantage	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	mr. krenz has several things going for him	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he always had aid	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he has accepted it for several weeks	yes	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he accepted the finding	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he sometimes had aid	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	the u.s. military intervene	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he has accepted it for several years	yes	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	yes	yes	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	Did he accept the aid for a long period of time?	he has accepted it for several hours	no	Stationarity
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	the u.s. has one great advantage	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	once in 90 years	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	almost every hour	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	the u.s. military intervene	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	once in 10 seconds	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	once in 10 weeks	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	almost every second	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	once in 10 years	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	once a decade	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	How often was the aid utilized?	once in 30 years	no	Frequency
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	When did he begin to accept the military aid?	he refused	no	Typical Time
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	When did he begin to accept the military aid?	3 centuries	no	Typical Time
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	When did he begin to accept the military aid?	never	no	Typical Time
+Mr. Barco has refused U.S. troops or advisers but has accepted U.S. military aid.	When did he begin to accept the military aid?	always	no	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	How often does the judge scold someone in court?	once a century	no	Frequency
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	How often does the judge scold someone in court?	every day	yes	Frequency
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	How often does the judge scold someone in court?	once in his life	no	Frequency
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	8:00 PM	no	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	7:00 AM	yes	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	5:00 PM	no	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	11:00 PM	no	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	8:00 AM	yes	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	9:00 AM	yes	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	7:00 PM	no	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	10:00 PM	no	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	When did court start?	11:00 AM	yes	Typical Time
+But Judge Thornton declared in court, "When these orders are entered, you don't just do whatever you damn well please and ignore them."	Was the judge still talking about this during the next case?	no	yes	Stationarity
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	30 centuries	no	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	two centuries	no	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	90 minutes	yes	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	two seconds	no	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	90 seconds	no	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	8 hours	yes	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	30 seconds	no	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How long did the hearing last?	30 years	no	Event Duration
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	a dozen times per second	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	once a second	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	once every 90 years	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	once every 10 seconds	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	once every 30 years	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	a dozen times per hour	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	once every 10 years	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	How often does Judge Thornton issue rulings?	every few centuries	no	Frequency
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	When did the hearing begin?	1:00 AM	no	Typical Time
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	When did the hearing begin?	9:00 PM	no	Typical Time
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	When did the hearing begin?	10:00 PM	no	Typical Time
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	When did the hearing begin?	1:00 PM	yes	Typical Time
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	When did the hearing begin?	3:00 PM	yes	Typical Time
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	When did the hearing begin?	at 8am	yes	Typical Time
+Ruling that the order was mutually binding, Judge Thornton also cited the men for contempt.	When did the hearing begin?	10:00 AM	yes	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How many poems has Pushkin published in total?	pushkin has published 50 poems in total	yes	Frequency
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How many poems has Pushkin published in total?	pushkin has published 50  poems in total	yes	Frequency
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How many poems has Pushkin published in total?	0	no	Frequency
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How many poems has Pushkin published in total?	millions	no	Frequency
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	175	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	7	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	3	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	63	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	45	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	age 95	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	age 57	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	750	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	105	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	150	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	age 19	yes	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	75	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	At what age did Pushkin graduate from Tsarskoye Selo Lyceum?	7.5	no	Typical Time
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	begged for money on the street	no	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	he published books of his poetry	yes	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	he continued to write	yes	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	he published books of his poems	yes	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	he released books of his poems	yes	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	he went to high school	no	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	begged for money on the streets	no	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	he attended to high school	no	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	begged for money on the bars	no	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	What did Pushkin do after his graduation?	he published books of his verses	yes	Event Ordering
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	6 weeks	no	Event Duration
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	50 years	no	Event Duration
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	fifty years	no	Event Duration
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	3 months	no	Event Duration
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	6 months	no	Event Duration
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	0.4 years	no	Event Duration
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	7 hours	no	Event Duration
+Pushkin published his first poem at the age of fifteen, and was widely recognized by the literary establishment by the time of his graduation from the Tsarskoye Selo Lyceum.	How long did it take Pushkin to graduate from Tsarskoye Selo Lyceum?	2 months	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	800 seconds	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	two minutes	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	6 centuries	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	two hours	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	two centuries	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	800 years	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	2400 years	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How long did it take for the WHO to find that fact?	many hours	no	Event Duration
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	What happened after the WHO discovered this fact?	the who ignored the population	no	Event Ordering
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	Does the population exist in a state of semi starvation today?	no, everyone never has enough to eat	no	Stationarity
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every century	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every minute	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every 100 seconds	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	once a second	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every 100 years	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every 100 hours	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every 300 years	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	once a hour	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every 900 years	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	How often does the WHO find out facts about the population?	every night	no	Frequency
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	What day did the WHO discover this fact?	monday	yes	Typical Time
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	What day did the WHO discover this fact?	tuesday	yes	Typical Time
+In 1996 the WHO found that much of the population existed in a state of ``semi-starvation.''	What day did the WHO discover this fact?	on monday	yes	Typical Time
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	When did he get a law degree?	1983	no	Typical Time
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	When did he get a law degree?	1981	yes	Typical Time
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	When did he get a law degree?	1999	no	Typical Time
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	When did he get a law degree?	in 1981	yes	Typical Time
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every 18 years	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every day	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every 2 hours	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every thirty weeks	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every thirty hours	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every thirty seconds	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every night	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every thirty years	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every six hours	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every six weeks	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every month	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every six seconds	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every minute	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every century	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	How often are judges elected	every 2 weeks	no	Frequency
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	What happened after Decatur County?	he retired early	yes	Event Ordering
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	Was he always in law?	no	yes	Stationarity
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	Was he always in law?	no, he wasn't	yes	Stationarity
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	Was he always in law?	yes, since birth	no	Stationarity
+After several years of private practice from 1982-90, he became the judge of Decatur County Court for a year.	Was he always in law?	yes	no	Stationarity
+Only certain animals were able to get at the plants hidden nectar.	How long did it take for the animals to get at the plant's hidden nectar?	10 days	no	Event Duration
+Only certain animals were able to get at the plants hidden nectar.	How long did it take for the animals to get at the plant's hidden nectar?	yearly	no	Event Duration
+Only certain animals were able to get at the plants hidden nectar.	How long did it take for the animals to get at the plant's hidden nectar?	it could take 0.33 days to get at the nectar	no	Event Duration
+Only certain animals were able to get at the plants hidden nectar.	How long did it take for the animals to get at the plant's hidden nectar?	it could take 3 centuries to get at the nectar	no	Event Duration
+Only certain animals were able to get at the plants hidden nectar.	How long did it take for the animals to get at the plant's hidden nectar?	it could take several centuries to get at the nectar	no	Event Duration
+Only certain animals were able to get at the plants hidden nectar.	How long did it take for the animals to get at the plant's hidden nectar?	a century	no	Event Duration
+Only certain animals were able to get at the plants hidden nectar.	How long did it take for the animals to get at the plant's hidden nectar?	10 centuries	no	Event Duration
+Only certain animals were able to get at the plants hidden nectar.	What did the animals do after they got at the plant's hidden nectar?	eat the nectar	yes	Event Ordering
+Only certain animals were able to get at the plants hidden nectar.	What did the animals do after they got at the plant's hidden nectar?	drank it	yes	Event Ordering
+Only certain animals were able to get at the plants hidden nectar.	What did the animals do after they got at the plant's hidden nectar?	we do the same for animals	no	Event Ordering
+Only certain animals were able to get at the plants hidden nectar.	What did the animals do after they got at the plant's hidden nectar?	we need to do the same for animals	no	Event Ordering
+Only certain animals were able to get at the plants hidden nectar.	What did the animals do after they got at the plant's hidden nectar?	officials get quotes for certain reinsurance contracts	no	Event Ordering
+Only certain animals were able to get at the plants hidden nectar.	What did the animals do after they got at the plant's hidden nectar?	fought	no	Event Ordering
+Only certain animals were able to get at the plants hidden nectar.	What did the animals do after they got at the plant's hidden nectar?	the animals ate the nectar from the plant	yes	Event Ordering
+Only certain animals were able to get at the plants hidden nectar.	Does the plant always have nectar?	yes	yes	Stationarity
+Only certain animals were able to get at the plants hidden nectar.	When did the animals get to the plant's hidden nectar?	spring	yes	Typical Time
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	2 times	yes	Frequency
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	she threw the ball at the surface 100 times	yes	Frequency
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	she throws the ball at the surface 5 times	yes	Frequency
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	she threw the ball into the surface 200 times	yes	Frequency
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	she threw the ball into the surface 45 times	yes	Frequency
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	she throw the ball at the surface 5 times	yes	Frequency
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	she threw the ball into the surface 15 times	yes	Frequency
+The angle at which it strikes the surface tells us how it will bounce off.	How many times did she throw the ball at the surface?	she threw the ball at the surface 5 times	yes	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	every minute or two	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	once a second	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	once every minute	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	every day or two	yes	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	once a day	yes	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	once per minute	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	every century or two	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	once a minute	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	each day or two	yes	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	every month or two	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	How often does the animal collect from a single flower	once a year	no	Frequency
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	2:00 PM	yes	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	3:00 AM	no	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	10:00 AM	yes	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	5:00 AM	no	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	he declined to be specific	no	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	in the afternoon	yes	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	about noon	yes	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	What time of day do they collect pollen	8:00 AM	yes	Typical Time
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	9 hours	no	Event Duration
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	1.5 hours	no	Event Duration
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	we need to do the same for animals	no	Event Duration
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	the features carry 30 seconds of advertising	no	Event Duration
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	we do the same for animals	no	Event Duration
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	3 hours	no	Event Duration
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	about 30 seconds	yes	Event Duration
+These specific animals might be more likely to visit only flowers of the same species.	How long do they spend at each flower?	3 days	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	Did she still order the next day?	she ordered grass	no	Stationarity
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	Did she still order the next day?	no	yes	Stationarity
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	a few hours	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	almost 60 minutes	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	almost 20 days	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	9 hour	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	a few minutes	yes	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	almost 20 centuries	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	1 week	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	1 hour	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	a few seconds	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	a few centuries	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	a few days	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	a few weeks	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How long did she take to decide on what to order?	almost 180 minutes	no	Event Duration
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	What did she do after ordering tastiest kind of each vegetable and the prettiest kind of each flower ?	she introduces each chapter	no	Event Ordering
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	What did she do after ordering tastiest kind of each vegetable and the prettiest kind of each flower ?	she says i felt kind of safe	no	Event Ordering
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	What did she do after ordering tastiest kind of each vegetable and the prettiest kind of each flower ?	she goes to the circus	no	Event Ordering
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	three minutes a week	no	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	every 10 minutes	no	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	each week	yes	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	once a second	no	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	every 10 centuries	no	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	once a week	yes	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	every 90 minutes	no	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	three days a week	yes	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	How often does she order vegetables and flowers?	every 30 minutes	no	Frequency
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	When did she order them?	at 5 pm	yes	Typical Time
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	When did she order them?	at midnight	no	Typical Time
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	When did she order them?	at 5 am	no	Typical Time
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	When did she order them?	in the afternoon	yes	Typical Time
+She ordered the tastiest kind of each vegetable and the prettiest kind of each flower.	When did she order them?	she doubted that kind of performance is sustainable	no	Typical Time
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How long did it take them to come?	they came quickly after being seen at the middle point	no	Event Duration
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How long did it take them to come?	a year	no	Event Duration
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How long did it take them to come?	10 months	no	Event Duration
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	Will they still be coming for the rest of eternity?	no	yes	Stationarity
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How often did they come?	once a minute	no	Frequency
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How often did they come?	once a month	yes	Frequency
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How often did they come?	every week	yes	Frequency
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How often did they come?	every hour	no	Frequency
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How often did they come?	every second	no	Frequency
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How often did they come?	once a hour	no	Frequency
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	How often did they come?	once a second	no	Frequency
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	What time of day was it?	4:00 PM	yes	Typical Time
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	What time of day was it?	3:00 PM	yes	Typical Time
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	What time of day was it?	1:00 PM	yes	Typical Time
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	What time of day was it?	5:00 PM	yes	Typical Time
+Hitherward they came, Meeting our faces from the middle point, With us beyond but with a larger stride.	What time of day was it?	12:00 PM	yes	Typical Time
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How many times a year did the Spanish visit Jamaica?	twice every year	yes	Frequency
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How many times a year did the Spanish visit Jamaica?	once each year	yes	Frequency
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How many times a year did the Spanish visit Jamaica?	once each hour	no	Frequency
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How many times a year did the Spanish visit Jamaica?	twice every hour	no	Frequency
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How many times a year did the Spanish visit Jamaica?	annually every year	yes	Frequency
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How many times a year did the Spanish visit Jamaica?	once every year	yes	Frequency
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	What happened after the Spanish found Jamaica?	they attacked the arawak	yes	Event Ordering
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	What happened after the Spanish found Jamaica?	they killed the arawak	yes	Event Ordering
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	What happened after the Spanish found Jamaica?	they destroyed the arawak	yes	Event Ordering
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	What happened after the Spanish found Jamaica?	they met the arawak	yes	Event Ordering
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	What happened after the Spanish found Jamaica?	they got off the ship	yes	Event Ordering
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	What happened after the Spanish found Jamaica?	they encountered the arawak	yes	Event Ordering
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	2 months	yes	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	decades	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	1 week	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	2 weeks	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	6 months	yes	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	seconds	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	6 years	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	months	yes	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	days	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	1 second	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	How long did it take for the Spanish to reach Jamaica?	centuries	no	Event Duration
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	Did the Spanish always know about Jamaica?	no	yes	Stationarity
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	Did the Spanish always know about Jamaica?	yes they always knew about the undiscovered island	no	Stationarity
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	Did the Spanish always know about Jamaica?	none	no	Stationarity
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	Did the Spanish always know about Jamaica?	yes they always known about the undiscovered island	no	Stationarity
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	Did the Spanish always know about Jamaica?	yes they always know about the undiscovered island	no	Stationarity
+Over 200 Arawak sites have been identified, and it is said that when the Spanish arrived in Jamaica there were approximately 100,000 Arawak living on the island.	Did the Spanish always know about Jamaica?	yes they always knew about this undiscovered island	no	Stationarity
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	Will the emperor always be in charge of Japan?	no	yes	Stationarity
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	Will the emperor always be in charge of Japan?	the most part	no	Stationarity
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	25 years	yes	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	10 seconds	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	200 hours	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	200 seconds	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	10 years	yes	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	25 seconds	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	200 years	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	225 years	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	1 minute	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How long did the Emperor rule Japan?	1 century	no	Event Duration
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	What did the people do next?	people started blaming the emperor for the defeat of the world war ii	yes	Event Ordering
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	every century	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	once a second	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	once a year	yes	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	every second	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	once a century	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	once a hour	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	every hour	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	every year	yes	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	once a minute	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	How often does the emperor publicly speak?	every minute	no	Frequency
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	What time of day does the emperor most likely wake up?	2:00 AM	no	Typical Time
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	What time of day does the emperor most likely wake up?	6:00 AM	yes	Typical Time
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	What time of day does the emperor most likely wake up?	7:00 PM	no	Typical Time
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	What time of day does the emperor most likely wake up?	6:00 PM	no	Typical Time
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	What time of day does the emperor most likely wake up?	11:00 PM	no	Typical Time
+At this early stage in its history Japan was already (for the most part) only nominally ruled by the emperor.	What time of day does the emperor most likely wake up?	5:00 PM	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	once	yes	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	25 times	no	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	five times	no	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	just once	yes	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	15 times	no	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	5 times	no	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	she said this was not a do-or-die deal	no	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How many times a day did Mary pick blueberries?	six	no	Frequency
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	approximately 10 am	yes	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	at 11 a.m	yes	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	about 12 am	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	about 10 pm	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	4:00 PM	yes	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	4:00 AM	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	about 1 am	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	approximately 12 am	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	1:00 AM	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	around 10 am	yes	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	at 1 a.m	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	at 12 a.m	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	12:00 PM	yes	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	2:00 AM	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	about 10 am	yes	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	around 12 am	no	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	At what time of day was Mary picking blueberries?	2:00 PM	yes	Typical Time
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	What did Mary do after turning around?	mary stops picking	yes	Event Ordering
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	What did Mary do after turning around?	she looked for max	yes	Event Ordering
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	What did Mary do after turning around?	she searched somewhere else for max	yes	Event Ordering
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	What did Mary do after turning around?	she looked somewhere else for max	yes	Event Ordering
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	What did Mary do after turning around?	she searched for max	yes	Event Ordering
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	What did Mary do after turning around?	mary stopped picking	yes	Event Ordering
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	10 seconds	no	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	about half an hour	yes	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	1 hours	yes	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	one minute	no	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	2 seconds	no	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	10 hours	no	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	one hour	yes	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	about two minutes	no	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	How long did Mary spend picking blueberries?	about three minutes	no	Event Duration
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	Was Mary still looking for Max the next day?	yes she found him that afternoon	no	Stationarity
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	Was Mary still looking for Max the next day?	no she find him that afternoon	yes	Stationarity
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	Was Mary still looking for Max the next day?	but she found him that afternoon	no	Stationarity
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	Was Mary still looking for Max the next day?	she has no problem with that	no	Stationarity
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	Was Mary still looking for Max the next day?	no she found him that morning	yes	Stationarity
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	Was Mary still looking for Max the next day?	no	yes	Stationarity
+One day, as Mary was picking the blueberries, she turned around to find that Max was not there.	Was Mary still looking for Max the next day?	she said this was not a do-or-die deal	no	Stationarity
+If I cannot carry my groceries or my laundry, how can I live?	What happened to the clothes?	they got dirty	yes	Stationarity
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	0.22 hours	no	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	2 seconds	no	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	30 centuries	no	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	1 second and 15 minutes	no	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	3 centuries	no	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	1 hour and 15 minutes	yes	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	9 year	no	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	2 hours	yes	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	How long did it take to do the laundry?	1 year	no	Event Duration
+If I cannot carry my groceries or my laundry, how can I live?	What happened after he did the laundry?	he folded it and put it away	yes	Event Ordering
+If I cannot carry my groceries or my laundry, how can I live?	What happened after he did the laundry?	he threw his laundry in the trash	no	Event Ordering
+If I cannot carry my groceries or my laundry, how can I live?	What happened after he did the laundry?	he put them away	yes	Event Ordering
+If I cannot carry my groceries or my laundry, how can I live?	What happened after he did the laundry?	he went to a party	no	Event Ordering
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	66.67	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	0.67	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	22.22	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	once	yes	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	18	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	27 times	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	200	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	1 times	yes	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	600	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	2	yes	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	0.22	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	81 times	no	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	How many times a week does he do the laundry?	twice	yes	Frequency
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	saturday	yes	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	today	yes	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	once a second	no	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	once a year	no	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	yesterday	yes	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	3 months ago	no	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	27 months ago	no	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	1 months ago	no	Typical Time
+If I cannot carry my groceries or my laundry, how can I live?	When did he do the laundry?	9 months ago	no	Typical Time
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	15 weeks	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	15 years	yes	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	5 seconds	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	100 seconds	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	30 weeks	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	10 years	yes	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	5 years	yes	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	100 years	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	2 weeks	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	11.11 years	yes	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	3.33 years	yes	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	100 weeks	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	1.67 years	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	135 years	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	30 seconds	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How long was the chief justice in standing?	100 hours	no	Event Duration
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	What happened after the award was named after the chief justice?	the chief justice felt honored	yes	Event Ordering
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	What happened after the award was named after the chief justice?	the award was collected	yes	Event Ordering
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	What happened after the award was named after the chief justice?	he was honored	yes	Event Ordering
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How often was an award named after the chief justice?	a new award comes out every hour	no	Frequency
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How often was an award named after the chief justice?	once	yes	Frequency
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How often was an award named after the chief justice?	one time	yes	Frequency
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How often was an award named after the chief justice?	a new award comes out every week	no	Frequency
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How often was an award named after the chief justice?	always	no	Frequency
+The award was named after the chief justice of the Indiana Supreme Court to honor his statewide vision on justice.	How often was an award named after the chief justice?	a new award comes out every second	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	once every few months	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	clinton visited pakistan once a month	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	each week	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	every month	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	once every few hours	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	once every few seconds	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	every week	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	clinton visits pakistan once a month	no	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How often does Clinton visit Pakistan?	once every few years	yes	Frequency
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	When did Clinton arrive in Pakistan?	when his was born	no	Typical Time
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	When did Clinton arrive in Pakistan?	90 years ago	no	Typical Time
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	When did Clinton arrive in Pakistan?	150 years ago	no	Typical Time
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	When did Clinton arrive in Pakistan?	100 years ago	no	Typical Time
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	When did Clinton arrive in Pakistan?	when he was born	no	Typical Time
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	When did Clinton arrive in Pakistan?	30 seconds ago	no	Typical Time
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	When did Clinton arrive in Pakistan?	60 years ago	no	Typical Time
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	12 seconds	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	every day	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	a minute	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	one month	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	12 weeks	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	a century	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	one hour	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	6 hours	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	one week	yes	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	a week	yes	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	one second	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	2.4 hours	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	How long was President Clinton's trip?	one year	no	Event Duration
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	Was Clinton still in South Asia after the trip?	yes	no	Stationarity
+But President Clinton insisted on including Pakistan in the itinerary for his trip to South Asia.	Was Clinton still in South Asia after the trip?	no	yes	Stationarity
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	15 centuries	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	5 weeks	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	10 minutes	yes	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	10 months	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	15 months	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	20 minutes	yes	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	5 hours	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	15 minutes	yes	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	20 months	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	45 hours	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	20 centuries	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How long does the robbery take?	2 weeks	no	Event Duration
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	giants fans went  into euphoria	no	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	they got arrested	yes	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	he and two colleagues caught nothing	no	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	he returned the items he robbed	no	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	they fled	yes	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	they went into hiding	yes	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	the board decides to explore other alternatives	no	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	he decides to be modern	no	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	he was caught	yes	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What happened after they robbed the train?	he decides to be trendy	no	Event Ordering
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	Does Charlie still have the goods from the train?	the board decides	no	Stationarity
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	Does Charlie still have the goods from the train?	he decides to act	no	Stationarity
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	Does Charlie still have the goods from the train?	the board decides to explore other alternatives	no	Stationarity
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	Does Charlie still have the goods from the train?	yes	yes	Stationarity
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How many times has Charlie robbed a train?	180 times	no	Frequency
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How many times has Charlie robbed a train?	135 times	no	Frequency
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	How many times has Charlie robbed a train?	once	yes	Frequency
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	it occurred around noon	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	12:00 AM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	7:00 PM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	3:00 AM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	7:00 AM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	9:00 AM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	1:00 PM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	1:00 AM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	it occurred around midnight	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	12:00 PM	yes	Typical Time
+Charlie decides to rob the train with the help of imprisoned Don and con-artist Victor Braganza .	What time did the robbery occur?	4:00 AM	yes	Typical Time
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	once a month	yes	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	once a week	yes	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	3 times a month	yes	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	daily	yes	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	3 times a week	yes	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	once a second	no	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	once a day	yes	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	3 times a century	no	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	once a century	no	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How often did Goode speak with Gorbachev?	it provided new technology for other company products	no	Frequency
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	one week	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	0.2 year	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	1 week	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	century	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	three hours	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	three weeks	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	0.5 week	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	centuries	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	How long did Gorbachev's campaign last?	hours	no	Event Duration
+W. Mark Goode, president of Micronyx Inc., a Richardson, Texas, firm that makes computer-security products, provided a new definition for Mikhail Gorbachev's campaign for greater openness, known commonly as glasnost.	Is W. Mark Goode still the president of Micronyx?	yes	yes	Stationarity
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	an year	no	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	6 hours	yes	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	an hour	yes	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	an week	no	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	2 hours	yes	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	a hour	yes	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	2 seconds	no	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	the storm lasted through the day	yes	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	the storm lasted through the morning	yes	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	an second	no	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	2 weeks	no	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	a second	no	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	a year	no	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How long was the storm?	the storm lasted through the early morning	yes	Event Duration
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What happened next?	tara sailed the ship to safety	yes	Event Ordering
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What happened next?	she drove for a while	no	Event Ordering
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What happened next?	yutaka kume took the helm	no	Event Ordering
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What happened next?	mr. luzon took the helm	no	Event Ordering
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	Will the hail storm ever end?	yes	yes	Stationarity
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	once a day	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	once every 5 seconds	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	once a night	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	every minute	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	once a minute	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	once every 5 hours	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	rarely	yes	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	every day	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	How often does a typical ship face a major storm like this?	every night	no	Frequency
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What time of day was the storm?	7:00 PM	yes	Typical Time
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What time of day was the storm?	it was morning	yes	Typical Time
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What time of day was the storm?	5:00 PM	yes	Typical Time
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What time of day was the storm?	7:00 AM	yes	Typical Time
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What time of day was the storm?	it was evening	yes	Typical Time
+It's hail crackled across the comm, and Tara spun to retake her seat at the helm.	What time of day was the storm?	3:00 PM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	5000 times	no	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	every day	yes	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	2 times	yes	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	10 times	yes	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	every minute	no	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	every century	no	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	0.4 times	no	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	ten times	yes	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	5 times	yes	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	30 times	yes	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How often has Number 13 watched Seki?	3000 times	no	Frequency
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	8:00 PM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	2:00 AM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	from 9am to 7 pm	no	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	from 9am to 5 pm	no	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	10:00 PM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	from 9am to 5 am	no	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	one minute ago	no	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	5:00 PM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	9:00 PM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	8:00 AM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	2:00 PM	yes	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	At what time of day was Seki killed?	from 9am to 4 pm	no	Typical Time
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How long was Seki being watched by Number 13?	seki was being watched by number thirteen for an hour	yes	Event Duration
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	How long was Seki being watched by Number 13?	seki was being watched by number 13 for an hour	yes	Event Duration
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	Has Number 13 always watched Seki?	he does this	no	Stationarity
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	Has Number 13 always watched Seki?	no he not did that minute	no	Stationarity
+During this incident , Seki does n't realize he's being watched by Number 13 , but as soon as he does , Number 13 kills him .	Has Number 13 always watched Seki?	no he just did that century	no	Stationarity
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	twice every night	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	twice a month	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	each few weeks	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	every night	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	each few seconds	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	every few seconds	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	every few hours	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	every minute	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	once per hour	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	twice every day	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	every few centuries	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	twice a night	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	once every year	yes	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	once a year	yes	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	once a minute	no	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How often does Bailey receive awards?	each year	yes	Frequency
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	When did Bailey receive their award?	1:00 PM	yes	Typical Time
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	When did Bailey receive their award?	1:00 AM	no	Typical Time
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	When did Bailey receive their award?	three seconds ago	no	Typical Time
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	When did Bailey receive their award?	the work gets the award	no	Typical Time
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	What happened after Bailey received their award?	bailey was very happy	yes	Event Ordering
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	an hour	yes	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	1 hour	yes	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	3 minutes	no	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	21 hours	no	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	25 hours	no	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	5 minutes	no	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	35 hours	no	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	7 hours	no	Event Duration
+Bailey received the award for his three years of volunteer work at Indiana Pro Bono Commission.	How long was Bailey's award ceremony?	5 seconds	no	Event Duration
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every day	yes	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every ten hours	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every month	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every ten seconds	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every third day	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every third month	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every third night	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every fourth day	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every morning	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every 3rd day	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every ten years	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	on a daily basis	yes	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every third minute	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How often do people conceal who they truly are?	every ten weeks	no	Frequency
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How long does one strive to become someone else?	for years	yes	Event Duration
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How long does one strive to become someone else?	1 minutes	no	Event Duration
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How long does one strive to become someone else?	5 centuries	no	Event Duration
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How long does one strive to become someone else?	their entire lives	yes	Event Duration
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How long does one strive to become someone else?	5 days	no	Event Duration
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	How long does one strive to become someone else?	for decades	yes	Event Duration
+The suggestion that you are some one else is the thing to strive for, not the concealment of who you really are.	Are people still striving to conceal who they are?	yes	yes	Stationarity
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How long did and and her friend study?	240 days	no	Event Duration
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How long did and and her friend study?	80 months	no	Event Duration
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How long did and and her friend study?	2 seconds	no	Event Duration
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How long did and and her friend study?	six seconds	no	Event Duration
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How long did and and her friend study?	2 centuries	no	Event Duration
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How long did and and her friend study?	2 minutes	no	Event Duration
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How long did and and her friend study?	1 second	no	Event Duration
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	What happened after the spelling bee?	she won	yes	Event Ordering
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	What happened after the spelling bee?	ana won the spelling bee	yes	Event Ordering
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every 5 weeks	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	once a second	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	once a year	yes	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every 5 hours	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every 5 years	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every hour	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every week	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every 15 years	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every day	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every night	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every century	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every 5 seconds	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	once a hour	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every 45 years	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	once a week	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every year	yes	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	How often is the spelling bee held?	every minute	no	Frequency
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	When did the spelling bee take place?	6:00 AM	no	Typical Time
+By the time the spelling bee arrived Ana and her best friend were sure she would win.	When did the spelling bee take place?	noon	yes	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	every hour	no	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	every year	yes	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	every other year	yes	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	once every year	yes	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	every other hour	no	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	every other second	no	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	once a hour	no	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	once per year	yes	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	once a second	no	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How often does he visit the tomb?	once a year	yes	Frequency
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	When did he leave for the tomb?	10:00 AM	yes	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	When did he leave for the tomb?	his son paid	no	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	When did he leave for the tomb?	0.5 month ago	no	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	When did he leave for the tomb?	9:00 AM	yes	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	When did he leave for the tomb?	0.2 month ago	no	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	When did he leave for the tomb?	0.6 day ago	no	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	When did he leave for the tomb?	11:00 AM	yes	Typical Time
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	What did he do when he left the tomb?	he came home	yes	Event Ordering
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	What did he do when he left the tomb?	he answers his own question	no	Event Ordering
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	What did he do when he left the tomb?	sang a track	no	Event Ordering
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	What did he do when he left the tomb?	sang a song	no	Event Ordering
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How long did he visit the tomb?	for a few months	no	Event Duration
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How long did he visit the tomb?	3 centuries	no	Event Duration
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How long did he visit the tomb?	3 months	no	Event Duration
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How long did he visit the tomb?	one hour	yes	Event Duration
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How long did he visit the tomb?	1 hour	yes	Event Duration
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	How long did he visit the tomb?	1 second	no	Event Duration
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	Did he stay at the tomb?	no he simply visited	yes	Stationarity
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	Did he stay at the tomb?	no he just visited	yes	Stationarity
+His son and successor, Caracalla, a great admirer, visited the tomb during his own reign.	Did he stay at the tomb?	no	yes	Stationarity
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	every day	yes	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	each day	yes	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	every morning	yes	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	once a day	yes	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	once every day	yes	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	once a century	no	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	never	no	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How often does he lay on the chair?	every century	no	Frequency
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	2 minutes	yes	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	2 days	no	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	3.5 hours	no	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	1 day	no	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	1.4 hours	no	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	90 minutes	no	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	0.5 minute	yes	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	7 hours	no	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	7 seconds	yes	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	7 days	no	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	1 minute	yes	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	30 seconds	yes	Event Duration
+He layed down on the chair and pawed at her as she ran in a circle under it.	How long did he paw at her?	0.2 minute	yes	Event Duration
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How often does the artist make paintings?	each hour	no	Frequency
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How often does the artist make paintings?	twice a minute	no	Frequency
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How often does the artist make paintings?	twice a century	no	Frequency
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How often does the artist make paintings?	once a second	no	Frequency
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How often does the artist make paintings?	every second	no	Frequency
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How often does the artist make paintings?	once a hour	no	Frequency
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How often does the artist make paintings?	every hour	no	Frequency
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	When did the artist finish the painting?	in the last 15 minutes	no	Typical Time
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	When did the artist finish the painting?	in the first 5 minutes	no	Typical Time
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	When did the artist finish the painting?	in the last 5 minutes	no	Typical Time
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	When did the artist finish the painting?	in the last 2.5 minutes	no	Typical Time
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	he painted it	no	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	the artist threw the painting into the trash after he finished it	no	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	took a rest	yes	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	the artist stored his painting after he finished it	yes	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	he framed it	yes	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	he frame it	yes	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	the artist threw the painting into the trash before he finished it	no	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	prepared his painting frame	yes	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	the artist threw the painting into the trash when he finished it	no	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	had a break	yes	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	What did the artist do when he finished the painting?	took a pause	yes	Event Ordering
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How long did the artist take to paint the picture?	5 minutes	no	Event Duration
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How long did the artist take to paint the picture?	2.5 minutes	no	Event Duration
+In one of the paintings, a character has been cut out and is instead sitting on the painting's frame, perhaps taking a break from posing?	How long did the artist take to paint the picture?	5 seconds	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	5 weeks	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	10 years	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	30 seconds	yes	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	10 weeks	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	0.22 years	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	a few years	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	45 seconds	yes	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	10 seconds	yes	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	a few seconds	yes	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	90 seconds	yes	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	5 years	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	2 years	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	6 years	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	2 weeks	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	1 minute	yes	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	How long does it take for them to answer?	a few weeks	no	Event Duration
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	What happens after Billy answers in a loud voice?	he gets a response	yes	Event Ordering
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	What happens after Billy answers in a loud voice?	the teacher tells him to be quiet	yes	Event Ordering
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	What happens after Billy answers in a loud voice?	every decent man raises his voice	no	Event Ordering
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	What happens after Billy answers in a loud voice?	he gets scolded for yelling	yes	Event Ordering
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	What happens after Billy answers in a loud voice?	i expect it to be this quiet	no	Event Ordering
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	What happens after Billy answers in a loud voice?	he whispers	no	Event Ordering
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	What happens after Billy answers in a loud voice?	we keep him quiet	no	Event Ordering
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	Does Billy answer in a loud voice on Mondays?	bill answers in a loud voice every day of the hour	no	Stationarity
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	Does Billy answer in a loud voice on Mondays?	bill answers in a loud voice every night of the week	no	Stationarity
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	Does Billy answer in a loud voice on Mondays?	yes	yes	Stationarity
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	Does Billy answer in a loud voice on Mondays?	bill answers in a loud voice every minute of the week	no	Stationarity
+On Fridays, Billy answers in a loud voice and Sally in a quiet voice.	Does Billy answer in a loud voice on Mondays?	bill takes a vow of silence and does not talk on mondays	no	Stationarity
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	How often does the coastal trade take place in Melaka?	it ended back where islam was founded	no	Frequency
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	How often does the coastal trade take place in Melaka?	once every two centuries	no	Frequency
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	How often does the coastal trade take place in Melaka?	once every two month	no	Frequency
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	How often does the coastal trade take place in Melaka?	it ended back when islam was started	no	Frequency
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	How often does the coastal trade take place in Melaka?	every century	no	Frequency
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	they drank liquor	no	Event Ordering
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	it died off	no	Event Ordering
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	it expanded even further	yes	Event Ordering
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	other religious faiths were ostracized	yes	Event Ordering
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	it spread even further	yes	Event Ordering
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	they drank alcohol	no	Event Ordering
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	it died out	no	Event Ordering
+In Melaka and throughout the peninsula, Islam thrived as a strong, male-dominated religion of individuality, offering dynamic leadership and preaching brotherhood and self-reliance — all qualities ideally suited to the coastal trade.	What happened after Islam became popular in the region?	it died down	no	Event Ordering
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	each minute	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	twice per day	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	every month	yes	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	each week	yes	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	every minute	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	every hour	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	every second	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	twice each month	yes	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	twice per minute	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	twice per month	yes	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	twice per century	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	once per month	yes	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	every century	no	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How often did he try to drum up interest?	each month	yes	Frequency
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	When did he first pursue financial interests in those countries?	3:00 AM	no	Typical Time
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	When did he first pursue financial interests in those countries?	12:00 AM	no	Typical Time
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	When did he first pursue financial interests in those countries?	5:00 AM	no	Typical Time
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	When did he first pursue financial interests in those countries?	9:00 PM	no	Typical Time
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	When did he first pursue financial interests in those countries?	when he was a child	no	Typical Time
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	When did he first pursue financial interests in those countries?	once he got to washington	yes	Typical Time
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	When did he first pursue financial interests in those countries?	1:00 AM	no	Typical Time
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	What happened after he tried getting money from those countries?	he visited other countries	yes	Event Ordering
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	What happened after he tried getting money from those countries?	he had a small investment	no	Event Ordering
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	What happened after he tried getting money from those countries?	he tried other countries	yes	Event Ordering
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	for several days	yes	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	5 hours	no	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	1 day	no	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	1 month	yes	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	for several months	yes	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	three months	yes	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	1 second	no	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	during several months	yes	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	for several weeks	yes	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	3 week	yes	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	for seconds	no	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	How long did he try to get money from those countries?	1st week	no	Event Duration
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	Is he still trying to drum up interest in those countries?	yes	no	Stationarity
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	Is he still trying to drum up interest in those countries?	no he gave up	yes	Stationarity
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	Is he still trying to drum up interest in those countries?	no	yes	Stationarity
+But he told us that he could not drum up much interest in or money for such a purpose from Washington, partly, he thought, because these countries had dictatorial governments.	Is he still trying to drum up interest in those countries?	and he never stopped	no	Stationarity
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	twice a week	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hijacked once a week	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hikacked once a month	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	aircraft are hijacked once a week	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hikacked once every hour	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	once a hour	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hijacked every a hour	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	aircraft are hijacked once a hour	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	once per hour	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hijacked once every week	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	aircraft are hikacked once a week	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hijacked every a week	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hijacked once a minute	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	planes are hijacked once a month	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	once a minute	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How often are planes hijacked?	once a weekend	no	Frequency
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	another few centuries	no	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	one century	no	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	1 day	yes	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	a day	yes	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	1st year	no	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	one day	yes	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	1 hour	yes	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	10 minutes	yes	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	How long did they know the plane had been hijacked?	a few hours	yes	Event Duration
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	Will the plane still be hijacked next week?	yes	no	Stationarity
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	Will the plane still be hijacked next week?	no	yes	Stationarity
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	Will the plane still be hijacked next week?	no the hijacker was arrested	yes	Stationarity
+At least some FAA officials in Boston Center and the New England Region knew that a hijacker on board American 11 had said "we have some planes."	Will the plane still be hijacked next week?	no the hijacker was caught	yes	Stationarity
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How many times per week is the approach used?	2.5 times	no	Frequency
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How many times per week is the approach used?	0.4	no	Frequency
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How many times per week is the approach used?	every day	yes	Frequency
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How many times per week is the approach used?	every month	no	Frequency
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How many times per week is the approach used?	5 times	yes	Frequency
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How many times per week is the approach used?	every century	no	Frequency
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was adopted by others	yes	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was used by others	yes	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	this was put into practice	yes	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was accepted by others	yes	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was lost	no	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was accepted by some	yes	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was forgotten	no	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was developed into practice	yes	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	What happened after the approach was made by Landau and Lifshitz?	it was put into practice	yes	Event Ordering
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	about a week	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	2 years	yes	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	hours	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	several seconds	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	about a hour	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	weeks	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	years	yes	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	about one week	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	some years	yes	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	2 seconds	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	seconds	no	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	How long did it take to become standard?	several years	yes	Event Duration
+This approach has been echoed by Lev Landau and Evgeny Lifshitz, and others, and has become standard.	Is the approach accepted by others?	yes	yes	Stationarity
+The bear looked up at the girl and it was almost as if he was smiling at her.	When did the bear smile at the girl?	after it lowered its head	no	Typical Time
+The bear looked up at the girl and it was almost as if he was smiling at her.	When did the bear smile at the girl?	when it walked away	no	Typical Time
+The bear looked up at the girl and it was almost as if he was smiling at her.	When did the bear smile at the girl?	after it lifted its head	yes	Typical Time
+The bear looked up at the girl and it was almost as if he was smiling at her.	When did the bear smile at the girl?	when it walks away	no	Typical Time
+The bear looked up at the girl and it was almost as if he was smiling at her.	When did the bear smile at the girl?	2:00 PM	yes	Typical Time
+The bear looked up at the girl and it was almost as if he was smiling at her.	When did the bear smile at the girl?	before it lifted its head	no	Typical Time
+The bear looked up at the girl and it was almost as if he was smiling at her.	When did the bear smile at the girl?	after it raised its head	yes	Typical Time
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	2 minutes	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	5 minute	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	one minute	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	5 minutes	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	4 minutes	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	2.5 minutes	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	5 seconds	yes	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	20 minutes	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	15 seconds	yes	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	1 minute	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	15 minutes	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	2 centuries	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	How long did the bear smile at the girl?	6 minutes	no	Event Duration
+The bear looked up at the girl and it was almost as if he was smiling at her.	Was the bear always smiling at the girl?	yes	no	Stationarity
+The bear looked up at the girl and it was almost as if he was smiling at her.	Was the bear always smiling at the girl?	every month	no	Stationarity
+The bear looked up at the girl and it was almost as if he was smiling at her.	Was the bear always smiling at the girl?	the nci study looked at blacks and whites	no	Stationarity
+The bear looked up at the girl and it was almost as if he was smiling at her.	Was the bear always smiling at the girl?	every century	no	Stationarity
+The bear looked up at the girl and it was almost as if he was smiling at her.	Was the bear always smiling at the girl?	no	yes	Stationarity
+If he wanted to , he could confront him , but he lacks the audacity to do so .	How often does he consider confronting people?	he considers confronting people every millisecond of his life	no	Frequency
+If he wanted to , he could confront him , but he lacks the audacity to do so .	How often does he consider confronting people?	every hour	no	Frequency
+If he wanted to , he could confront him , but he lacks the audacity to do so .	How often does he consider confronting people?	he considers confronting people each millisecond of his life	no	Frequency
+If he wanted to , he could confront him , but he lacks the audacity to do so .	How often does he consider confronting people?	he thinks confronting people every millisecond of his life	no	Frequency
+If he wanted to , he could confront him , but he lacks the audacity to do so .	How often does he consider confronting people?	each time he feels slighted	yes	Frequency
+If he wanted to , he could confront him , but he lacks the audacity to do so .	How often does he consider confronting people?	every minute	no	Frequency
+If he wanted to , he could confront him , but he lacks the audacity to do so .	How often does he consider confronting people?	he considers confronting people every few minutes	no	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	everyday	yes	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	5 times an week	yes	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	each a hour	no	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	5 times an hour	no	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	5 times per hour	no	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	once a day	yes	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	once every day	yes	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	5 times per second	no	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	twice a second	no	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	45 times per hour	no	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How often does she charm him?	once a night	yes	Frequency
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	When is she attempting to charm him?	when he was a child	no	Typical Time
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How long does he resist for?	a few seconds	no	Event Duration
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How long does he resist for?	a few minutes	no	Event Duration
+Safti at first resists , but ultimately succumbs to Edwina's charms and falls hopelessly in love with her .	How long does he resist for?	a couple seconds	no	Event Duration
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	once every month	no	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	the bear rests once every four days	no	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	the bears rest every day for long periods of time	yes	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	once a month	no	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	once a day	yes	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	once every day	yes	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	once a minute	no	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	once a century	no	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	once a night	yes	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	How often does the bear rest?	the bear rests once every three days	no	Frequency
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	When did the girl see the bear?	the girl saw the bear on a tuesday afternoon	yes	Typical Time
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	When did the girl see the bear?	the girl spotted the bear on a tuesday afternoon	yes	Typical Time
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	When did the girl see the bear?	the girl saw the bear on a sunday afternoon	yes	Typical Time
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	When did the girl see the bear?	tomorrow	no	Typical Time
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	When did the girl see the bear?	over the last 5 minutes	no	Typical Time
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	What did the bear do later?	he woke up	yes	Event Ordering
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	What did the bear do later?	the bear took dinner	yes	Event Ordering
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	What did the bear do later?	the bear ate dinner	yes	Event Ordering
+To both the girl and the dog's surprise, there was a small brown bear resting in the bushes.	What did the bear do later?	the bears ate dinner	yes	Event Ordering
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	between 70 and 90 weeks at least	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	between 70 and 810 years at least	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	3 centuries	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	between 70 and 90 years at least	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	9 months	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	30 years	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	10 years	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	between 70 and 90 seconds at least	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How long does it take to lure men to their downfall?	5 centuries	no	Event Duration
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	What happens after men are lured to their downfall?	a woman nominated her boss	no	Event Ordering
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	What happens after men are lured to their downfall?	they are eaten	no	Event Ordering
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	What happens after men are lured to their downfall?	they get their workers to be flexible	no	Event Ordering
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	What happens after men are lured to their downfall?	a woman misses her menstrual period	no	Event Ordering
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	What happens after men are lured to their downfall?	they succeed	no	Event Ordering
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	Is she sexually attractive today?	yes	yes	Stationarity
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How often were men lured?	every century	no	Frequency
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How often were men lured?	a few times a second	no	Frequency
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How often were men lured?	a few times a year	yes	Frequency
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How often were men lured?	every month	yes	Frequency
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	How often were men lured?	every second	no	Frequency
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	When did she lure them?	mornings	no	Typical Time
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	When did she lure them?	every time they looked at her	yes	Typical Time
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	When did she lure them?	once a century	no	Typical Time
+It refers to a woman who is dangerously attractive, and lures men to their downfall with her sexual attractiveness.	When did she lure them?	once a minute	no	Typical Time

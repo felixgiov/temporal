@@ -25,6 +25,7 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 
 import numpy as np
+from sklearn.metrics import classification_report
 from torch import nn
 
 from transformers import (
@@ -43,13 +44,13 @@ from transformers import (
     InputFeatures,
     AutoModelForSequenceClassification,
     glue_compute_metrics,
-    GlueDataTrainingArguments)
+    GlueDataTrainingArguments, GPT2Model)
 
 from multi_modelling_roberta import RobertaForTemporalMulti
 from multi_trainer import Trainer, set_seed
 from multi_utils import TemporalProcessor, convert_mctaco_examples_to_features, temprel_set, MATRESProcessor, \
     convert_matres_examples_to_features, TimeBankProcessor, convert_timebank_examples_to_features, \
-    TimeBankDurationProcessor, convert_tb_duration_examples_to_features
+    TimeBankDurationProcessor, convert_tb_duration_examples_to_features, convert_matres_v2_examples_to_features
 
 from sklearn.model_selection import train_test_split
 
@@ -86,10 +87,16 @@ class DataTrainingArguments:
     """
 
     data_dir: str = field(
-        metadata={"help": "The input data dir. Should contain the .txt files for a CoNLL-2003-formatted task."}
+        metadata={"help": "The input data dir."}
+    )
+    train_data: str = field(
+        metadata={"help": "The input train data."}
+    )
+    dev_data: str = field(
+        metadata={"help": "The input dev data dir"}
     )
     labels: Optional[str] = field(
-        metadata={"help": "Path to a file containing all labels. If not specified, CoNLL-2003 labels are used."}
+        metadata={"help": "Path to a file containing all labels."}
     )
     max_seq_length: int = field(
         default=128,
@@ -110,6 +117,9 @@ class MultiTrainingArguments:
     """
     train_matres: bool = field(
         default=False, metadata={"help": "Train MATRES task"}
+    )
+    train_matres_v2: bool = field(
+        default=False, metadata={"help": "Train MATRESv2 task"}
     )
     train_event: bool = field(
         default=False, metadata={"help": "Train TimeBank Event Classification task"}
@@ -200,11 +210,14 @@ def main():
     # hard coded args, fix this later
     # ne_size = 64
     # neg_ratio = 1.0
-    train_file = '/home/felix/projects/research/datasets/TBAQ-cleaned/timebank_v4_train.txt'
-    dev_file = '/home/felix/projects/research/datasets/TBAQ-cleaned/timebank_v4_dev.txt'
+
+    # train_file = '/home/felix/projects/research/datasets/TBAQ-cleaned/timebank_v4_train.txt'
+    # dev_file = '/home/felix/projects/research/datasets/TBAQ-cleaned/timebank_v4_dev.txt'
 
     # MCTACO Parameters
     mctaco_data_args = DataTrainingArguments(data_dir="./datasets/MCTACO",
+                                             train_data=data_args.train_data,
+                                             dev_data=data_args.dev_data,
                                              labels="./datasets/MCTACO/mctaco_labels.txt",
                                              max_seq_length=data_args.max_seq_length,
                                              overwrite_cache=data_args.overwrite_cache)
@@ -235,8 +248,23 @@ def main():
         model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path,
         cache_dir=model_args.cache_dir,
     )
+    special_tokens_dict = {'additional_special_tokens': ['<e>', '</e>', '<e1>', '</e1>', '<e2>', '</e2>']}
+    num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
+    print('We have added', num_added_toks, 'tokens')
+
+    print(tokenizer.additional_special_tokens)
+
+    tokenizer.save_pretrained(training_args.output_dir)
+
+    task_1_data_sizes = 0
+    task_2_data_sizes = 0
+    task_3_data_sizes = 0
+    task_4_data_sizes = 0
+    task_5_data_sizes = 0
+    task_6_data_sizes = 0
 
     matres_train_dataset = None
+    matres_v2_train_dataset = None
     timebank_timex_train_dataset = None
     timebank_event_train_dataset = None
     tb_duration_train_dataset = None
@@ -249,14 +277,15 @@ def main():
     mctaco_label_list = mctaco_processor.get_labels()
 
     if training_args.do_train:
-        mctaco_train_examples = mctaco_processor.get_train_examples(mctaco_data_args.data_dir)
+        mctaco_train_examples = mctaco_processor.get_train_examples(mctaco_data_args.train_data)
         mctaco_train_dataset = convert_mctaco_examples_to_features(mctaco_train_examples,
                                                                    mctaco_label_list,
                                                                    mctaco_data_args.max_seq_length,
                                                                    tokenizer)
+        task_1_data_sizes = len(mctaco_train_dataset)
 
     if training_args.do_eval or training_args.do_predict:
-        mctaco_eval_examples = mctaco_processor.get_dev_examples(mctaco_data_args.data_dir)
+        mctaco_eval_examples = mctaco_processor.get_dev_examples(mctaco_data_args.dev_data)
         mctaco_eval_dataset = convert_mctaco_examples_to_features(mctaco_eval_examples,
                                                                   mctaco_label_list,
                                                                   mctaco_data_args.max_seq_length,
@@ -273,7 +302,8 @@ def main():
     timebank_timex_label_list = timebank_processor.get_timex_labels()
 
     if training_args.do_train and multi_args.train_timex:
-        timebank_timex_train_examples = timebank_processor.get_all_train_examples('')
+        # timebank_timex_train_examples = timebank_processor.get_all_train_examples()
+        timebank_timex_train_examples = timebank_processor.get_train_examples('')
         timebank_timex_train_dataset = convert_timebank_examples_to_features(timebank_timex_train_examples,
                                                                              timebank_timex_label_list,
                                                                              mctaco_data_args.max_seq_length,
@@ -290,9 +320,11 @@ def main():
                                                                              pad_token_segment_id=tokenizer.pad_token_type_id,
                                                                              pad_token_label_id=nn.CrossEntropyLoss().ignore_index,
                                                                              )
+        task_2_data_sizes = len(timebank_timex_train_dataset)
 
     if training_args.do_train and multi_args.train_event:
-        timebank_event_train_examples = timebank_processor.get_all_train_examples('')
+        # timebank_event_train_examples = timebank_processor.get_all_train_examples()
+        timebank_event_train_examples = timebank_processor.get_train_examples('')
         timebank_event_train_dataset = convert_timebank_examples_to_features(timebank_event_train_examples,
                                                                              timebank_event_label_list,
                                                                              mctaco_data_args.max_seq_length,
@@ -309,6 +341,7 @@ def main():
                                                                              pad_token_segment_id=tokenizer.pad_token_type_id,
                                                                              pad_token_label_id=nn.CrossEntropyLoss().ignore_index,
                                                                              )
+        task_3_data_sizes = len(timebank_event_train_dataset)
 
     # if training_args.do_eval or training_args.do_predict:
     #     timebank_event_eval_examples = timebank_processor.get_dev_examples('')
@@ -322,50 +355,71 @@ def main():
     matres_label_list = matres_processor.get_labels()
 
     if training_args.do_train and multi_args.train_matres:
-        matres_train_examples = matres_processor.get_all_train_examples('')
+        # matres_train_examples = matres_processor.get_all_train_examples()
+        matres_train_examples = matres_processor.get_train_examples('')
         matres_train_dataset = convert_matres_examples_to_features(matres_train_examples,
                                                                    matres_label_list,
                                                                    mctaco_data_args.max_seq_length,
                                                                    tokenizer)
+        task_4_data_sizes = len(matres_train_dataset)
+
     # if training_args.do_eval or training_args.do_predict:
     #     matres_eval_examples = matres_processor.get_dev_examples('')
     #     matres_eval_dataset = convert_matres_examples_to_features(matres_eval_examples,
     #                                                               matres_label_list,
     #                                                               mctaco_data_args.max_seq_length,
     #                                                               tokenizer)
-        # # Output Dev gold labels
-        # eval_labels = []
-        # for ex in matres_eval_dataset:
-        #     eval_labels.append(ex.label)
-        #
-        # output_eval_label = os.path.join(training_args.output_dir, "test_labels.txt")
-        # with open(output_eval_label, 'w') as writer:
-        #     for line in eval_labels:
-        #         if line == 0:
-        #             writer.write("BEFORE\n")
-        #         elif line == 1:
-        #             writer.write("AFTER\n")
-        #         elif line == 2:
-        #             writer.write("EQUAL\n")
-        #         elif line == 3:
-        #             writer.write("VAGUE\n")
+    #     # Output Dev gold labels
+    #     eval_labels = []
+    #     for ex in matres_eval_dataset:
+    #         eval_labels.append(ex.label)
+    #
+    #     output_eval_label = os.path.join(training_args.output_dir, "test_labels.txt")
+    #     with open(output_eval_label, 'w') as writer:
+    #         for line in eval_labels:
+    #             if line == 0:
+    #                 writer.write("BEFORE\n")
+    #             elif line == 1:
+    #                 writer.write("AFTER\n")
+    #             elif line == 2:
+    #                 writer.write("EQUAL\n")
+    #             elif line == 3:
+    #                 writer.write("VAGUE\n")
 
     # Get TimeBank Duration datasets
     tb_duration_processor = TimeBankDurationProcessor()
     tb_duration_label_list = tb_duration_processor.get_labels()
 
     if training_args.do_train and multi_args.train_duration:
-        tb_duration_train_examples = tb_duration_processor.get_all_examples('')
+        # tb_duration_train_examples = tb_duration_processor.get_all_examples()
+        tb_duration_train_examples = tb_duration_processor.get_train_examples('')
         tb_duration_train_dataset = convert_tb_duration_examples_to_features(tb_duration_train_examples,
                                                                              tb_duration_label_list,
                                                                              mctaco_data_args.max_seq_length,
                                                                              tokenizer)
+        task_5_data_sizes = len(tb_duration_train_dataset)
 
         # tb_duration_all_examples = tb_duration_processor.get_all_examples('')
         # tb_duration_all_dataset = convert_tb_duration_examples_to_features(tb_duration_all_examples,
         #                                                                    tb_duration_label_list,
         #                                                                    128,
         #                                                                    tokenizer)
+
+    # MATRES v2
+    if training_args.do_train and multi_args.train_matres_v2:
+        # matres_train_examples = matres_processor.get_all_train_examples()
+        matres_v2_train_examples = matres_processor.get_train_examples('')
+        matres_v2_train_dataset = convert_matres_v2_examples_to_features(matres_v2_train_examples,
+                                                                         matres_label_list,
+                                                                         mctaco_data_args.max_seq_length,
+                                                                         tokenizer)
+        task_6_data_sizes = len(matres_v2_train_dataset)
+
+        matres_v2_eval_examples = matres_processor.get_dev_examples('')
+        matres_v2_eval_dataset = convert_matres_v2_examples_to_features(matres_v2_eval_examples,
+                                                                        matres_label_list,
+                                                                        mctaco_data_args.max_seq_length,
+                                                                        tokenizer)
 
     # temprel_trainset = temprel_set("datasets/MATRES/trainset-temprel.xml")
     # temprel_train, temprel_dev = train_test_split(temprel_trainset.temprel_ee, test_size=0.2, random_state=2093)
@@ -412,7 +466,13 @@ def main():
         # bigramGetter=bigramGetter
     )
 
+    multitask_model.resize_token_embeddings(len(tokenizer))
     multitask_model.set_batch_size(training_args.per_gpu_train_batch_size)
+    # multitask_model.calculateWeightedLossRatio(task_1_data_sizes, task_2_data_sizes, task_3_data_sizes, task_4_data_sizes, task_5_data_sizes)
+
+    def compute_metrics(p: EvalPrediction) -> Dict:
+        preds = np.argmax(p.predictions, axis=1)
+        return classification_report(p.label_ids, preds, output_dict=True)
 
     def mctaco_compute_metrics(p: EvalPrediction) -> Dict:
         preds = np.argmax(p.predictions, axis=1)
@@ -424,7 +484,7 @@ def main():
         if preds.size == 9442:
             test_file = '/home/felix/projects/research/datasets/MCTACO/test_9442.tsv'
         else:
-            test_file = "/home/felix/projects/research/datasets/MCTACO/dev_splitted_sent.tsv"
+            test_file = mctaco_data_args.dev_data
 
         prediction_lines = []
         for val in preds:
@@ -504,6 +564,7 @@ def main():
         timebank_train_timex_dataset=timebank_timex_train_dataset,
         timebank_train_duration_dataset=tb_duration_train_dataset,
         matres_train_dataset=matres_train_dataset,
+        matres_v2_train_dataset=matres_v2_train_dataset,
         mctaco_train_dataset=mctaco_train_dataset,
         eval_dataset=mctaco_eval_dataset,  # change to mctaco_eval_dataset / dev_dataset
         test_dataset=mctaco_test_dataset,
@@ -538,75 +599,75 @@ def main():
 
             results.update(result)
 
-    # Predict
-    if training_args.do_predict:
-        preds = trainer.predict(mctaco_test_dataset)
-        # preds = trainer.predict_timebank(dev_dataset)
-        # preds = trainer.predict(matres_eval_dataset)
-
-        preds_tensor = torch.from_numpy(preds.predictions)
-        preds_argmax = torch.argmax(preds_tensor, dim=1)
-
-        # TIMEBANK
-        # output_tensor_file = os.path.join(
-        #     training_args.output_dir, f"pred_tensor_results_timebank.txt"
-        # )
-        # with open(output_tensor_file, "w") as tensor_writer:
-        #     for val in preds.predictions:
-        #         tensor_writer.write(str(val) + "\n")
-        # output_pred_file = os.path.join(
-        #     training_args.output_dir, f"pred_results_timebank.txt"
-        # )
-        # with open(output_pred_file, "w") as pred_writer:
-        #     for val in preds_argmax:
-        #         if val == 0:
-        #             pred_writer.write("DATE\n")
-        #         elif val == 1:
-        #             pred_writer.write("TIME\n")
-        #         elif val == 2:
-        #             pred_writer.write("DURATION\n")
-        #         else:
-        #             pred_writer.write("SET\n")
-
-        # MCTACO
-        output_tensor_file = os.path.join(
-            training_args.output_dir, f"pred_tensors.txt"
-        )
-        with open(output_tensor_file, "w") as tensor_writer:
-            for val in preds.predictions:
-                tensor_writer.write(str(val) + "\n")
-
-        output_pred_file = os.path.join(
-            training_args.output_dir, f"pred_results.txt"
-        )
-        with open(output_pred_file, "w") as pred_writer:
-            for val in preds_argmax:
-                if val == 0:
-                    pred_writer.write("yes\n")
-                else:
-                    pred_writer.write("no\n")
-
-        # MATRES
-        # output_tensor_file = os.path.join(
-        #     training_args.output_dir, f"pred_tensor_results_matres_test.txt"
-        # )
-        # with open(output_tensor_file, "w") as tensor_writer:
-        #     for val in preds.predictions:
-        #         tensor_writer.write(str(val) + "\n")
-        #
-        # output_pred_file = os.path.join(
-        #     training_args.output_dir, f"pred_results_matres_test.txt"
-        # )
-        # with open(output_pred_file, "w") as pred_writer:
-        #     for val in preds_argmax:
-        #         if val == 0:
-        #             pred_writer.write("BEFORE\n")
-        #         elif val == 1:
-        #             pred_writer.write("AFTER\n")
-        #         elif val == 2:
-        #             pred_writer.write("EQUAL\n")
-        #         else:
-        #             pred_writer.write("VAGUE\n")
+    # # Predict
+    # if training_args.do_predict:
+    #     preds = trainer.predict(mctaco_test_dataset)
+    #     # preds = trainer.predict_timebank(dev_dataset)
+    #     # preds = trainer.predict(matres_eval_dataset)
+    #
+    #     preds_tensor = torch.from_numpy(preds.predictions)
+    #     preds_argmax = torch.argmax(preds_tensor, dim=1)
+    #
+    #     # TIMEBANK
+    #     # output_tensor_file = os.path.join(
+    #     #     training_args.output_dir, f"pred_tensor_results_timebank.txt"
+    #     # )
+    #     # with open(output_tensor_file, "w") as tensor_writer:
+    #     #     for val in preds.predictions:
+    #     #         tensor_writer.write(str(val) + "\n")
+    #     # output_pred_file = os.path.join(
+    #     #     training_args.output_dir, f"pred_results_timebank.txt"
+    #     # )
+    #     # with open(output_pred_file, "w") as pred_writer:
+    #     #     for val in preds_argmax:
+    #     #         if val == 0:
+    #     #             pred_writer.write("DATE\n")
+    #     #         elif val == 1:
+    #     #             pred_writer.write("TIME\n")
+    #     #         elif val == 2:
+    #     #             pred_writer.write("DURATION\n")
+    #     #         else:
+    #     #             pred_writer.write("SET\n")
+    #
+    #     # MCTACO
+    #     output_tensor_file = os.path.join(
+    #         training_args.output_dir, f"pred_tensors.txt"
+    #     )
+    #     with open(output_tensor_file, "w") as tensor_writer:
+    #         for val in preds.predictions:
+    #             tensor_writer.write(str(val) + "\n")
+    #
+    #     output_pred_file = os.path.join(
+    #         training_args.output_dir, f"pred_results.txt"
+    #     )
+    #     with open(output_pred_file, "w") as pred_writer:
+    #         for val in preds_argmax:
+    #             if val == 0:
+    #                 pred_writer.write("yes\n")
+    #             else:
+    #                 pred_writer.write("no\n")
+    #
+    #     # MATRES
+    #     # output_tensor_file = os.path.join(
+    #     #     training_args.output_dir, f"pred_tensor_results_matres_test.txt"
+    #     # )
+    #     # with open(output_tensor_file, "w") as tensor_writer:
+    #     #     for val in preds.predictions:
+    #     #         tensor_writer.write(str(val) + "\n")
+    #     #
+    #     # output_pred_file = os.path.join(
+    #     #     training_args.output_dir, f"pred_results_matres_test.txt"
+    #     # )
+    #     # with open(output_pred_file, "w") as pred_writer:
+    #     #     for val in preds_argmax:
+    #     #         if val == 0:
+    #     #             pred_writer.write("BEFORE\n")
+    #     #         elif val == 1:
+    #     #             pred_writer.write("AFTER\n")
+    #     #         elif val == 2:
+    #     #             pred_writer.write("EQUAL\n")
+    #     #         else:
+    #     #             pred_writer.write("VAGUE\n")
 
     return results
 

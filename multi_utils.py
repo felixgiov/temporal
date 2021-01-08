@@ -106,12 +106,14 @@ class TemporalProcessor(DataProcessor):
     #     return self._create_examples(mctaco_dev, "dev")
 
     def get_train_examples(self, data_dir):
-        f = open("/home/felix/projects/research/datasets/MCTACO/train_splitted_sent.tsv", "r")
+        # f = open("/home/felix/projects/research/datasets/MCTACO/train_splitted_sent.tsv", "r")
+        f = open(data_dir, "r")
         lines = [x.strip() for x in f.readlines()]
         return self._create_examples(lines, "train")
 
     def get_dev_examples(self, data_dir):
-        f = open("/home/felix/projects/research/datasets/MCTACO/dev_splitted_sent.tsv", "r")
+        # f = open("/home/felix/projects/research/datasets/MCTACO/dev_splitted_sent.tsv", "r")
+        f = open(data_dir, "r")
         lines = [x.strip() for x in f.readlines()]
         return self._create_examples(lines, "dev")
 
@@ -196,7 +198,11 @@ def convert_mctaco_examples_to_features(examples, label_list, max_seq_length, to
         assert len(input_mask) == max_seq_length
         assert len(segment_ids) == max_seq_length
 
-        label_id = label_map[example.label]
+        try:
+            label_id = label_map[example.label]
+        except:
+            print(example)
+
         if ex_index < 5:
             logger.info("*** Example ***")
             logger.info("guid: %s" % (example.guid))
@@ -297,14 +303,14 @@ class MATRESProcessor(DataProcessor):
     # # uncomment if we want to predict test (put test into dev)
     # temprel_dev = temprel_testset.temprel_ee
 
-    def get_all_train_examples(self, data_dir):
+    def get_all_train_examples(self):
         return self._create_examples(self.temprel_trainset.temprel_ee, "train")
 
     def get_train_examples(self, data_dir):
-        return self._create_examples(self.temprel_train, "train")
+        return self._create_examples(self.temprel_trainset.temprel_ee, "train")
 
     def get_dev_examples(self, data_dir):
-        return self._create_examples(self.temprel_dev, "dev")
+        return self._create_examples(self.temprel_testset.temprel_ee, "dev")
 
     def get_labels(self):
         return ["BEFORE", "AFTER", "EQUAL", "VAGUE"]
@@ -432,13 +438,91 @@ def convert_matres_examples_to_features(examples, label_list, max_seq_length, to
                                     4))
     return features
 
+def convert_matres_v2_examples_to_features(examples, label_list, max_seq_length, tokenizer):
+    """Loads a data file into a list of `InputBatch`s."""
+
+    label_map = {}
+    for (i, label) in enumerate(label_list):
+        label_map[label] = i
+
+    features = []
+    for (ex_index, example) in enumerate(examples):
+        # add truncation
+        tokens = []
+        segment_ids = []
+        event_ids = []
+        tokens.append("<s>")
+        segment_ids.append(0)
+        event_ids.append(0)
+        for i, tok in enumerate(example.text_a):
+            if i == example.event_ix[0]:
+                token = tokenizer.tokenize('<e> ' + example.lemma[i] + ' </e>')
+                for tkn in token:
+                    tokens.append(tkn)
+                    segment_ids.append(0)
+                    event_ids.append(-99)
+            elif i == example.event_ix[1]:
+                token = tokenizer.tokenize('<e> ' + example.lemma[i] + ' </e>')
+                for tkn in token:
+                    tokens.append(tkn)
+                    segment_ids.append(0)
+                    event_ids.append(-98)
+            else:
+                token = tokenizer.tokenize('<s> ' + tok + ' </s>')
+                for tkn in token[1:-1]:
+                    tokens.append(tkn)
+                    segment_ids.append(0)
+                    event_ids.append(0)
+        tokens.append("</s>")
+        segment_ids.append(0)
+        event_ids.append(0)
+
+        input_ids = tokenizer.convert_tokens_to_ids(tokens)
+
+        # The mask has 1 for real tokens and 0 for padding tokens. Only real
+        # tokens are attended to.
+        input_mask = [1] * len(input_ids)
+
+        # Zero-pad up to the sequence length.
+        while len(input_ids) < max_seq_length:
+            input_ids.append(0)
+            input_mask.append(0)
+            segment_ids.append(0)
+            event_ids.append(0)
+
+        if len(input_ids) == max_seq_length:
+            assert len(input_ids) == max_seq_length
+            assert len(input_mask) == max_seq_length
+            assert len(segment_ids) == max_seq_length
+            assert len(event_ids) == max_seq_length
+
+            label_id = label_map[example.label]
+            if ex_index < 5:
+                logger.info("*** Example ***")
+                logger.info("guid: %s" % (example.guid))
+                logger.info("tokens: %s" % " ".join([str(x) for x in tokens]))
+                logger.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
+                logger.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
+                logger.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
+                logger.info("event_ids: %s" % " ".join([str(x) for x in event_ids]))
+                logger.info("label: %s (id = %d)" % (example.label, label_id))
+
+            features.append(
+                MATRESInputFeatures(input_ids,
+                                    input_mask,
+                                    segment_ids,
+                                    event_ids,
+                                    label_id,
+                                    6))
+    return features
+
 
 """ TimeBank Event and Timex Cls Part"""
 
 
 class TimeBankProcessor(DataProcessor):
 
-    def get_all_train_examples(self, data_dir):
+    def get_all_train_examples(self):
         f = open("datasets/TBAQ-cleaned/timebank_v4.txt", "r")
         lines = [x.strip() for x in f.readlines()]
         return self._create_examples(lines, "train")
@@ -685,7 +769,10 @@ TimeBank Event Duration
 
 
 class TimeBankDurationProcessor(DataProcessor):
-    def get_all_examples(self, data_dir):
+
+    train, dev = None, None
+
+    def get_all_examples(self):
         f = open("/home/felix/projects/research/datasets/tb_duration/train_tb_duration.txt", "r")
         g = open("/home/felix/projects/research/datasets/tb_duration/test_tb_duration.txt", "r")
         lines = [x.strip() for x in f.readlines()]
@@ -693,15 +780,25 @@ class TimeBankDurationProcessor(DataProcessor):
         lines.extend(lines2)
         return self._create_examples(lines, "train")
 
+    def split_examples(self):
+        all_examples = self.get_all_examples()
+        train, dev = train_test_split(all_examples, test_size=0.1, random_state=2093)
+        self.train = train
+        self.dev = dev
+
     def get_train_examples(self, data_dir):
-        f = open("/home/felix/projects/research/datasets/tb_duration/train_tb_duration.txt", "r")
-        lines = [x.strip() for x in f.readlines()]
-        return self._create_examples(lines, "train")
+        # f = open("/home/felix/projects/research/datasets/tb_duration/train_tb_duration.txt", "r")
+        # lines = [x.strip() for x in f.readlines()]
+        # return self._create_examples(lines, "train")
+        self.split_examples()
+        return self.train
 
     def get_test_examples(self, data_dir):
-        f = open("/home/felix/projects/research/datasets/tb_duration/test_tb_duration.txt", "r")
-        lines = [x.strip() for x in f.readlines()]
-        return self._create_examples(lines, "test")
+        # f = open("/home/felix/projects/research/datasets/tb_duration/test_tb_duration.txt", "r")
+        # lines = [x.strip() for x in f.readlines()]
+        # return self._create_examples(lines, "test")
+        self.split_examples()
+        return self.dev
 
     def get_labels(self):
         return ["0", "1"]

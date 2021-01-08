@@ -1,0 +1,712 @@
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	30 minutes	yes	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	10 minutes	yes	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	27 hours	no	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	it took them 30 minutes	yes	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	20 days	no	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	30 days	no	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	it took them 10 minutes	yes	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	20 minutes	yes	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	5 hours	no	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	15 hours	no	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	3 years	no	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How long did it take for them to reach the dog pound?	20 months	no	Event Duration
+Her mommy took her to the dog pound so that she could choose one that she wanted.	What did they do after she chose the dog that she wanted?	they took it home	yes	Event Ordering
+Her mommy took her to the dog pound so that she could choose one that she wanted.	What did they do after she chose the dog that she wanted?	they went home	yes	Event Ordering
+Her mommy took her to the dog pound so that she could choose one that she wanted.	What did they do after she chose the dog that she wanted?	they went to a nearby pet store	yes	Event Ordering
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	three times a day	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	once in five seconds	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	once a second	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	once in five hours	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	once a hour	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	three times a night	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	50 times	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	How often do they visit the dog pound?	three times a century	no	Frequency
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	during the month	no	Typical Time
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	during the century	no	Typical Time
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	during the night	no	Typical Time
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	they went to the dog pound 15 years ago, in may	no	Typical Time
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	during the day	yes	Typical Time
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	at bedtime	no	Typical Time
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	they went to the dog pound 45 years ago, in may	no	Typical Time
+Her mommy took her to the dog pound so that she could choose one that she wanted.	When did they go to the dog pound ?	they went to the dog pound last saturday	yes	Typical Time
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	How often did the Spanish settle in new places?	every 20 second	no	Frequency
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	How often did the Spanish settle in new places?	every month	no	Frequency
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	How often did the Spanish settle in new places?	every year	no	Frequency
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	How often did the Spanish settle in new places?	every 90 years	no	Frequency
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	How often did the Spanish settle in new places?	every 20 days	no	Frequency
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	What happened to the Spanish before they founded the new settlement?	spanish magazine and newspaper publisher leading	no	Event Ordering
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	What happened to the Spanish before they founded the new settlement?	they lost a hundred wars	no	Event Ordering
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	What happened to the Spanish before they founded the new settlement?	spanish authorities clear the price for the treatment	no	Event Ordering
+The site of Nueva Sevilla proved to be unhealthy and mosquito-ridden, and in 1534 the Spanish founded Villa de la Vega, today known as Spanish Town.	Did the Spanish stay in Nueva Sevilla after founding Villa de la Vega?	spanish authorities clear the price for the treatment	no	Stationarity
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How often are people confused at the courthouse?	sunday	no	Frequency
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How often are people confused at the courthouse?	once a second	no	Frequency
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How often are people confused at the courthouse?	every century	no	Frequency
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How often are people confused at the courthouse?	once a year	no	Frequency
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How often are people confused at the courthouse?	every minute	no	Frequency
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How often are people confused at the courthouse?	twice a year	no	Frequency
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How often are people confused at the courthouse?	sometimes	yes	Frequency
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	4 hours	yes	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	one month	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	4 minutes	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	3 days	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	3 hours	yes	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	3 centuries	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	4 seconds	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	1.5 hours	yes	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	15 days	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	one year	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	3 weeks	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	9 days	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	3 minutes	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	How long was she at the courthouse?	she went to work for a fund-raising organization	no	Event Duration
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	Was she still confused the next day?	yes	yes	Stationarity
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	Was she still confused the next day?	no she found it out overnight	no	Stationarity
+When she went to a courthouse to file a complaint against her landlord, she found the process so confusing that she gave up and went home.	Was she still confused the next day?	yes and her problem wasn't solved	yes	Stationarity
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	for less than a minute	yes	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	2 minutes	yes	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	for a few months	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	18 minutes	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	2 days	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	2 centuries	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	for a few minutes	yes	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	20 minutes	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	for a few days	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	180 minutes	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	2 months	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	for less than a month	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	for a few centuries	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	60 minutes	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	How long did they laugh?	20 centuries	no	Event Duration
+I clapped her shoulder to show I was not laughing at her.	What happened after they clapped her shoulder?	they talked	yes	Event Ordering
+I clapped her shoulder to show I was not laughing at her.	What happened after they clapped her shoulder?	they laughed	yes	Event Ordering
+I clapped her shoulder to show I was not laughing at her.	What happened after they clapped her shoulder?	she cried	no	Event Ordering
+I clapped her shoulder to show I was not laughing at her.	What happened after they clapped her shoulder?	they both laughed	yes	Event Ordering
+I clapped her shoulder to show I was not laughing at her.	How often will they clap someone's shoulder?	every century	no	Frequency
+I clapped her shoulder to show I was not laughing at her.	How often will they clap someone's shoulder?	once a second	no	Frequency
+I clapped her shoulder to show I was not laughing at her.	How often will they clap someone's shoulder?	once a minute	no	Frequency
+I clapped her shoulder to show I was not laughing at her.	How often will they clap someone's shoulder?	i touch her	no	Frequency
+I clapped her shoulder to show I was not laughing at her.	How often will they clap someone's shoulder?	once a century	no	Frequency
+I clapped her shoulder to show I was not laughing at her.	How often will they clap someone's shoulder?	every minute	no	Frequency
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	3:30 AM	no	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	four minutes ago	yes	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	tomorrow	no	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	four centuries ago	no	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	before they laughed	no	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	the next night	no	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	the next day	no	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	the next century	no	Typical Time
+I clapped her shoulder to show I was not laughing at her.	When did they clap her shoulder?	the next month	no	Typical Time
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	a hour	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	2 seconds	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	3 months	yes	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	1 days	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	2 weeks	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	3 days	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	3 centuries	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	a second	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	a week	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	How long did it take to make profit?	9 days	no	Event Duration
+About 30% of Ratners's profit already is derived from the U.S.	What happened before Ratners's made a profit?	he worked hard	yes	Event Ordering
+About 30% of Ratners's profit already is derived from the U.S.	What happened before Ratners's made a profit?	he was rich	no	Event Ordering
+About 30% of Ratners's profit already is derived from the U.S.	Is Ratners's profit derived from the U.S. today?	yes	yes	Stationarity
+About 30% of Ratners's profit already is derived from the U.S.	How often did Ratners make a profit?	pichia pastoris made protein from natural gas-derived alcohol	no	Frequency
+About 30% of Ratners's profit already is derived from the U.S.	How often did Ratners make a profit?	every century	no	Frequency
+About 30% of Ratners's profit already is derived from the U.S.	How often did Ratners make a profit?	sometimes	yes	Frequency
+About 30% of Ratners's profit already is derived from the U.S.	How often did Ratners make a profit?	never	no	Frequency
+About 30% of Ratners's profit already is derived from the U.S.	How often did Ratners make a profit?	once a second	no	Frequency
+About 30% of Ratners's profit already is derived from the U.S.	What day did Ratners realize he had made profit?	ratner first noticed a profit after expanding their market to the us, one hour ago on april 1st	no	Typical Time
+About 30% of Ratners's profit already is derived from the U.S.	What day did Ratners realize he had made profit?	ratner first noticed a profit after expanding their market to the us, one second ago on april 1st	no	Typical Time
+Tumble would see Billy and walk up to him as fast as a turtle can go.	What time did the turtle see Billy?	1:00 PM	yes	Typical Time
+Tumble would see Billy and walk up to him as fast as a turtle can go.	What time did the turtle see Billy?	about 12 am	no	Typical Time
+Tumble would see Billy and walk up to him as fast as a turtle can go.	What time did the turtle see Billy?	4:00 PM	yes	Typical Time
+Tumble would see Billy and walk up to him as fast as a turtle can go.	What time did the turtle see Billy?	2:00 AM	no	Typical Time
+Tumble would see Billy and walk up to him as fast as a turtle can go.	What time did the turtle see Billy?	around 6 pm	yes	Typical Time
+Tumble would see Billy and walk up to him as fast as a turtle can go.	What time did the turtle see Billy?	3:00 PM	yes	Typical Time
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	a century	no	Event Duration
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	peter wanted to bark for 2 minutes	yes	Event Duration
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	a minute	yes	Event Duration
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	peter wanted to bark for 2 months	no	Event Duration
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	a month	no	Event Duration
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	30 years	no	Event Duration
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	90 seconds	yes	Event Duration
+Peter wanted to show off his bark, but he was too tired.	How long did Peter want to bark for?	peter wanted to bark for 2 centuries	no	Event Duration
+Peter wanted to show off his bark, but he was too tired.	What did Peter do next?	went to sleep	yes	Event Ordering
+Peter wanted to show off his bark, but he was too tired.	What did Peter do next?	peter laid down and took a nap	yes	Event Ordering
+Peter wanted to show off his bark, but he was too tired.	What did Peter do next?	peter started dancing on two legs and singing	no	Event Ordering
+Peter wanted to show off his bark, but he was too tired.	What did Peter do next?	he slept	yes	Event Ordering
+Peter wanted to show off his bark, but he was too tired.	Was Peter still tired after he slept the night?	no	yes	Stationarity
+Peter wanted to show off his bark, but he was too tired.	Was Peter still tired after he slept the night?	he wanted to pursue his own dream	no	Stationarity
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	once every 180 years	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	several times per minute	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	once every 20 years	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	sometimes	yes	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	once every 2.22 years	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	several times per night	yes	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	every day	yes	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	every night	yes	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	every century	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	several times per day	yes	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	several times per century	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	once every 6.67 years	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	every minute	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	once every 60 years	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	How often does Peter bark?	once every 20 weeks	no	Frequency
+Peter wanted to show off his bark, but he was too tired.	What time of day was it most likely?	9:00 PM	yes	Typical Time
+Peter wanted to show off his bark, but he was too tired.	What time of day was it most likely?	1:00 PM	no	Typical Time
+Peter wanted to show off his bark, but he was too tired.	What time of day was it most likely?	noon	no	Typical Time
+All Muslims-as he defined them-therefore must take up arms in this fight.	What day did the Muslims take arms?	monday	yes	Typical Time
+All Muslims-as he defined them-therefore must take up arms in this fight.	What day did the Muslims take arms?	tuesday	yes	Typical Time
+All Muslims-as he defined them-therefore must take up arms in this fight.	What day did the Muslims take arms?	wednesday	yes	Typical Time
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	180 years	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	just a few months	yes	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	a few months	yes	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	a few minutes	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	60 years	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	just a few centuries	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	20 years	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	6.67 years	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	a few centuries	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	How long did it take for Muslims to take up arms?	20 seconds	no	Event Duration
+All Muslims-as he defined them-therefore must take up arms in this fight.	What happened after the Muslims took arms?	they fight	yes	Event Ordering
+All Muslims-as he defined them-therefore must take up arms in this fight.	What happened after the Muslims took arms?	they fought in battle	yes	Event Ordering
+All Muslims-as he defined them-therefore must take up arms in this fight.	What happened after the Muslims took arms?	they began to fight	yes	Event Ordering
+All Muslims-as he defined them-therefore must take up arms in this fight.	How often do Muslims take arms?	every century	no	Frequency
+All Muslims-as he defined them-therefore must take up arms in this fight.	How often do Muslims take arms?	once a hour	no	Frequency
+All Muslims-as he defined them-therefore must take up arms in this fight.	How often do Muslims take arms?	once a second	no	Frequency
+All Muslims-as he defined them-therefore must take up arms in this fight.	How often do Muslims take arms?	every minute	no	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	1 hour	yes	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	34 years	no	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	two seconds a day	no	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	20 to 22 hours a day	no	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	20 to 22 seconds a day	no	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	two hours a day	yes	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	34 hours	no	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	two hours a century	no	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	few minutes to half an hour	yes	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	How long do they play everyday?	102 hours	no	Event Duration
+Other times, they play a game with Quack where they wave at Quack and laugh.	Do they still laugh after playing a game with Quack?	no	yes	Stationarity
+Other times, they play a game with Quack where they wave at Quack and laugh.	Do they still laugh after playing a game with Quack?	yes	yes	Stationarity
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	few times a week	yes	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play every other day	yes	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	few times a hour	no	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	hourly	no	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play about once a week	yes	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play every other morning	yes	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play about once a hour	no	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play about once a year	no	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	few times a second	no	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play every other early morning	yes	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play about once a second	no	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	How often do they play a game with Quack ?	they play every other night	yes	Frequency
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	4:00 PM	yes	Typical Time
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	early evening	yes	Typical Time
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	weekends	yes	Typical Time
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	early morning	yes	Typical Time
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	2:00 PM	yes	Typical Time
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	early late night	no	Typical Time
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	12:00 PM	yes	Typical Time
+Other times, they play a game with Quack where they wave at Quack and laugh.	When do they play games?	at 5 pm everyday	yes	Typical Time
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How long does it take to get immediate legal assistance services?	matter of centuries and hours	no	Event Duration
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How long does it take to get immediate legal assistance services?	a century	no	Event Duration
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How long does it take to get immediate legal assistance services?	a year	no	Event Duration
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How long does it take to get immediate legal assistance services?	a second	no	Event Duration
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How long does it take to get immediate legal assistance services?	matter of minutes and years	no	Event Duration
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How long does it take to get immediate legal assistance services?	a decade	no	Event Duration
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How long does it take to get immediate legal assistance services?	a minute	no	Event Duration
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	What does the women and children do once they have immediate legal assistance services ?	meet and talk with a lawyer	yes	Event Ordering
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	What does the women and children do once they have immediate legal assistance services ?	you talk of times of peace for all	no	Event Ordering
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	What does the women and children do once they have immediate legal assistance services ?	the women and children decline protection	no	Event Ordering
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	What does the women and children do once they have immediate legal assistance services ?	they have a party	no	Event Ordering
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	once a minute	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	once per 2 months	yes	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	once a century	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	one can apply for immediate legal assistance services once every three minutes	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	once a night	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	once per 6 minutes	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	one can apply for immediate legal assistance services once every two seconds	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	one can apply for immediate legal assistance services once every two hours	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	once per 6 months	yes	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	How often can one apply for immediate legal assistance services ?	once per 6 centuries	no	Frequency
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	When can a women apply for immediate legal assistance services ?	3:00 AM	no	Typical Time
+Often times women are in need of immediate legal assistance services for the protection of the mother and the child.	When can a women apply for immediate legal assistance services ?	when office opens at 8am	yes	Typical Time
+The First Dynasty The confluence of mythology and history in China took place around 4,000 years ago during what is referred to as the Xia (Hsia) Dynasty.	Does the dynasty still exist?	yes	no	Stationarity
+The First Dynasty The confluence of mythology and history in China took place around 4,000 years ago during what is referred to as the Xia (Hsia) Dynasty.	Does the dynasty still exist?	no	yes	Stationarity
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	22 seconds	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	18 years	yes	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	60 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	20 weeks	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	18 seconds	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	54 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	2.44 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	7.33 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	2 hours	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	18 hours	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	180 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	2.22 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	2 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	162 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	198 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	6 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	How long did it take Cathy Wallace to grow up?	6.67 years	no	Event Duration
+Cathy Wallace did not always know what she wanted to be when she grew up.	What happened after she grew up?	she got a job	yes	Event Ordering
+Cathy Wallace did not always know what she wanted to be when she grew up.	What happened after she grew up?	she wanted strong government	no	Event Ordering
+Cathy Wallace did not always know what she wanted to be when she grew up.	What happened after she grew up?	she was a pirate	no	Event Ordering
+Cathy Wallace did not always know what she wanted to be when she grew up.	What happened after she grew up?	she found her place	yes	Event Ordering
+Cathy Wallace did not always know what she wanted to be when she grew up.	What happened after she grew up?	she wanted a jim beam	no	Event Ordering
+Cathy Wallace did not always know what she wanted to be when she grew up.	Did Cathy always have this unsure feeling?	she know whether she had actually been pregnant	no	Stationarity
+Cathy Wallace did not always know what she wanted to be when she grew up.	Did Cathy always have this unsure feeling?	you know where she 'll turn up	no	Stationarity
+Cathy Wallace did not always know what she wanted to be when she grew up.	Did Cathy always have this unsure feeling?	she said that 's always looking back	no	Stationarity
+Cathy Wallace did not always know what she wanted to be when she grew up.	Did Cathy always have this unsure feeling?	she wanted strong government	no	Stationarity
+Cathy Wallace did not always know what she wanted to be when she grew up.	Did Cathy always have this unsure feeling?	she says you know	no	Stationarity
+Cathy Wallace did not always know what she wanted to be when she grew up.	How often did Cathy think about this issue?	once a night	yes	Frequency
+Cathy Wallace did not always know what she wanted to be when she grew up.	How often did Cathy think about this issue?	once a hour	no	Frequency
+Cathy Wallace did not always know what she wanted to be when she grew up.	How often did Cathy think about this issue?	once a second	no	Frequency
+Cathy Wallace did not always know what she wanted to be when she grew up.	How often did Cathy think about this issue?	once a minute	no	Frequency
+Cathy Wallace did not always know what she wanted to be when she grew up.	How often did Cathy think about this issue?	once a month	yes	Frequency
+Cathy Wallace did not always know what she wanted to be when she grew up.	How often did Cathy think about this issue?	once a century	no	Frequency
+Cathy Wallace did not always know what she wanted to be when she grew up.	How often did Cathy think about this issue?	once a week	yes	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	every hour	no	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	every year	yes	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	every second	no	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	several times a second	no	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	once a century	no	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	once every year	yes	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	once per year	yes	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	each year	yes	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	once a night	no	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	How often do they study the DNA of extinct organisms?	once a year	yes	Frequency
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	in the 2nd century ad	no	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	1000 seconds ago	no	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	in the 2nd month ad	no	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	in the 2nd minute ad	no	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	during the 1970s	yes	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	1000 weeks ago	no	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	in the 1st century ad	no	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	50 years ago	yes	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	1000 years ago	no	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	When did they begin studying the DNA?	in the 1970s	yes	Typical Time
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	one day	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	six minutes	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	every day	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	a minute	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	one week	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	three years	yes	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	a century	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	a day	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	How long did it take to study the DNA?	a night	no	Event Duration
+They are able to study the DNA of the organism that no longer lives on Earth.	Are they still studying the DNA?	yes	yes	Stationarity
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	once a week	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	every three minutes	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	each few days	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	a few days	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	once a century	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	once a second	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	every five minutes	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	every three centuries	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	every few centuries	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	once per week	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	once every century	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	once a minute	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How often does Mama put the jacket in the stopbox?	once a hour	no	Frequency
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	When did Mama put the jacket in the stopbox?	3:00 AM	no	Typical Time
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	When did Mama put the jacket in the stopbox?	last year	yes	Typical Time
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	When did Mama put the jacket in the stopbox?	last season	yes	Typical Time
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How long was the capturador lent to the uncle for?	10 seconds	no	Event Duration
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How long was the capturador lent to the uncle for?	1 hour	no	Event Duration
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	How long was the capturador lent to the uncle for?	1 second	no	Event Duration
+Mama kept her mink jacket, a family hand-me-down, safe from time in a stopbox, and lent the capturador to my uncle for his stamp collection.	Will the mink jacket stay in the stopbox?	yes	yes	Stationarity
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	a few times a hour	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	every day	yes	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	one a year	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	every minute	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	once a hour	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	a few times a week	yes	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	a few times a day	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	once a week	yes	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	a few times every week	yes	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	once every year	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	once a year	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	every week	yes	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	every century	no	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How often did he go out to play and splash?	a couple times a week	yes	Frequency
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	1:00 PM	yes	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	2:00 PM	yes	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	11:00 PM	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	12:00 AM	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	a month ago	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	a months ago	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	at 12 am	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	until midnight	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	at 10 pm	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	10:00 AM	yes	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	a day ago	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	a year ago	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	at midnight	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	2:00 AM	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	6:00 AM	yes	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	a century ago	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What time did he start playing?	after midnight	no	Typical Time
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	What happened after he slept?	he woke up	yes	Event Ordering
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How long would he splash and play for?	1 hour	yes	Event Duration
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How long would he splash and play for?	2.5 minutes	no	Event Duration
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How long would he splash and play for?	for an hour	yes	Event Duration
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How long would he splash and play for?	5 seconds	no	Event Duration
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How long would he splash and play for?	5 days	no	Event Duration
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	How long would he splash and play for?	5 centuries	no	Event Duration
+He would splash and play until he was ready to go back home, where he would sleep for hours, having worn himself out playing.	Was he still worn out after sleeping?	no	yes	Stationarity
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	every year	yes	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	each day	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	every night	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	each year	yes	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	every minute	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	each century	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	every sunday	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	this hour	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	about once per century	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	about once every century	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	about once per day	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	every late night	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	each saturday	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	How often does she recount her desire to be a doctor?	each night	no	Frequency
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	2 month ago	yes	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	10 hour ago	no	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	10 months ago	yes	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	2 years ago	yes	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	0.56 minutes ago	no	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	0.56 days ago	no	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	90 years ago	no	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	5 minutes ago	no	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	2 minute ago	no	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	When did she graduate college?	5 months ago	yes	Typical Time
+When I was in college, I thought I wanted to be a doctor, she said.	What happened after she left college?	she changed to a life of crime	no	Event Ordering
+When I was in college, I thought I wanted to be a doctor, she said.	What happened after she left college?	she turned to a life of crime	no	Event Ordering
+When I was in college, I thought I wanted to be a doctor, she said.	What happened after she left college?	she became a teacher	yes	Event Ordering
+When I was in college, I thought I wanted to be a doctor, she said.	What happened after she left college?	she went to a life of crime	no	Event Ordering
+When I was in college, I thought I wanted to be a doctor, she said.	What happened after she left college?	she studied for her college classes	no	Event Ordering
+When I was in college, I thought I wanted to be a doctor, she said.	What happened after she left college?	she said it 's worse than i thought	no	Event Ordering
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	90 minutes	no	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	10 years	no	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	four seconds	no	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	12 years	no	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	36 years	no	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	1.11 months	no	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	4 years	yes	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	10 minutes	no	Event Duration
+When I was in college, I thought I wanted to be a doctor, she said.	How long was she in college?	four years	yes	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed being under the sun for 8 seconds	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed 25 seconds under the sun	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed 2 years under the sun	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed 25 weeks under the sun	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed 25 years under the sun	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed 2 weeks under the sun	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed being under the sun for 2 hours	yes	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed 25 hours under the sun	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	for an hour	yes	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed 2 hours under the sun	yes	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed being under the sun for 18 hours	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed being under the sun for 8 years	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	How long did they enjoy under the sun?	they enjoyed being under the sun for 2 seconds	no	Event Duration
+Then they laid down on some towels and enjoyed the sun.	What did  they do after enjoying the sun?	slept	yes	Event Ordering
+Then they laid down on some towels and enjoyed the sun.	What did  they do after enjoying the sun?	ms. bogart laid her cards on the table	no	Event Ordering
+Then they laid down on some towels and enjoyed the sun.	What did  they do after enjoying the sun?	they went home	yes	Event Ordering
+Then they laid down on some towels and enjoyed the sun.	What did  they do after enjoying the sun?	got sunburn	yes	Event Ordering
+Then they laid down on some towels and enjoyed the sun.	What did  they do after enjoying the sun?	they sold a home	no	Event Ordering
+Then they laid down on some towels and enjoyed the sun.	What did  they do after enjoying the sun?	they retrieve some appliances on the second floor	no	Event Ordering
+Then they laid down on some towels and enjoyed the sun.	What did  they do after enjoying the sun?	ate some lunch	yes	Event Ordering
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	every century	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	several times a minute	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	several times a century	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	every minute	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	once a second	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	once a hour	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	never	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	always	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	How often do they lay down and enjoy the sun?	every night	no	Frequency
+Then they laid down on some towels and enjoyed the sun.	At what time did they lay down on the towels?	afternoon	yes	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	every few centuries	no	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	twice	yes	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	four times	yes	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	25 winners	no	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	every few minutes	yes	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	5 times	yes	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	every few days	no	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	every few months	no	Frequency
+The music , in a garage punk vein , plays an important role in the film .	How often does the music play in the film?	three times	yes	Frequency
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	a few minutes in	yes	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	at the five days mark	no	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	at the five minute mark	yes	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	at the start	yes	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	and the very end	no	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	at the five month mark	no	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	at the very ends	no	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	at the five day time	no	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	a cut centuries in	no	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	When does the music start playing in the film?	at the beginning	yes	Typical Time
+The music , in a garage punk vein , plays an important role in the film .	What happens after the music plays in the film?	a video is shown	yes	Event Ordering
+The music , in a garage punk vein , plays an important role in the film .	What happens after the music plays in the film?	the protagonist saves another person	yes	Event Ordering
+The music , in a garage punk vein , plays an important role in the film .	What happens after the music plays in the film?	something happens during the plot	yes	Event Ordering
+The music , in a garage punk vein , plays an important role in the film .	What happens after the music plays in the film?	the hero saves another person	yes	Event Ordering
+The music , in a garage punk vein , plays an important role in the film .	What happens after the music plays in the film?	something happens in the plot	yes	Event Ordering
+The music , in a garage punk vein , plays an important role in the film .	What happens after the music plays in the film?	a clip is shown	yes	Event Ordering
+The music , in a garage punk vein , plays an important role in the film .	What happens after the music plays in the film?	something happens in the story	yes	Event Ordering
+The music , in a garage punk vein , plays an important role in the film .	How long does the music play in the film?	20 minutes	yes	Event Duration
+The music , in a garage punk vein , plays an important role in the film .	How long does the music play in the film?	5 minutes	yes	Event Duration
+The music , in a garage punk vein , plays an important role in the film .	How long does the music play in the film?	five minutes	yes	Event Duration
+The music , in a garage punk vein , plays an important role in the film .	How long does the music play in the film?	5 years	no	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How long did the bishop remain in Faro?	10 seconds	no	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How long did the bishop remain in Faro?	0.11 day	no	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How long did the bishop remain in Faro?	10 years	yes	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How long did the bishop remain in Faro?	several years	yes	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How long did the bishop remain in Faro?	several seconds	no	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How long did the bishop remain in Faro?	1 minute	no	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How long did the bishop remain in Faro?	1 century	no	Event Duration
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What happened after the Algarve installed the bishop?	the state began collecting corporate taxes	no	Event Ordering
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What happened after the Algarve installed the bishop?	he began collecting tithes	yes	Event Ordering
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What happened after the Algarve installed the bishop?	the algarve had more political power, because the bishop position is powerful	yes	Event Ordering
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What happened after the Algarve installed the bishop?	fourth place	no	Event Ordering
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	Did the bishop's position remain open after his tenure?	no	yes	Stationarity
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	once every week	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	once a second	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	once every hour	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every week	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every hour	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every two hours	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every day	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	once a week	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every century	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every two seconds	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every second	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	once a hour	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	once every second	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	How often did Algarve dispatch new bishops?	every minute	no	Frequency
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What year did the bishop arrive in Faro?	550	no	Typical Time
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What year did the bishop arrive in Faro?	one of the early weeks of the fourth century	yes	Typical Time
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What year did the bishop arrive in Faro?	one of the late years of the fourth century	no	Typical Time
+By the beginning of the fourth century the Algarve had a bishop in place, based in Faro.	What year did the bishop arrive in Faro?	he hasn't arrived yet	no	Typical Time
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	once	yes	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	september 9-11	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	for a decade	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	twice each decade	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	every hour	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	june 9 to 11	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	august 9-11	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	twice every decade	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	twice a century	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	every year	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	every second	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	twice a decade	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	twice a year	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	every week	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	each year	no	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	How often did the 9/11 attack occur?	just once	yes	Frequency
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	At what time of the day did the attack occur?	8:00 AM	yes	Typical Time
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	august 9-11	no	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	the 9 / 11 attack happened	yes	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they executed the attack after they planned it	yes	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they execute the attack after they planned it	yes	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they stopped	no	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they changed their mind on committing to the attack after planning it	no	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they executed the attack after they plan it	yes	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they changed their minds about committing to the attack after planning it	no	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	the 9/11 attack happened	yes	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they carry it out	yes	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they carried it out	yes	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	What happened after the 9/11 plotters planned the attack?	they changed their minds on committing to the attack after planning it	no	Event Ordering
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	For how long did the 9/11 plotters plan the attack?	years	yes	Event Duration
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	For how long did the 9/11 plotters plan the attack?	hours	no	Event Duration
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	For how long did the 9/11 plotters plan the attack?	5 minutes	no	Event Duration
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	For how long did the 9/11 plotters plan the attack?	2 seconds	no	Event Duration
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	For how long did the 9/11 plotters plan the attack?	1 minutes	no	Event Duration
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	For how long did the 9/11 plotters plan the attack?	days	no	Event Duration
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	For how long did the 9/11 plotters plan the attack?	5 seconds	no	Event Duration
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	yes	no	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	no they ' re all dead	yes	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	september 9-11	no	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	no they ' re all gone	yes	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	no they're all dead	yes	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	yes they want to strike again	no	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	yes they want to attack again	no	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	yes they want to bomb again	no	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	no	yes	Stationarity
+The 9/11 plotters eventually spent somewhere between $400,000 and $500,000 to plan and conduct their attack.	Are the 9/11 plotters planning an attack?	june 9 to 11	no	Stationarity
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	How often are alien corpse's found?	once every century	yes	Frequency
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	How often are alien corpse's found?	once a day	no	Frequency
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	How often are alien corpse's found?	once each century	yes	Frequency
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	How often are alien corpse's found?	aliens corpse ' s are found every second	no	Frequency
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	How often are alien corpse's found?	once a century	yes	Frequency
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	How often are alien corpse's found?	once a weekend	no	Frequency
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	the person paid no notice to it	no	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	the administration finds itself	no	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	it was given to science	yes	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	the person paid no attention to it	no	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	the individual paid no attention to it	no	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	it was discovered there	no	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	an oil company finds a sideline	no	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	the person looked over the aliens	no	Event Ordering
+While Dr. Hughes finds an alien corpse with a fossilized diamond , Dr. Campbell finds hieroglyphics at the cost of the party except for Hughes and himself .	What happened after the corpse was found?	the person looked for the alien	no	Event Ordering
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	once a week	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	once a hour	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	once a second	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	once a year	yes	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	every hour	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	once per week	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	every second	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	each week	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	once every year	yes	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	every week	no	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How often do Pompey, Julius Caesar, and Augustus visit the tomb?	just once	yes	Frequency
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	0.5 hour	no	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	about five days	yes	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	about five minutes	no	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	1 week	yes	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	about an hour	no	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	3 week	yes	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	1 hours	no	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	3 hours	no	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	How long did it take to visit the tomb?	3 seconds	no	Event Duration
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	Was the nose still knocked off the next day?	yes	yes	Stationarity
+Pompey, Julius Caesar and Augustus all visited the tomb in Alexandria, where Augustus, allegedly, accidentally knocked the nose off.	Was the nose still knocked off the next day?	no	no	Stationarity
+Several tenants blame other neighbors as perpetrators of the rift, however.	What will the tenants do as a result of the rift?	they will move	yes	Event Ordering
+Several tenants blame other neighbors as perpetrators of the rift, however.	What will the tenants do as a result of the rift?	not speak to each other	yes	Event Ordering
+Several tenants blame other neighbors as perpetrators of the rift, however.	What will the tenants do as a result of the rift?	spouses incriminating each other	no	Event Ordering
+Several tenants blame other neighbors as perpetrators of the rift, however.	What will the tenants do as a result of the rift?	start the rift	no	Event Ordering
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	0.67 minutes	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	2 seconds	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	one second	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	900 years	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	6 months	yes	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	forever	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	18 minutes	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	one week	yes	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	6 minutes	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	one year	yes	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	100 years	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How long has there been a rift between neighbors?	2 minutes	no	Event Duration
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every few weeks	yes	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	frequently	yes	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every 100 seconds	no	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every 300 years	no	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every 100 years	no	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every few seconds	no	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every minute	no	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every month	yes	Frequency
+Several tenants blame other neighbors as perpetrators of the rift, however.	How often do the tenants have issues with other people?	every few years	no	Frequency
+And as they waited for His coming, one generation after another, and yet He did not come, a sadness fell upon them.	How many times per day did they wait?	2 times	yes	Frequency
+And as they waited for His coming, one generation after another, and yet He did not come, a sadness fell upon them.	How many times per day did they wait?	1 times	yes	Frequency
+And as they waited for His coming, one generation after another, and yet He did not come, a sadness fell upon them.	For how many years did each generation wait?	50 seconds	no	Event Duration
+And as they waited for His coming, one generation after another, and yet He did not come, a sadness fell upon them.	For how many years did each generation wait?	50 weeks	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many cases a month does his father work on?	9	yes	Frequency
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many cases a month does his father work on?	5	yes	Frequency
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many cases a month does his father work on?	5000	no	Frequency
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many cases a month does his father work on?	1000	no	Frequency
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many cases a month does his father work on?	500	no	Frequency
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many cases a month does his father work on?	10	yes	Frequency
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many cases a month does his father work on?	200	no	Frequency
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	What did Atta do after being born?	become a lawyer	no	Event Ordering
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	What did Atta do after being born?	she leaves her house	no	Event Ordering
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	What did Atta do after being born?	she left her home	no	Event Ordering
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	What did Atta do after being born?	she left her house	no	Event Ordering
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	What did Atta do after being born?	became a lawyer	no	Event Ordering
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	What did Atta do after being born?	become a prosecutor	no	Event Ordering
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	atta lived with his parents for 20 hours	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	2 years	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	18 years	yes	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	atta never lived with his parents	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	atta lived with his parents for 4 years	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	atta lived with his parents for 20 years	yes	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	atta lived with his parents for 60 years	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	10 years	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	3.6 years	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	18 weeks	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	5 years	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	18 months	no	Event Duration
+Mohamed Atta was born on September 1, 1968, in Kafr el Sheikh, Egypt, to a middle-class family headed by his father, an attorney.	How many years did Atta live with his parents?	90	no	Event Duration
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	When did the bidding take place?	about 13 am	no	Typical Time
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	When did the bidding take place?	11:00 PM	no	Typical Time
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	When did the bidding take place?	about 1 am	no	Typical Time
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	When did the bidding take place?	2:00 AM	no	Typical Time
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	When did the bidding take place?	around 1 am	no	Typical Time
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	What happened after the Soviet national shipping company found out they'd been excluded?	they looked upset	yes	Event Ordering
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	What happened after the Soviet national shipping company found out they'd been excluded?	they hated the swiss trader	yes	Event Ordering
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	What happened after the Soviet national shipping company found out they'd been excluded?	they won the bid	no	Event Ordering
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	What happened after the Soviet national shipping company found out they'd been excluded?	they were upset	yes	Event Ordering
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	What happened after the Soviet national shipping company found out they'd been excluded?	they won the bids	no	Event Ordering
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	What happened after the Soviet national shipping company found out they'd been excluded?	they resented the swiss trader	yes	Event Ordering
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	How long did the bidding last?	two days	yes	Event Duration
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	How long did the bidding last?	all day	yes	Event Duration
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	How long did the bidding last?	the bidding lasted three days	yes	Event Duration
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	How long did the bidding last?	the bidding lasted two days	yes	Event Duration
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	How long did the bidding last?	the bids lasted two days	yes	Event Duration
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	Was the Soviet national shipping company later invited to submit a bid?	no it was always invited	no	Stationarity
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	Was the Soviet national shipping company later invited to submit a bid?	no it was sometimes invited	no	Stationarity
+Among the responses the Swiss trader got was one from the Soviet national shipping company, which hadn't been invited to submit a bid.	Was the Soviet national shipping company later invited to submit a bid?	it invited many other companies to participate	no	Stationarity
+Another unit was added on to the communal dwelling each time a marriage created a new family.	How often are units added?	at any point	no	Frequency
+Another unit was added on to the communal dwelling each time a marriage created a new family.	How often are units added?	one century	no	Frequency
+Another unit was added on to the communal dwelling each time a marriage created a new family.	How often are units added?	one dynasty	no	Frequency
+Another unit was added on to the communal dwelling each time a marriage created a new family.	How often are units added?	at any times	no	Frequency
+Another unit was added on to the communal dwelling each time a marriage created a new family.	How often are units added?	at any time	no	Frequency
+Another unit was added on to the communal dwelling each time a marriage created a new family.	How often are units added?	once each 20 weeks	no	Frequency
+Another unit was added on to the communal dwelling each time a marriage created a new family.	How often are units added?	for any time	no	Frequency
+Another unit was added on to the communal dwelling each time a marriage created a new family.	When does construction on the new unit take place?	next minute	no	Typical Time
+Another unit was added on to the communal dwelling each time a marriage created a new family.	When does construction on the new unit take place?	next day	yes	Typical Time
+Another unit was added on to the communal dwelling each time a marriage created a new family.	When does construction on the new unit take place?	following month	yes	Typical Time
+Another unit was added on to the communal dwelling each time a marriage created a new family.	What happens after the unit is added to the communal dwelling?	they burn the whole place down	no	Event Ordering
+Another unit was added on to the communal dwelling each time a marriage created a new family.	What happens after the unit is added to the communal dwelling?	the married couple resides there	yes	Event Ordering
+Another unit was added on to the communal dwelling each time a marriage created a new family.	What happens after the unit is added to the communal dwelling?	the new family lived in it	yes	Event Ordering
+Another unit was added on to the communal dwelling each time a marriage created a new family.	What happens after the unit is added to the communal dwelling?	they burn the whole town down	no	Event Ordering
+Another unit was added on to the communal dwelling each time a marriage created a new family.	Are new units permanent?	yes	yes	Stationarity
+In the first months of the new administration, questions concerning the Predator became more and more a central focus of dispute.	When was the Predator first talked about by the President?	2 minutes ago	no	Typical Time
+In the first months of the new administration, questions concerning the Predator became more and more a central focus of dispute.	When was the Predator first talked about by the President?	april 5th 670	no	Typical Time
+In the first months of the new administration, questions concerning the Predator became more and more a central focus of dispute.	When was the Predator first talked about by the President?	never	no	Typical Time
+In the first months of the new administration, questions concerning the Predator became more and more a central focus of dispute.	When was the Predator first talked about by the President?	2 weeks ago	no	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	every other morning	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	every minute	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	once a hour	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	every other night	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	each other day	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	on monday	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	every other minute	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	every other day	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	once a second	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	on tuesday	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How often will they make the journey?	on sunday	no	Frequency
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	8:00 PM	no	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	7:00 AM	yes	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	2:00 AM	no	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	9:00 PM	no	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	2:00 PM	yes	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	1:00 AM	no	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	11:00 AM	yes	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What time did they begin the journey?	8:00 AM	yes	Typical Time
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What will the ad men do after making the journey?	shoot a advertisement	yes	Event Ordering
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What will the ad men do after making the journey?	film a commercial	yes	Event Ordering
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	What will the ad men do after making the journey?	shoot a commercial	yes	Event Ordering
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How long is the motorcycle journey?	2 week	yes	Event Duration
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How long is the motorcycle journey?	5 minutes	no	Event Duration
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How long is the motorcycle journey?	9 days	yes	Event Duration
+Farragut convinces the ad men to make the motorcycle journey on the pretext of looking for a location to shoot a commercial .	How long is the motorcycle journey?	3 days	yes	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	Do the Iban control the Sarawak's Coast now?	no	yes	Stationarity
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	Do the Iban control the Sarawak's Coast now?	yes they are still controlled by the iban	yes	Stationarity
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	Do the Iban control the Sarawak's Coast now?	yes	yes	Stationarity
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	What time of day did the Iban gain control?	5:00 PM	yes	Typical Time
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	What time of day did the Iban gain control?	11:00 AM	yes	Typical Time
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	What time of day did the Iban gain control?	day	no	Typical Time
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	900 times	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	600 years	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	300 times	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	once	yes	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	for a few seconds	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	200 years	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	1800 years	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	100 times	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How often had the Iban had control of the Sarawak's coast?	200 seconds	no	Frequency
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How long did it take for the Iban to take control of Sarawak's coast?	2 seconds	no	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How long did it take for the Iban to take control of Sarawak's coast?	a few seconds	no	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How long did it take for the Iban to take control of Sarawak's coast?	a second	no	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How long did it take for the Iban to take control of Sarawak's coast?	18 years	no	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How long did it take for the Iban to take control of Sarawak's coast?	a minute	no	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How long did it take for the Iban to take control of Sarawak's coast?	1 minute	no	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	How long did it take for the Iban to take control of Sarawak's coast?	1 century	no	Event Duration
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	What happened after the Iban gained control?	catfish farmers and haulers cheat on their taxes	no	Event Ordering
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	What happened after the Iban gained control?	chaos ensued	yes	Event Ordering
+Sarawak's coast and jungle interior were controlled by the Iban — Sea Dayak pirates and Land Dayak slash-and-burn farmers.	What happened after the Iban gained control?	they took over the lands	yes	Event Ordering

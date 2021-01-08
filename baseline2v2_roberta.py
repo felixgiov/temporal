@@ -202,15 +202,16 @@ def main():
     )
     data_args = DataTrainingArguments(task_name="rte", data_dir="./datasets/MCTACO")
     training_args = TrainingArguments(
-        output_dir=f"./models/{model_args.model_name_or_path}",
+        output_dir=f"./models/roberta-large-test",
         overwrite_output_dir=True,
         do_train=True,
         do_eval=True,
         do_predict=True,
         per_gpu_train_batch_size=8,
         per_gpu_eval_batch_size=128,
+        gradient_accumulation_steps=4,
         num_train_epochs=3,
-        learning_rate=2e-5,
+        learning_rate=1e-5,
         logging_steps=500,
         logging_first_step=True,
         save_steps=10000,

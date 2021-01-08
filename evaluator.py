@@ -22,6 +22,13 @@ python evaluator.py eval --test_file datasets/MCTACO/dev_splitted.tsv --predicti
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file multi_results/1/pred_results_roberta-large.txt
 python evaluator.py eval --test_file datasets/MCTACO/dev_splitted_sent.tsv --prediction_file multi_results_2e-5/13_dev/pred_results.txt
 python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file multi_results/test/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file /home/felix/projects/research/multi_results/multi_results_seed32_1e-5_8x4_full_data/1/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file /home/felix/projects/research/multi_results/multi_results_seed_1e-5_8x4_ensemble/12_14/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file /orange/felix/multi_results/multi_run_cosmos_new_2e_default_dropout/_result_ensemble/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file /orange/felix/multi_results/multi_run_cosmos_new_2e_default_dropout/_result_ensemble_1e-5_8x2_10/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file /orange/felix/multi_results/multi_run_cosmos_new_2e_default_dropout/_result_ensemble_seed33_1e-5_8x2_10/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file /orange/felix/multi_results/multi_run_cosmos_new_2e_default_dropout_column_three/_result_ensemble_seed33_10321_76567_1e-5_8x4_1_10/pred_results.txt
+python evaluator.py eval --test_file datasets/MCTACO/test_9442.tsv --prediction_file /orange/orange/felix/multi_results/ensemble_vote_1_15models_pred_results.txt
 """
 
 
@@ -81,8 +88,8 @@ class McTacoEvaluator:
         print("Correct: " + str(correct))
         print("F1: " + str(f1))
         print("Total: " + str(total))
-        print("Strict Acc.: {:.3f}" .format(correct / total))
-        print("Avg F1: {:.3f}" .format(f1 / total))
+        print("Strict Acc.: {:.4f}" .format(correct / total))
+        print("Avg F1: {:.4f}" .format(f1 / total))
 
         if self.output:
             print("Writing results to file: %s" % self.output)
